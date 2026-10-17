@@ -1,0 +1,17 @@
+recipe: 'Varbase Search Base'
+config:
+  -
+    name: core.entity_view_mode.node.search_result
+    data:
+      label: 'Search result'
+  -
+    name: facets.facet.search_content_type
+    data:
+      name: 'Content Type'
+      missing_label: others
+      url_alias: content_type
+  -
+    name: search_api.server.database_server
+    data:
+      name: 'Database server'
+      description: 'Default database server.'

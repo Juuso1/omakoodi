@@ -1,0 +1,27 @@
+uuid: cf92c1cb-bc10-41f3-bc72-024b5e027fa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_podcast
+    - node.type.podcast
+    - node.type.podcast_episode
+_core:
+  default_config_hash: 0VpoTQ6iwU5gucmMiauTY_EYxDGdeti7Pn9fZAeqk7U
+id: node.podcast_episode.field_podcast
+field_name: field_podcast
+entity_type: node
+bundle: podcast_episode
+label: Podcast
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      podcast: podcast
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,350 @@
+recipe: 'Varbase News Base'
+config:
+  -
+    name: canvas.content_template.node.news.full
+    data:
+      component_tree:
+        0f26dedc-d75e-4fc9-b942-726ad8431e86:
+          inputs:
+            label: Breadcrumbs
+  -
+    name: core.date_format.rss
+    data:
+      label: RSS
+      pattern: r
+  -
+    name: core.entity_form_display.node.news.default
+    data:
+      third_party_settings:
+        field_group:
+          group_seo:
+            label: 'Search Engine Optimization (SEO) Information'
+  -
+    name: core.entity_view_display.node.news.featured_card_large
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.featured_card_medium
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.featured_card_xlarge
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.hero_card
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.impressed_card_large
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.impressed_card_medium
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.impressed_card_small
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.impressed_card_xlarge
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.overlay_card_large
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.overlay_card_medium
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.overlay_card_xlarge
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+  -
+    name: core.entity_view_display.node.news.text_card_large
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+            more:
+              text: More
+              aria_label: 'Read more about [node:title]'
+  -
+    name: core.entity_view_display.node.news.text_card_medium
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+            more:
+              text: More
+              aria_label: 'Read more about [node:title]'
+  -
+    name: core.entity_view_display.node.news.text_card_small
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+            more:
+              text: More
+              aria_label: 'Read more about [node:title]'
+  -
+    name: field.field.node.news.field_content
+    data:
+      label: Content
+      description: 'The content of this page.'
+  -
+    name: field.field.node.news.field_description
+    data:
+      label: Description
+      description: 'Describe the news post content. This appears as the description in search engine results.'
+  -
+    name: field.field.node.news.field_featured_image
+    data:
+      label: 'Featured image'
+      description: 'Include an image. This appears as the image in search engine results.'
+  -
+    name: field.field.node.news.field_news_categories
+    data:
+      label: Categories
+      description: 'Select the news categories.'
+  -
+    name: field.field.node.news.field_seo_analysis
+    data:
+      label: 'SEO analysis'
+      description: 'Pick the main keyword this page is about.'
+  -
+    name: field.field.node.news.field_seo_description
+    data:
+      label: 'SEO description'
+      description: 'Write a description for search engines and social media sites.'
+  -
+    name: field.field.node.news.field_seo_image
+    data:
+      label: 'SEO image'
+      description: 'Upload an image to be used when the page is shared on social media sites.'
+  -
+    name: field.field.node.news.field_seo_title
+    data:
+      label: 'SEO title'
+      description: 'Use this field to overwrite the default HTML page title for SEO.'
+  -
+    name: field.field.node.news.field_tags
+    data:
+      label: Tags
+      description: 'Include tags for relevant topics.'
+  -
+    name: node.type.news
+    data:
+      name: 'News post'
+      description: 'Use <em>News</em> to publish news posts by different authors in the News section of the site.'
+  -
+    name: pathauto.pattern.news_content
+    data:
+      label: 'News content'
+      pattern: '/news/[node:title]'
+  -
+    name: taxonomy.vocabulary.news_categories
+    data:
+      name: 'News Categories'
+  -
+    name: views.view.news
+    data:
+      label: News
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: News
+            fields:
+              title:
+                separator: ', '
+            pager:
+              options:
+                tags:
+                  next: ››
+                  previous: ‹‹
+                expose:
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options_all_label: '- All -'
+                  offset_label: Offset
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area:
+                content:
+                  value: '<p>There are no news posts yet.</p>'
+        all:
+          display_title: 'All news posts'
+          display_options:
+            pager:
+              options:
+                tags:
+                  next: ››
+                  previous: ‹‹
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options_all_label: '- All -'
+                  offset_label: Offset
+            exposed_form:
+              options:
+                submit_button: 'Apply Filter'
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                text_input_required: 'Select any filter and click on Apply to see results'
+                text_input_required_format: full_html
+                bef:
+                  general:
+                    secondary_label: 'Advanced options'
+                  filter:
+                    search_title:
+                      advanced:
+                        placeholder_text: 'Search by...'
+            filters:
+              search_title:
+                expose:
+                  label: 'Search by'
+              field_tags_target_id:
+                expose:
+                  label: Industry
+              field_news_categories_target_id:
+                expose:
+                  label: Type
+            header:
+              area:
+                content:
+                  value: '<h2 class="visually-hidden">All news posts</h2>'
+              result:
+                content: '<span class="vb-result-summary"><span class="vb-result-summary__label">Shown articles:</span> <span class="vb-result-summary__count">@start-@end of @total</span></span>'
+        page_1:
+          display_title: News
+          display_options:
+            pager:
+              options:
+                tags:
+                  next: ››
+                  previous: ‹‹
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options_all_label: '- All -'
+                  offset_label: Offset
+            exposed_form:
+              options:
+                submit_button: 'Apply Filter'
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                text_input_required: 'Select any filter and click on Apply to see results'
+                text_input_required_format: full_html
+                bef:
+                  general:
+                    secondary_label: 'Advanced options'
+                  filter:
+                    search_title:
+                      advanced:
+                        placeholder_text: 'Search by...'
+            filters:
+              search_title:
+                expose:
+                  label: 'Search by'
+              field_tags_target_id:
+                expose:
+                  label: Industry
+              field_news_categories_target_id:
+                expose:
+                  label: Type
+            header:
+              area:
+                content:
+                  value: '<h2 class="visually-hidden">All news posts</h2>'
+              result:
+                content: '<span class="vb-result-summary"><span class="vb-result-summary__label">Shown articles:</span> <span class="vb-result-summary__count">@start-@end of @total</span></span>'
+        latest:
+          display_title: 'Latest news posts'
+          display_options:
+            title: 'Latest news posts'
+        related:
+          display_title: 'Related news posts'
+          display_options:
+            title: 'Related news posts'
+            arguments:
+              field_tags_target_id:
+                exception:
+                  title: All
+              nid:
+                exception:
+                  title: All
+        rss:
+          display_title: 'RSS Feed'
+          display_options:
+            fields:
+              title:
+                separator: ', '
+              field_description:
+                separator: ', '
+              view_node:
+                text: view
+              uuid:
+                separator: ', '
+              uid:
+                separator: ', '
+              created:
+                separator: ', '
+            style:
+              options:
+                description: 'Subscribe to our RSS feed to stay up to date with our latest news posts.'
+        featured:
+          display_title: 'Featured news posts'
+          display_options:
+            title: 'Latest news posts'
+            block_description: 'Featured news posts'

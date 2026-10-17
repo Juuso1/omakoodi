@@ -1,0 +1,34 @@
+uuid: ad8f68d6-8c9a-4db1-829e-e8426fa3e08b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.live-feed-item
+    - core.entity_view_mode.node.live_feed
+    - node.type.news
+  module:
+    - node
+_core:
+  default_config_hash: BKwPPsvVZIjTAg7F2ttfanvnOA2gEMXM15X2FEu-ouM
+id: node.news.live_feed
+content_entity_type_id: node
+content_entity_type_bundle: news
+content_entity_type_view_mode: live_feed
+component_tree:
+  '0:f0e0f3bb-a92e-4e71-b176-a9beae921fa5':
+    uuid: f0e0f3bb-a92e-4e71-b176-a9beae921fa5
+    component_id: sdc.vartheme_bs5_rightup.live-feed-item
+    component_version: c521ad982a5f3a56
+    inputs:
+      timestamp:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:news␝created␞␟value'
+      time_format: 'g:i A'
+      title:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:news␝title␞␟value'
+      url:
+        sourceType: host-entity-url
+        absolute: false
+exposed_slots: {  }
+page_variant: null

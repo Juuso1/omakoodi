@@ -1,0 +1,150 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - system.menu.content
+  - system.menu.top-tasks
+  - views.view.varbase_dashboard_welcome
+  module:
+  - layout_builder
+  - menu_block
+  - system
+  - views
+id: welcome
+label: Welcome to your site
+description: 'Where editors land after the install: what to add, their drafts, recent and scheduled content.'
+layout:
+- layout_id: layout_twocol_section
+  layout_settings:
+    label: Tasks and content
+    column_widths: 33-67
+    context_mapping: {}
+  components:
+    03e5ad14-b84a-4e57-bf1e-dd73b3c72af0:
+      uuid: 03e5ad14-b84a-4e57-bf1e-dd73b3c72af0
+      region: first
+      configuration:
+        id: views_block:varbase_dashboard_welcome-block_welcome
+        label: ''
+        label_display: '0'
+        provider: views
+        context_mapping: {}
+        views_label: ''
+        items_per_page: none
+      weight: -1
+      additional: {}
+    8ed4f6f9-ba92-43bc-90e1-205b8599e43c:
+      uuid: 8ed4f6f9-ba92-43bc-90e1-205b8599e43c
+      region: first
+      configuration:
+        id: menu_block:content
+        label: Add content
+        label_display: visible
+        provider: menu_block
+        context_mapping: {}
+        follow: false
+        follow_parent: child
+        display_empty: false
+        label_link: false
+        label_type: block
+        level: 1
+        depth: 1
+        expand_all_items: false
+        parent: content:navigation.create
+        render_parent: false
+        suggestion: content
+        hide_on_nonactive: false
+      weight: 0
+      additional: {}
+    cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8:
+      uuid: cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8
+      region: first
+      configuration:
+        id: system_menu_block:top-tasks
+        label: Top tasks
+        label_display: visible
+        provider: system
+        context_mapping: {}
+        level: 1
+        depth: 1
+        expand_all_items: false
+      weight: 1
+      additional: {}
+    290ff960-69f3-4786-ac9b-b16ac1b81f87:
+      uuid: 290ff960-69f3-4786-ac9b-b16ac1b81f87
+      region: second
+      configuration:
+        id: dashboard_placeholder
+        decorates: views_block:publishing_content-block_drafts
+        label: ''
+        label_display: visible
+        provider: views
+        context_mapping: {}
+        views_label: ''
+        items_per_page: null
+      weight: 0
+      additional: {}
+    27befbfe-fa01-4708-913b-e93797dbd366:
+      uuid: 27befbfe-fa01-4708-913b-e93797dbd366
+      region: second
+      configuration:
+        id: dashboard_placeholder
+        decorates: views_block:recent_content-block_recent_content
+        label: ''
+        label_display: visible
+        provider: views
+        context_mapping: {}
+        views_label: ''
+        items_per_page: null
+      weight: 1
+      additional: {}
+    911f9ec8-28b6-46a3-a002-c3b271ba8efb:
+      uuid: 911f9ec8-28b6-46a3-a002-c3b271ba8efb
+      region: second
+      configuration:
+        id: dashboard_placeholder
+        decorates: views_block:recent_pages-block_recent_pages
+        label: ''
+        label_display: visible
+        provider: views
+        context_mapping: {}
+        views_label: ''
+        items_per_page: null
+      weight: 2
+      additional: {}
+    dca0f1f8-6ec0-47ec-88de-4ca8dca54d89:
+      uuid: dca0f1f8-6ec0-47ec-88de-4ca8dca54d89
+      region: second
+      configuration:
+        id: dashboard_placeholder
+        decorates: views_block:a11y_tools_editoria11y_results-block_a11y_alerts
+        label: ''
+        label_display: visible
+        provider: views
+        context_mapping: {}
+        views_label: ''
+        items_per_page: null
+      weight: 3
+      additional: {}
+  third_party_settings: {}
+- layout_id: layout_onecol
+  layout_settings:
+    label: Scheduled content
+    context_mapping: {}
+  components:
+    252d3375-c349-4870-a4d4-757d44e72e5f:
+      uuid: 252d3375-c349-4870-a4d4-757d44e72e5f
+      region: content
+      configuration:
+        id: dashboard_placeholder
+        decorates: views_block:publishing_content-block_scheduled
+        label: ''
+        label_display: visible
+        provider: views
+        context_mapping: {}
+        views_label: ''
+        items_per_page: null
+      weight: 0
+      additional: {}
+  third_party_settings: {}
+weight: 0

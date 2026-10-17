@@ -1,0 +1,13 @@
+uuid: 005202a1-e8de-4037-8b6b-82e56c361875
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: o3omkJf__DQrXDxEiUomsnkFYXsuHfo2BCJv6DMR6Fk
+id: node.text_card_large
+label: 'Text card - large'
+description: null
+targetEntityType: node
+cache: true

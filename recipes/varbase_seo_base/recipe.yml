@@ -1,0 +1,127 @@
+name: Varbase SEO Base
+description: A recipe to manage default installed modules, configs and permissions for Varbase Search Engine Optimization (SEO) Core features and settings.
+type: Varbase SEO
+install:
+  - metatag
+  - eca_metatag
+  - metatag_facebook
+  - metatag_google_plus
+  - metatag_hreflang
+  - metatag_mobile
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - metatag_verification
+  - metatag_views
+  - pathauto
+  - redirect
+  - redirect_404
+  - redirect_domain
+  - schema_metatag
+  - schema_article
+  - schema_item_list
+  - schema_web_page
+  - schema_web_site
+  - simple_sitemap
+  - yoast_seo
+  - easy_breadcrumb
+config:
+  strict: false
+  import:
+    metatag_facebook: '*'
+    metatag_google_plus: '*'
+    metatag_hreflang: '*'
+    metatag_mobile: '*'
+    metatag_open_graph: '*'
+    metatag_twitter_cards: '*'
+    metatag_verification: '*'
+    pathauto: '*'
+    redirect: '*'
+    redirect_404: '*'
+    redirect_domain: '*'
+    schema_metatag: '*'
+    schema_article: '*'
+    schema_item_list: '*'
+    schema_web_page: '*'
+    schema_web_site: '*'
+    simple_sitemap: '*'
+    yoast_seo: '*'
+    easy_breadcrumb: '*'
+  actions:
+    pathauto.settings:
+      simple_config_update:
+        enabled_entity_types:
+          - user
+        punctuation:
+          hyphen: 1
+        verbose: false
+        separator: "-"
+        max_length: 100
+        max_component_length: 100
+        transliterate: true
+        reduce_ascii: false
+        case: true
+        ignore_words: "a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with"
+        update_action: 2
+        safe_tokens:
+          - alias
+          - path
+          - join-path
+          - login-url
+          - url
+          - url-brief
+    redirect.settings:
+      simple_config_update:
+        canonical: false
+        auto_redirect: true
+        default_status_code: 301
+        passthrough_querystring: true
+        warning: false
+        nonclean_to_clean: true
+        ignore_admin_path: true
+        frontpage_redirect: true
+        deslash: true
+        access_check: false
+        normalize_aliases: true
+        content_location_header: false
+        term_path_handler: true
+        route_normalizer_enabled: true
+    simple_sitemap.settings:
+      simple_config_update:
+        max_links: 2000
+        cron_generate: true
+        cron_generate_interval: 0
+        generate_duration: 10000
+        remove_duplicates: true
+        skip_untranslated: true
+        batch_process_limit: 1500
+        xsl: true
+        base_url: ""
+        default_variant: default
+        custom_links_include_images: false
+        excluded_languages: {}
+        enabled_entity_types:
+          - node
+          - taxonomy_term
+          - menu_link_content
+    easy_breadcrumb.settings:
+      simpleConfigUpdate:
+        include_title_segment: false
+        hide_single_home_item: false
+    user.role.content_editor:
+      grantPermissions:
+        - 'administer redirects'
+        - 'use yoast seo'
+    user.role.content_admin:
+      grantPermissions:
+        - 'administer redirects'
+        - 'use yoast seo'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'administer redirects'
+        - 'use yoast seo'
+        - 'administer meta tags'
+        - 'administer sitemap settings'
+    user.role.site_admin:
+      grantPermissions:
+        - 'administer redirects'
+        - 'use yoast seo'

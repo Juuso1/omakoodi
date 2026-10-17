@@ -1,0 +1,23 @@
+uuid: 71331e1e-cac9-4415-bc82-7553a40147b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: dBT8BO0p9DqjD2JQ0934KiAeDO_Bttb-2WGsQXMqkwk
+id: node.field_duration
+field_name: field_duration
+entity_type: node
+type: string
+settings:
+  max_length: 16
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

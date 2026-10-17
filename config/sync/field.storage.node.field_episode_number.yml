@@ -1,0 +1,22 @@
+uuid: 7d61c3cb-8f6a-494b-a2f3-5b124b248e78
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: bjpnhH2TIltTKd7VDA44E94abAPX4we44y_FSPM9k7U
+id: node.field_episode_number
+field_name: field_episode_number
+entity_type: node
+type: integer
+settings:
+  unsigned: true
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

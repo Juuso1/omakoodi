@@ -1,0 +1,7 @@
+recipe: 'Basic SEO'
+config:
+  -
+    name: pathauto.pattern.menu_path
+    data:
+      label: 'Menu Path'
+      pattern: '/[node:menu-link:parents:join-path]/[node:title]'

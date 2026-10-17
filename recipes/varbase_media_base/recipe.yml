@@ -1,0 +1,434 @@
+name: Varbase Media Base
+description: A base recipe to install core media modules and apply default Varbase media configurations including media library, focal point, and media types.
+type: Varbase Media
+recipes:
+  - core/recipes/content_editor_role
+  - core/recipes/audio_media_type
+  - core/recipes/document_media_type
+  - core/recipes/image_media_type
+  - core/recipes/local_video_media_type
+  - core/recipes/remote_video_media_type
+install:
+  - media
+  - media_library
+  - file
+  - image
+  - breakpoint
+  - views
+  - better_exposed_filters
+  - crop
+  - drimage_improved
+  - dropzonejs_eb_widget
+  - embed
+  - focal_point
+  - field_ui
+  - media_bulk_upload
+  - media_bulk_upload_dropzonejs
+  - media_library_form_element
+  - media_library_edit
+  - views_bulk_operations
+  - views_infinite_scroll
+  - views_bulk_edit
+  - varbase_media
+  - canvas
+  # The media setup drupal_cms_media used to provide: SVG images, responsive
+  # image styles and view modes, bulk upload and file deletion. That recipe was
+  # removed from Drupal CMS 2.2 and its last release requires Tagify 1, which
+  # no longer installs beside Drupal CMS.
+  - drupal_cms_helper
+  - eca_base
+  - eca_config
+  - eca_render
+  - eca_ui
+  - eca_user
+  - media_file_delete
+  - media_library_bulk_upload
+  - modeler_api
+  - responsive_image
+  - svg_image
+  - token
+config:
+  strict: false
+  import:
+    focal_point: '*'
+  actions:
+    core.entity_form_display.media.*.*:
+      setComponent:
+        name: name
+        options:
+          type: string_textfield
+          weight: -5
+      hideComponent: path
+    core.entity_form_display.media.image.*:
+      setComponent:
+        name: field_media_image
+        options:
+          type: image_focal_point
+          weight: 1
+          settings:
+            progress_indicator: throbber
+            preview_image_style: media_library
+            preview_link: true
+            offsets: '50,50'
+    core.entity_view_display.media.image.media_library:
+      setComponent:
+        name: thumbnail
+        options:
+          settings:
+            image_style: media_library_square_thumbnail
+    file.settings:
+      simpleConfigUpdate:
+        filename_sanitization.replace_whitespace: true
+    views.view.files:
+      disable: {}
+    core.entity_view_display.media.image.large:
+      setComponent:
+        name: field_media_image
+        options:
+          type: drimage_improved
+          label: hidden
+          settings:
+            image_link: ''
+            image_handling: scale
+            aspect_ratio:
+              width: '1'
+              height: '1'
+            background:
+              attachment: scroll
+              position: 'center center'
+              size: cover
+            image_loading:
+              attribute: lazy
+            iwc:
+              image_style: null
+            image_style: ''
+          third_party_settings: {}
+    core.entity_view_display.media.image.medium:
+      setComponent:
+        name: field_media_image
+        options:
+          type: drimage_improved
+          label: hidden
+          settings:
+            image_link: ''
+            image_handling: scale
+            aspect_ratio:
+              width: '1'
+              height: '1'
+            background:
+              attachment: scroll
+              position: 'center center'
+              size: cover
+            image_loading:
+              attribute: lazy
+            iwc:
+              image_style: null
+            image_style: ''
+          third_party_settings: {}
+    core.entity_view_display.media.image.small:
+      setComponent:
+        name: field_media_image
+        options:
+          type: drimage_improved
+          label: hidden
+          settings:
+            image_link: ''
+            image_handling: scale
+            aspect_ratio:
+              width: '1'
+              height: '1'
+            background:
+              attachment: scroll
+              position: 'center center'
+              size: cover
+            image_loading:
+              attribute: lazy
+            iwc:
+              image_style: null
+            image_style: ''
+          third_party_settings: {}
+    core.entity_view_display.media.image.full:
+      setComponent:
+        name: field_media_image
+        options:
+          type: drimage_improved
+          label: hidden
+          settings:
+            image_link: ''
+            image_handling: scale
+            aspect_ratio:
+              width: '1'
+              height: '1'
+            background:
+              attachment: scroll
+              position: 'center center'
+              size: cover
+            image_loading:
+              attribute: lazy
+            iwc:
+              image_style: null
+            image_style: ''
+          third_party_settings: {}
+    core.entity_view_display.media.image.original:
+      setComponent:
+        name: field_media_image
+        options:
+          type: drimage_improved
+          label: hidden
+          settings:
+            image_link: ''
+            image_handling: scale
+            aspect_ratio:
+              width: '1'
+              height: '1'
+            background:
+              attachment: scroll
+              position: 'center center'
+              size: cover
+            image_loading:
+              attribute: lazy
+            iwc:
+              image_style: null
+            image_style: ''
+          third_party_settings: {}
+    core.entity_form_display.media.video.default:
+      setComponent:
+        name: field_media_cover_image
+        options:
+          type: image_focal_point
+          weight: 20
+          region: content
+          settings:
+            progress_indicator: throbber
+            preview_image_style: field_preview
+            preview_link: true
+            offsets: '50,50'
+          third_party_settings: {}
+    core.entity_view_display.media.video.default:
+      setComponent:
+        name: field_media_cover_image
+        options:
+          type: image
+          label: hidden
+          weight: 1
+          region: content
+          settings:
+            image_style: ''
+            image_link: ''
+            image_loading:
+              attribute: lazy
+          third_party_settings: {}
+    core.entity_form_display.media.remote_video.default:
+      setComponent:
+        name: field_media_cover_image
+        options:
+          type: image_focal_point
+          weight: 20
+          region: content
+          settings:
+            progress_indicator: throbber
+            preview_image_style: field_preview
+            preview_link: true
+            offsets: '50,50'
+          third_party_settings: {}
+    core.entity_view_display.media.remote_video.default:
+      setComponent:
+        name: field_media_cover_image
+        options:
+          type: image
+          label: hidden
+          weight: 1
+          region: content
+          settings:
+            image_style: ''
+            image_link: ''
+            image_loading:
+              attribute: lazy
+          third_party_settings: {}
+    core.entity_view_display.media.video.media_library:
+      setComponent:
+        name: field_media_cover_image
+        options:
+          type: image
+          label: hidden
+          weight: 1
+          region: content
+          settings:
+            image_style: medium
+            image_link: ''
+            image_loading:
+              attribute: lazy
+          third_party_settings: {}
+    core.entity_view_display.media.remote_video.media_library:
+      setComponent:
+        name: field_media_cover_image
+        options:
+          type: image
+          label: hidden
+          weight: 1
+          region: content
+          settings:
+            image_style: medium
+            image_link: ''
+            image_loading:
+              attribute: lazy
+          third_party_settings: {}
+    user.role.authenticated:
+      grantPermission: 'delete own files'
+    user.role.content_editor:
+      grantPermissions:
+        - 'delete own files'
+        - 'create audio media'
+        - 'create document media'
+        - 'create image media'
+        - 'create media'
+        - 'create remote_video media'
+        - 'create remote_audio media'
+        - 'create svg_image media'
+        - 'create video media'
+        - 'delete any audio media'
+        - 'delete any document media'
+        - 'delete any image media'
+        - 'delete any remote_video media'
+        - 'delete any remote_audio media'
+        - 'delete any svg_image media'
+        - 'delete any video media'
+        - 'dropzone upload files'
+        - 'edit any audio media'
+        - 'edit any document media'
+        - 'edit any image media'
+        - 'edit any remote_video media'
+        - 'edit any remote_audio media'
+        - 'edit any svg_image media'
+        - 'edit any video media'
+        - 'edit own audio media'
+        - 'edit own document media'
+        - 'edit own image media'
+        - 'edit own remote_video media'
+        - 'edit own remote_audio media'
+        - 'edit own svg_image media'
+        - 'edit own video media'
+        - 'use media audio bulk upload form'
+        - 'use media document bulk upload form'
+        - 'use media image bulk upload form'
+        - 'use media remote_video bulk upload form'
+        - 'use media svg_image bulk upload form'
+        - 'use media video bulk upload form'
+        - 'use media_bulk_upload bulk upload form'
+        - 'view own unpublished media'
+    user.role.content_admin:
+      grantPermissions:
+        - 'delete own files'
+        - 'create audio media'
+        - 'create document media'
+        - 'create image media'
+        - 'create media'
+        - 'create remote_video media'
+        - 'create remote_audio media'
+        - 'create svg_image media'
+        - 'create video media'
+        - 'delete any audio media'
+        - 'delete any image media'
+        - 'delete any remote_video media'
+        - 'delete any remote_audio media'
+        - 'delete any video media'
+        - 'dropzone upload files'
+        - 'edit any audio media'
+        - 'edit any document media'
+        - 'edit any image media'
+        - 'edit any remote_video media'
+        - 'edit any remote_audio media'
+        - 'edit any svg_image media'
+        - 'edit any video media'
+        - 'edit own audio media'
+        - 'edit own document media'
+        - 'edit own image media'
+        - 'edit own remote_video media'
+        - 'edit own remote_audio media'
+        - 'edit own svg_image media'
+        - 'edit own video media'
+        - 'use media audio bulk upload form'
+        - 'use media document bulk upload form'
+        - 'use media image bulk upload form'
+        - 'use media remote_video bulk upload form'
+        - 'use media svg_image bulk upload form'
+        - 'use media video bulk upload form'
+        - 'use media_bulk_upload bulk upload form'
+        - 'view own unpublished media'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'delete own files'
+        - 'create audio media'
+        - 'create image media'
+        - 'create media'
+        - 'create remote_video media'
+        - 'create remote_audio media'
+        - 'create svg_image media'
+        - 'create video media'
+        - 'delete any image media'
+        - 'delete any remote_video media'
+        - 'delete any remote_audio media'
+        - 'dropzone upload files'
+        - 'edit any image media'
+        - 'edit any remote_video media'
+        - 'edit any remote_audio media'
+        - 'edit own audio media'
+        - 'edit own document media'
+        - 'edit own image media'
+        - 'edit own remote_video media'
+        - 'edit own remote_audio media'
+        - 'edit own svg_image media'
+        - 'edit own video media'
+        - 'use media_bulk_upload bulk upload form'
+        - 'view own unpublished media'
+    user.role.site_admin:
+      grantPermissions:
+        - 'delete own files'
+        - 'create audio media'
+        - 'create document media'
+        - 'create image media'
+        - 'create media'
+        - 'create remote_video media'
+        - 'create remote_audio media'
+        - 'create svg_image media'
+        - 'create video media'
+        - 'delete any audio media'
+        - 'delete any image media'
+        - 'delete any media'
+        - 'delete any remote_video media'
+        - 'delete any remote_audio media'
+        - 'delete any video media'
+        - 'delete media'
+        - 'dropzone upload files'
+        - 'edit any audio media'
+        - 'edit any document media'
+        - 'edit any image media'
+        - 'edit any remote_video media'
+        - 'edit any remote_audio media'
+        - 'edit any svg_image media'
+        - 'edit any video media'
+        - 'edit own audio media'
+        - 'edit own document media'
+        - 'edit own image media'
+        - 'edit own remote_video media'
+        - 'edit own remote_audio media'
+        - 'edit own svg_image media'
+        - 'edit own video media'
+        - 'update any media'
+        - 'update media'
+        - 'use media audio bulk upload form'
+        - 'use media document bulk upload form'
+        - 'use media image bulk upload form'
+        - 'use media remote_video bulk upload form'
+        - 'use media svg_image bulk upload form'
+        - 'use media video bulk upload form'
+        - 'use media_bulk_upload bulk upload form'
+        - 'view all media revisions'
+        - 'view any audio media revisions'
+        - 'view any document media revisions'
+        - 'view any image media revisions'
+        - 'view any remote_video media revisions'
+        - 'view any remote_audio media revisions'
+        - 'view any svg_image media revisions'
+        - 'view any video media revisions'
+        - 'view own unpublished media'

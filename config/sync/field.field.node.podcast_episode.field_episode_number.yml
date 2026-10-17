@@ -1,0 +1,25 @@
+uuid: cb748fda-7c47-459d-a732-72e831f4176f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_episode_number
+    - node.type.podcast_episode
+_core:
+  default_config_hash: Af7w-LQm8rpTJaMUiueWQc8lugAN5mIyap90vGa4vp8
+id: node.podcast_episode.field_episode_number
+field_name: field_episode_number
+entity_type: node
+bundle: podcast_episode
+label: 'Episode number'
+description: 'The episode number within the show.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

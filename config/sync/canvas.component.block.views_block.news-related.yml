@@ -1,0 +1,27 @@
+uuid: 0d1cc7e1-5d02-40bb-ad91-77aec6d86b52
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+active_version: 0df8d2ae212054db
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:news-related'
+        label: 'News: Related news posts'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'News: Related news posts'
+id: block.views_block.news-related
+provider: views
+source: block
+source_local_id: 'views_block:news-related'

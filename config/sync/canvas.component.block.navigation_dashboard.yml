@@ -1,0 +1,22 @@
+uuid: b91ec9eb-1e87-4cfe-906a-7afd071e40cd
+langcode: en
+status: false
+dependencies:
+  module:
+    - dashboard
+active_version: 96919a0c9b7ec9ae
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: navigation_dashboard
+        label: 'Navigation Dashboard'
+        label_display: '0'
+        provider: dashboard
+    fallback_metadata:
+      slot_definitions: null
+label: 'Navigation Dashboard'
+id: block.navigation_dashboard
+provider: dashboard
+source: block
+source_local_id: navigation_dashboard

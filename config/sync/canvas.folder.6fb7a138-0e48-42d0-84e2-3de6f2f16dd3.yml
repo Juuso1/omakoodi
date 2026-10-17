@@ -1,0 +1,51 @@
+uuid: 6fb7a138-0e48-42d0-84e2-3de6f2f16dd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.marker.page_content
+    - canvas.component.sdc.navigation.message
+    - canvas.component.sdc.navigation.title
+    - canvas.component.sdc.vartheme_bs5_rightup.audio-player-local
+    - canvas.component.sdc.vartheme_bs5_rightup.audio-player-remote
+    - canvas.component.sdc.vartheme_bs5_rightup.column
+    - canvas.component.sdc.vartheme_bs5_rightup.container
+    - canvas.component.sdc.vartheme_bs5_rightup.dropdown-menu
+    - canvas.component.sdc.vartheme_bs5_rightup.html-code
+    - canvas.component.sdc.vartheme_bs5_rightup.input-checkbox
+    - canvas.component.sdc.vartheme_bs5_rightup.input-submit
+    - canvas.component.sdc.vartheme_bs5_rightup.navbar-brand
+    - canvas.component.sdc.vartheme_bs5_rightup.plain-text
+    - canvas.component.sdc.vartheme_bs5_rightup.rich-text
+    - canvas.component.sdc.vartheme_bs5_rightup.row
+    - canvas.component.sdc.vartheme_bs5_rightup.share
+    - canvas.component.sdc.vartheme_bs5_rightup.tab-item
+    - canvas.component.sdc.vartheme_bs5_rightup.tab-pane
+    - canvas.component.sdc.vartheme_bs5_rightup.tabs
+    - canvas.component.sdc.webshare.share
+    - canvas.component.theme_page_template.vartheme_bs5_rightup
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - marker.page_content
+  - sdc.navigation.message
+  - sdc.navigation.title
+  - sdc.vartheme_bs5_rightup.audio-player-local
+  - sdc.vartheme_bs5_rightup.audio-player-remote
+  - sdc.vartheme_bs5_rightup.column
+  - sdc.vartheme_bs5_rightup.container
+  - sdc.vartheme_bs5_rightup.dropdown-menu
+  - sdc.vartheme_bs5_rightup.html-code
+  - sdc.vartheme_bs5_rightup.input-checkbox
+  - sdc.vartheme_bs5_rightup.input-submit
+  - sdc.vartheme_bs5_rightup.navbar-brand
+  - sdc.vartheme_bs5_rightup.plain-text
+  - sdc.vartheme_bs5_rightup.rich-text
+  - sdc.vartheme_bs5_rightup.row
+  - sdc.vartheme_bs5_rightup.share
+  - sdc.vartheme_bs5_rightup.tab-item
+  - sdc.vartheme_bs5_rightup.tab-pane
+  - sdc.vartheme_bs5_rightup.tabs
+  - sdc.webshare.share
+  - theme_page_template.vartheme_bs5_rightup

@@ -1,0 +1,11 @@
+recipe: 'Audio media'
+config:
+  -
+    name: field.field.media.audio.field_media_audio_file
+    data:
+      label: 'Audio file'
+  -
+    name: media.type.audio
+    data:
+      label: Audio
+      description: 'A locally hosted audio file.'

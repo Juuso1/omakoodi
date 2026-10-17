@@ -1,0 +1,13 @@
+uuid: 81d4a1ff-29ea-48ca-b630-6879c3182e37
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: Xg6xcLwsrdVOME-fMp7fOebi_UnP0Vm81RDk-Uw2MCc
+id: media.media_video_21_09
+label: 'Media Video 21:9'
+description: null
+targetEntityType: media
+cache: true

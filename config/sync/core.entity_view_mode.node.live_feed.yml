@@ -1,0 +1,13 @@
+uuid: cfc65684-919e-475d-8ce7-7e2885837f85
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: mYpYAW2Sreku2S4iqF6SlnIIAH7pNqGvOJuZyVVi-SM
+id: node.live_feed
+label: 'Live feed'
+description: null
+targetEntityType: node
+cache: true

@@ -1,0 +1,74 @@
+recipe: 'Varbase Users Base'
+config:
+  -
+    name: eca.eca.varbase_user_profile_details
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'User profile details'
+          annotations:
+            TextAnnotation_upd_field:
+              text: 'Adds a "Profile details" field to the user Manage display, so it can be moved or hidden there. Only the account owner sees it: it shows the email address and time zone.'
+            TextAnnotation_upd_block:
+              text: 'Adds a "User profile details" block for the logged-in user, which Drupal Canvas offers as a block component, for an account or dashboard page.'
+            TextAnnotation_upd_data:
+              text: 'Loads the current user and works out how long they have been a member.'
+            TextAnnotation_upd_render:
+              text: "Renders the active theme's user-profile-details component. A theme without it renders nothing."
+      events:
+        extra_field_profile_details:
+          label: 'Profile details field'
+          configuration:
+            extra_field_description: 'The account picture, details and quick actions, shown to the account owner only.'
+        block_profile_details:
+          label: 'User profile details block'
+      actions:
+        vary_by_user:
+          label: 'Vary by user'
+        load_account:
+          label: 'Load the current user'
+        set_member_for:
+          label: 'Member for'
+          configuration:
+            token_value: '[account:created:since]'
+        render_profile_details:
+          label: 'Render the profile details'
+          configuration:
+            template: |
+              {{ include(active_theme() ~ ':user-profile-details', {
+                username: account.name.value|default(''),
+                full_name: account.hasField('field_full_name')
+                  ? account.field_full_name.value|default('')
+                  : (account.hasField('field_first_name')
+                    ? (account.field_first_name.value|default('') ~ ' ' ~ (account.hasField('field_last_name') ? account.field_last_name.value|default('') : ''))|trim
+                    : ''),
+                email: account.mail.value|default(''),
+                timezone: account.timezone.value|default(''),
+                status: account.status.value == 1,
+                created: account.created.value|format_date('medium'),
+                member_for: member_for ~ '',
+                last_login: account.login.value ? account.login.value|format_date('medium') : '',
+                picture_url: account.user_picture.entity ? file_url(account.user_picture.entity.fileuri) : '',
+                picture_alt: account.user_picture.alt|default(''),
+                actions: [
+                  { title: 'Edit profile'|t, url: path('entity.user.edit_form', { user: account.id }), variant: 'primary' },
+                  { title: 'Change password'|t, url: path('entity.user.edit_form', { user: account.id }) ~ '#edit-pass-pass1', variant: 'outline-primary' },
+                  { title: 'Log out'|t, url: path('user.logout'), variant: 'outline-dark' },
+                ],
+              }, with_context = false, ignore_missing = true) }}
+  -
+    name: user.role.content_admin
+    data:
+      label: 'Content Admin'
+  -
+    name: user.role.content_editor
+    data:
+      label: 'Content editor'
+  -
+    name: user.role.seo_admin
+    data:
+      label: 'SEO Admin'
+  -
+    name: user.role.site_admin
+    data:
+      label: 'Site Admin'

@@ -1,0 +1,46 @@
+recipe: 'Varbase Admin Base'
+config:
+  -
+    name: dashboard.dashboard.welcome
+    data:
+      label: 'Welcome to your site'
+      layout:
+        -
+          layout_settings:
+            label: 'Tasks and content'
+          components:
+            8ed4f6f9-ba92-43bc-90e1-205b8599e43c:
+              configuration:
+                label: 'Add content'
+            cb457c1c-83c2-4a79-a09e-2c64a8bf8fb8:
+              configuration:
+                label: 'Top tasks'
+        -
+          layout_settings:
+            label: 'Scheduled content'
+  -
+    name: image.style.varbase_dashboard_avatar
+    data:
+      label: 'Dashboard avatar (128×128)'
+  -
+    name: system.menu.top-tasks
+    data:
+      label: 'Top tasks'
+      description: 'Things users can do when they start using Drupal CMS.'
+  -
+    name: views.view.varbase_dashboard_welcome
+    data:
+      label: 'Dashboard welcome'
+      description: 'Greets the signed-in user with their picture on the dashboard.'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            fields:
+              name:
+                alter:
+                  text: '<table class="varbase-dashboard-welcome"><tr><td width="160">{{ user_picture }}</td><td><strong>Welcome,</strong><br>{{ name }}</td></tr></table>'
+        block_welcome:
+          display_title: Welcome
+          display_options:
+            block_description: 'Dashboard welcome'

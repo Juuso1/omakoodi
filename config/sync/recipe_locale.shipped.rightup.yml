@@ -1,0 +1,2030 @@
+recipe: Rightup
+config:
+  -
+    name: canvas.component.block.announce_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Announcements Feed'
+      label: 'Announcements Feed'
+  -
+    name: canvas.component.block.dashboard_placeholder
+    data:
+      label: Placeholder
+  -
+    name: canvas.component.block.dashboard_site_status
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Site Status'
+      label: 'Site Status'
+  -
+    name: canvas.component.block.events_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Events Feed'
+      label: 'Events Feed'
+  -
+    name: canvas.component.block.help_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Help
+      label: Help
+  -
+    name: canvas.component.block.local_actions_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Primary admin actions'
+      label: 'Primary admin actions'
+  -
+    name: canvas.component.block.local_tasks_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Tabs
+      label: Tabs
+  -
+    name: canvas.component.block.navigation_dashboard
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Navigation Dashboard'
+      label: 'Navigation Dashboard'
+  -
+    name: canvas.component.block.navigation_link
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Link
+      label: Link
+  -
+    name: canvas.component.block.navigation_shortcuts
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Navigation Shortcuts'
+      label: 'Navigation Shortcuts'
+  -
+    name: canvas.component.block.navigation_user
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: User
+      label: User
+  -
+    name: canvas.component.block.page_title_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Page title'
+      label: 'Page title'
+  -
+    name: canvas.component.block.project_browser_block.drupal_core
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Core modules'
+      label: 'Core modules'
+  -
+    name: canvas.component.block.project_browser_block.drupalorg_jsonapi
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Contrib modules'
+      label: 'Contrib modules'
+  -
+    name: canvas.component.block.project_browser_block.local_modules
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Local modules'
+      label: 'Local modules'
+  -
+    name: canvas.component.block.project_browser_block.recipes
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Recipes
+      label: Recipes
+  -
+    name: canvas.component.block.project_browser_block.recommended
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Recommended add-ons'
+      label: 'Recommended add-ons'
+  -
+    name: canvas.component.block.share
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Share
+              heading: Share
+      label: Share
+  -
+    name: canvas.component.block.system_branding_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Site branding'
+      label: 'Site branding'
+  -
+    name: canvas.component.block.system_breadcrumb_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Breadcrumbs
+      label: Breadcrumbs
+  -
+    name: canvas.component.block.system_clear_cache_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Clear cache'
+      label: 'Clear cache'
+  -
+    name: canvas.component.block.system_menu_block.account
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'User account menu'
+      label: 'User account menu'
+  -
+    name: canvas.component.block.system_menu_block.admin
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Administration
+      label: Administration
+  -
+    name: canvas.component.block.system_menu_block.content
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Content
+      label: Content
+  -
+    name: canvas.component.block.system_menu_block.footer
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Footer
+      label: Footer
+  -
+    name: canvas.component.block.system_menu_block.main
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Main navigation'
+      label: 'Main navigation'
+  -
+    name: canvas.component.block.system_menu_block.navigation-user-links
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Navigation user links'
+      label: 'Navigation user links'
+  -
+    name: canvas.component.block.system_menu_block.secondary
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Secondary menu'
+      label: 'Secondary menu'
+  -
+    name: canvas.component.block.system_menu_block.social-media-menu
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Social media menu'
+      label: 'Social media menu'
+  -
+    name: canvas.component.block.system_menu_block.tools
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Tools
+      label: Tools
+  -
+    name: canvas.component.block.system_menu_block.top-tasks
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Top tasks'
+      label: 'Top tasks'
+  -
+    name: canvas.component.block.system_messages_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Messages
+      label: Messages
+  -
+    name: canvas.component.block.system_powered_by_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Powered by Drupal'
+      label: 'Powered by Drupal'
+  -
+    name: canvas.component.block.user_login_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'User login'
+      label: 'User login'
+  -
+    name: canvas.component.block.views_block.a11y_tools_editoria11y_results-block_a11y_alerts
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'A11y Tools - Pages with accessibility alerts'
+      label: 'A11y Tools - Pages with accessibility alerts'
+  -
+    name: canvas.component.block.views_block.editoria11y_dismissals-recent_dismissals
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Editoria11y - Recent dismissals'
+      label: 'Editoria11y - Recent dismissals'
+  -
+    name: canvas.component.block.views_block.editoria11y_results-block_recent_issues
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Editoria11y - Recent alerts'
+      label: 'Editoria11y - Recent alerts'
+  -
+    name: canvas.component.block.views_block.editoria11y_results-block_top_issues
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Editoria11y - Most frequent alerts'
+      label: 'Editoria11y - Most frequent alerts'
+  -
+    name: canvas.component.block.views_block.editoria11y_results-block_top_results
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Editoria11y - Pages with the most alerts'
+      label: 'Editoria11y - Pages with the most alerts'
+  -
+    name: canvas.component.block.views_block.live_feed-block_1
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Live feed'
+      label: 'Live feed'
+  -
+    name: canvas.component.block.views_block.publishing_content-block_drafts
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'My drafts'
+      label: 'My drafts'
+  -
+    name: canvas.component.block.views_block.publishing_content-block_scheduled
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Scheduled
+      label: Scheduled
+  -
+    name: canvas.component.block.views_block.recent_content-block_recent_content
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Recent content'
+      label: 'Recent content'
+  -
+    name: canvas.component.block.views_block.recent_pages-block_recent_pages
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Recent pages'
+      label: 'Recent pages'
+  -
+    name: canvas.component.block.views_block.rightup_news-editors_picks
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: "News: Editors' picks"
+      label: "News: Editors' picks"
+  -
+    name: canvas.component.block.views_block.rightup_news-featured
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Featured: lead'
+      label: 'News: Featured: lead'
+  -
+    name: canvas.component.block.views_block.rightup_news-featured_more
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Featured: more'
+      label: 'News: Featured: more'
+  -
+    name: canvas.component.block.views_block.rightup_news-featured_slider
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Featured: slider'
+      label: 'News: Featured: slider'
+  -
+    name: canvas.component.block.views_block.rightup_news-latest
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Latest stories list'
+      label: 'News: Latest stories list'
+  -
+    name: canvas.component.block.views_block.rightup_news-latest_grid
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Latest stories grid'
+      label: 'News: Latest stories grid'
+  -
+    name: canvas.component.block.views_block.rightup_news-lead
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Lead story'
+      label: 'News: Lead story'
+  -
+    name: canvas.component.block.views_block.rightup_news-more
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: More stories'
+      label: 'News: More stories'
+  -
+    name: canvas.component.block.views_block.rightup_news-podcast_episodes
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Podcast episodes'
+      label: 'News: Podcast episodes'
+  -
+    name: canvas.component.block.views_block.rightup_news-podcast_show
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Podcast show'
+      label: 'News: Podcast show'
+  -
+    name: canvas.component.block.views_block.rightup_news-side
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Side stories'
+      label: 'News: Side stories'
+  -
+    name: canvas.component.block.views_block.rightup_news-top_hero
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Top stories: hero'
+      label: 'News: Top stories: hero'
+  -
+    name: canvas.component.block.views_block.rightup_news-top_pair
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Top stories: text pair'
+      label: 'News: Top stories: text pair'
+  -
+    name: canvas.component.block.views_block.rightup_news-top_side
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Top stories: side'
+      label: 'News: Top stories: side'
+  -
+    name: canvas.component.block.views_block.rightup_news-top_text
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'News: Top stories: text'
+      label: 'News: Top stories: text'
+  -
+    name: canvas.component.block.webform_block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: Webform
+      label: Webform
+  -
+    name: canvas.component.sdc.navigation.title
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+                description: 'Content of title.'
+      label: Title
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.accordion-block
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              title:
+                default_value:
+                  -
+                    value: 'Section title'
+          fallback_metadata:
+            slot_definitions:
+              accordion_content:
+                title: 'Accordion content'
+                description: 'Content in this slot will be hidden when the accordion is collapsed.'
+                examples:
+                  - '<p>Accordion body content…</p>'
+        d15857c73d3eb93c:
+          fallback_metadata:
+            slot_definitions:
+              accordion_content:
+                title: 'Accordion content'
+                description: 'Content in this slot will be hidden when the accordion is collapsed.'
+                examples:
+                  - '<p>Accordion body content…</p>'
+      label: Accordion
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.accordion-container
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              accordion_content:
+                title: 'Accordion content'
+                description: 'Place one or more accordion items inside this slot.'
+        8153116bba7b2866:
+          fallback_metadata:
+            slot_definitions:
+              accordion_content:
+                title: 'Accordion content'
+                description: 'Place one or more accordion items inside this slot.'
+      label: 'Accordion container'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.anchor
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              id:
+                default_value:
+                  -
+                    value: anchor-id
+      label: Anchor
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.article-teaser
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading_text:
+                default_value:
+                  -
+                    value: 'Enter the title'
+      label: 'Article Teaser'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.audio-player-local
+    data:
+      label: 'Local Audio Player'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.audio-player-remote
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              url:
+                default_value:
+                  -
+                    uri: 'https://example.com/podcast/episode-12.mp3'
+      label: 'Remote Audio Player'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.author
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              prefix:
+                default_value:
+                  -
+                    value: 'By:'
+              author:
+                default_value:
+                  -
+                    value: 'Jane Doe'
+      label: Author
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.badge
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              label:
+                default_value:
+                  -
+                    value: Badge
+              icon:
+                default_value:
+                  -
+                    value: none
+              indicator_text:
+                default_value:
+                  -
+                    value: 99+
+      label: Badge
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.blockquote
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              text:
+                default_value:
+                  -
+                    value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sapien lacinia, pellentesque elit sit amet, tempor orci.'
+              cite_text:
+                default_value:
+                  -
+                    value: 'Quotee Name and Position'
+      label: Blockquote
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.button
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              label:
+                default_value:
+                  -
+                    value: 'Read more'
+              icon:
+                default_value:
+                  -
+                    value: none
+      label: Button
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.byline
+    data:
+      label: Byline
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-featured
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              overlay:
+                title: 'Media overlay'
+                description: 'Drag & drop slot rendered as a badge overlay in the top-left corner of the media image. Drop a Badge or any inline element here. Renders even when no image is uploaded (shows placeholder).'
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text, buttons, and other elements.'
+        c0b39338e25589bb:
+          fallback_metadata:
+            slot_definitions:
+              overlay:
+                title: 'Media overlay'
+                description: 'Drag & drop slot rendered as a badge overlay in the top-left corner of the media image. Drop a Badge or any inline element here. Renders even when no image is uploaded (shows placeholder).'
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text, buttons, and other elements.'
+      label: 'Featured Card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-hero
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              content_text:
+                default_value:
+                  -
+                    value: '<p>Reporting on the studios, buildings and products being made right now, told by the people who made them.</p>'
+          fallback_metadata:
+            slot_definitions:
+              media_slot:
+                title: 'Card media (slot)'
+                description: 'Optional override for media (e.g. video).'
+              actions:
+                title: 'Actions (slot)'
+                description: 'Optional override for buttons rendering.'
+      label: 'Hero Card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-icon
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              text:
+                default_value:
+                  -
+                    value: 'Your heading here'
+              description:
+                default_value:
+                  -
+                    value: '<p>This is placeholder text.</p>'
+              icon:
+                default_value:
+                  -
+                    value: people
+              button_label:
+                default_value:
+                  -
+                    value: 'Learn more'
+      label: 'Card Icon'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-impressed
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              overlay:
+                title: 'Media overlay'
+                description: 'Drag & drop slot rendered as a badge overlay in the top-left corner of the image. Drop a Badge component or any inline element here.'
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text/buttons/etc.'
+        aa6c2c2cab020330:
+          fallback_metadata:
+            slot_definitions:
+              overlay:
+                title: 'Media overlay'
+                description: 'Drag & drop slot rendered as a badge overlay in the top-left corner of the image. Drop a Badge component or any inline element here.'
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text/buttons/etc.'
+      label: 'Impressed Card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-logo
+    data:
+      label: 'Card Logo'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-overlay
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text, buttons, and other components.'
+        cbb9d1d2a9df39a3:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text, buttons, and other components.'
+      label: 'Overlay Card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-pricing
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              badge_text:
+                default_value:
+                  -
+                    value: 'Most popular'
+              heading_text:
+                default_value:
+                  -
+                    value: Premium
+              description:
+                default_value:
+                  -
+                    value: 'Curabitur nascetur non potenti pede luctus vivamus.'
+              price:
+                default_value:
+                  -
+                    value: '159'
+              currency_code:
+                default_value:
+                  -
+                    value: USD
+              currency_symbol:
+                default_value:
+                  -
+                    value: $
+              price_period:
+                default_value:
+                  -
+                    value: /month
+              price_note:
+                default_value:
+                  -
+                    value: 'Billed annually'
+              text:
+                default_value:
+                  -
+                    value: '<ul><li>Example item 1</li><li>Example item 2</li></ul>'
+              button_label:
+                default_value:
+                  -
+                    value: 'Choose this plan'
+      label: 'Pricing card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-testimonial
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              text:
+                default_value:
+                  -
+                    value: 'My career guidance was crucial in helping me understand the tech industry landscape and ultimately secure my role.'
+              cite_name:
+                default_value:
+                  -
+                    value: 'Isiah Julio'
+              cite_text:
+                default_value:
+                  -
+                    value: 'Engineer, Technical Services'
+      label: 'Testimonial card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card-text
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text/buttons/etc.'
+        1b5e59a0921b3d9c:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: 'Card content'
+                description: 'Drag & drop content slot for text/buttons/etc.'
+      label: 'Text Card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.card
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading_text:
+                default_value:
+                  -
+                    value: 'This is your card title'
+              text:
+                default_value:
+                  -
+                    value: 'A short description goes here.'
+              button_label:
+                default_value:
+                  -
+                    value: 'Learn more'
+      label: Card
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.column
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+                description: 'Content placed inside the column.'
+      label: Column
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.container
+    data:
+      label: Container
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.cta
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading_text:
+                default_value:
+                  -
+                    value: 'Your heading goes here'
+              text:
+                default_value:
+                  -
+                    value: 'Lorem ipsum dolor sit amet.'
+              button_text:
+                default_value:
+                  -
+                    value: 'Learn more'
+              button_url:
+                default_value:
+                  -
+                    uri: 'https://example.com'
+      label: 'Hero CTA'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.date
+    data:
+      label: Date
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.divider
+    data:
+      label: Divider
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.dropdown-menu
+    data:
+      label: 'Dropdown menu'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.figure
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              number:
+                default_value:
+                  -
+                    value: '0000'
+              description:
+                default_value:
+                  -
+                    value: 'Number description'
+      label: Figure
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.group
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+        aef7f7b22127c944:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+        af0b31efb9fbca1d:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+      label: Group
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.heading
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading_text:
+                default_value:
+                  -
+                    value: 'Your heading goes here'
+      label: Heading
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.hero-blog
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading_text:
+                default_value:
+                  -
+                    value: 'Vivamus curae metus neque mollis orci ipsum sapien velit cursus'
+              author:
+                default_value:
+                  -
+                    value: 'John Smith'
+              author_url:
+                default_value:
+                  -
+                    uri: 'https://example.com/author/john-smith'
+          fallback_metadata:
+            slot_definitions:
+              blog_media:
+                title: 'Blog media'
+                description: 'Optional media slot rendered above the content.'
+        bc698a2ed47332ca:
+          fallback_metadata:
+            slot_definitions:
+              blog_media:
+                title: 'Blog media'
+                description: 'Optional media slot rendered above the content.'
+      label: 'Hero Blog'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.hero-side-by-side
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading:
+                default_value:
+                  -
+                    value: 'Build better digital experiences'
+              text:
+                default_value:
+                  -
+                    value: '<p>Create flexible, scalable Drupal experiences using modern components.</p>'
+              button_label:
+                default_value:
+                  -
+                    value: 'Get started'
+      label: 'Hero side by side'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.hero-slide
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              title:
+                default_value:
+                  -
+                    value: 'Design news before it’s polished'
+              content:
+                default_value:
+                  -
+                    value: '<p>Reporting on the studios, buildings and products being made right now, told by the people who made them.</p>'
+              button_text:
+                default_value:
+                  -
+                    value: 'Learn more'
+              button_url:
+                default_value:
+                  -
+                    value: /
+      label: 'Hero Slide'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.hero-slider-container
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              slides:
+                title: Slides
+                description: 'Add one or more "Hero Slide" components here (unlimited, drag & drop reorder).'
+        d9794bb5b0f9d2dd:
+          fallback_metadata:
+            slot_definitions:
+              slides:
+                title: Slides
+                description: 'Add one or more "Hero Slide" components here (unlimited, drag & drop reorder).'
+      label: 'Hero Slider (Container)'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.horizontal-text-icon-card
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+                description: 'Flexible content area for the start side — combine taxonomy/category label, heading, text, meta line, button, etc.'
+      label: 'Horizontal Text Icon Card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.html-code
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              code:
+                default_value:
+                  -
+                    value: '<p class="mb-0">Hello <strong>world</strong>.</p>'
+      label: 'HTML Code'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.icon-toggle
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              icon:
+                default_value:
+                  -
+                    value: search
+              label:
+                default_value:
+                  -
+                    value: Search
+              open_label:
+                default_value:
+                  -
+                    value: 'Close search'
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+                description: "The content revealed in the popover, e.g. the 'Exposed form: search-page' block for a search toggle."
+        ab1b678dc1806d89:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+                description: "The content revealed in the popover, e.g. the 'Exposed form: search-page' block for a search toggle."
+        89c883e11d4f832c:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+                description: "The content revealed in the popover, e.g. the 'Exposed form: search-page' block for a search toggle."
+        5a87298f3691cd43:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+                description: "The content revealed in the popover, e.g. the 'Exposed form: search-page' block for a search toggle."
+      label: 'Icon Toggle'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.icon
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              icon:
+                default_value:
+                  -
+                    value: people
+      label: Icon
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.image
+    data:
+      label: Image
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.input-checkbox
+    data:
+      label: Checkbox
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.input-submit
+    data:
+      label: 'Input Submit'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.live-feed-item
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              time:
+                default_value:
+                  -
+                    value: '5:10 PM'
+              time_format:
+                default_value:
+                  -
+                    value: 'g:i A'
+              title:
+                default_value:
+                  -
+                    value: 'Adobe Quietly Kills Its Font-Pairing Tool'
+      label: 'Live Feed Item'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.media-banner
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              media_banner_slot:
+                title: 'Media banner content'
+        61c0d63a0029df26:
+          fallback_metadata:
+            slot_definitions:
+              media_banner_slot:
+                title: 'Media banner content'
+      label: 'Media banner'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.navbar-brand
+    data:
+      label: 'Navbar brand'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.navbar
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              branding:
+                title: 'Site branding'
+              navigation:
+                title: 'Navigation menu'
+      label: Navbar
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.offcanvas-menu
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              label:
+                default_value:
+                  -
+                    value: 'Open menu'
+              close_label:
+                default_value:
+                  -
+                    value: 'Close menu'
+          fallback_metadata:
+            slot_definitions:
+              menu:
+                title: 'Main menu'
+                description: 'The primary navigation links, e.g. a "Main navigation" menu block rendered through the Nav Menu component.'
+              utility:
+                title: 'Utility links'
+                description: 'Secondary links shown below the divider, e.g. Newsletter, About, Advertise.'
+              search:
+                title: Search
+                description: "Search form, e.g. the 'Exposed form: search-page' block."
+      label: 'Offcanvas Menu'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.plain-text
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              text:
+                default_value:
+                  -
+                    value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+              suffix:
+                default_value:
+                  -
+                    value: '...'
+      label: 'Plain Text'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.podcast-card
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              meta_text:
+                default_value:
+                  -
+                    value: '38 Episodes'
+              button_text:
+                default_value:
+                  -
+                    value: 'View Show'
+          fallback_metadata:
+            slot_definitions:
+              content_slot:
+                title: Content
+                description: "Drop the card's heading and description here (e.g. atoms/heading + atoms/text, or a rich text field)."
+      label: 'Podcast Card'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.read-more
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              more_text:
+                default_value:
+                  -
+                    value: 'Read More'
+              less_text:
+                default_value:
+                  -
+                    value: 'Read Less'
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Content
+      label: 'Read more'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.rich-text
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              text:
+                default_value:
+                  -
+                    value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>'
+              suffix:
+                default_value:
+                  -
+                    value: '...'
+      label: 'Rich Text'
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.row
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Columns
+        f4892fd4b63ec042:
+          fallback_metadata:
+            slot_definitions:
+              content:
+                title: Columns
+      label: Row
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.section
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              header_slot:
+                title: Header
+              col_1:
+                title: 'Column 1'
+              col_2:
+                title: 'Column 2'
+              col_3:
+                title: 'Column 3'
+              col_4:
+                title: 'Column 4'
+              col_5:
+                title: 'Column 5'
+              col_6:
+                title: 'Column 6'
+              footer_slot:
+                title: Footer
+        4171719f53c41b9d:
+          fallback_metadata:
+            slot_definitions:
+              header_slot:
+                title: Header
+              col_1:
+                title: 'Column 1'
+              col_2:
+                title: 'Column 2'
+              col_3:
+                title: 'Column 3'
+              col_4:
+                title: 'Column 4'
+              col_5:
+                title: 'Column 5'
+              col_6:
+                title: 'Column 6'
+              footer_slot:
+                title: Footer
+        430108359a34d02e:
+          fallback_metadata:
+            slot_definitions:
+              header_slot:
+                title: Header
+              col_1:
+                title: 'Column 1'
+              col_2:
+                title: 'Column 2'
+              col_3:
+                title: 'Column 3'
+              col_4:
+                title: 'Column 4'
+              col_5:
+                title: 'Column 5'
+              col_6:
+                title: 'Column 6'
+              footer_slot:
+                title: Footer
+      label: Section
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.share
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading:
+                default_value:
+                  -
+                    value: Share
+      label: Share
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.spacer
+    data:
+      label: Spacer
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.tabs
+    data:
+      versioned_properties:
+        active:
+          fallback_metadata:
+            slot_definitions:
+              items:
+                title: Items
+                description: 'Place one or more Tab Item components inside this slot.'
+              panes:
+                title: Panes
+                description: 'Optional. Place one or more Tab Pane components inside this slot, in the same order as their paired Tab Items, to render real Bootstrap JS tab content. Each pane is paired with its Tab Item automatically by position (no Pane ID or Active flag needs to match, or even be set, on the Tab Item). Leave empty to use Tab Item as a plain filter/navigation link instead.'
+        ead44d287f956a39:
+          fallback_metadata:
+            slot_definitions:
+              items:
+                title: Items
+                description: 'Place one or more Tab Item components inside this slot.'
+              panes:
+                title: Panes
+                description: 'Optional. Place one or more Tab Pane components inside this slot, in the same order as their paired Tab Items, to render real Bootstrap JS tab content. Each pane is paired with its Tab Item automatically by position (no Pane ID or Active flag needs to match, or even be set, on the Tab Item). Leave empty to use Tab Item as a plain filter/navigation link instead.'
+      label: Tabs
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.taxonomy
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              label:
+                default_value:
+                  -
+                    value: Taxonomy
+      label: Taxonomy
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.text
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              text:
+                default_value:
+                  -
+                    value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>'
+      label: Text
+  -
+    name: canvas.component.sdc.vartheme_bs5_rightup.video
+    data:
+      label: Video
+  -
+    name: canvas.component.sdc.webshare.share
+    data:
+      versioned_properties:
+        active:
+          settings:
+            prop_field_definitions:
+              heading:
+                default_value:
+                  -
+                    value: Share
+      label: Share
+  -
+    name: canvas.content_template.node.news.live_feed
+    data:
+      component_tree:
+        f0e0f3bb-a92e-4e71-b176-a9beae921fa5:
+          inputs:
+            time_format: 'g:i A'
+  -
+    name: canvas.content_template.node.news.search_result
+    data:
+      component_tree:
+        3d296e31-1f14-4903-8d96-e3e5a1b27252:
+          inputs:
+            suffix: ' ...'
+  -
+    name: canvas.content_template.node.podcast.rightup_show
+    data:
+      component_tree:
+        9a583789-8df1-419c-8ee3-9b9a20a2f1f9:
+          inputs:
+            label: 'View All'
+  -
+    name: canvas.content_template.node.podcast_episode.card
+    data:
+      component_tree:
+        332ecae1-4986-404a-9a26-7ab433197288:
+          inputs:
+            button_text: Listen
+  -
+    name: canvas.content_template.node.podcast_episode.live_feed
+    data:
+      component_tree:
+        aa438ce0-245b-4dab-ae54-cfcbe6394008:
+          inputs:
+            time_format: 'g:i A'
+  -
+    name: canvas.content_template.node.podcast_episode.rightup_episode
+    data:
+      component_tree:
+        45c3630d-d577-49c3-86e0-6d16f17ce997:
+          inputs:
+            prefix: Episode
+  -
+    name: canvas.content_template.node.podcast_episode.search_result
+    data:
+      component_tree:
+        5bedbe3f-7bb4-4ebc-88df-62c406984736:
+          inputs:
+            suffix: ' ...'
+  -
+    name: canvas.page_region.vartheme_bs5_rightup.footer
+    data:
+      component_tree:
+        735a29e1-7d4d-46a2-a98f-626675fa98a6:
+          inputs:
+            code: '<img class="footer-logo-image" src="/themes/contrib/vartheme_bs5_rightup/rightup-logo-white.svg" alt="The Rightup logo" style ="height: auto;">'
+        a6068d50-17eb-4bf9-ba50-f15c0a0bd43f:
+          inputs:
+            label: 'Social media menu'
+        fa8ff88a-efed-5c65-9ef8-a530ad60a14e:
+          inputs:
+            label: 'Footer navigation'
+        20e662f3-a52f-446e-a5ec-6978af1d9cdd:
+          inputs:
+            label: 'Footer menu'
+  -
+    name: canvas.pattern.contact_split
+    data:
+      label: 'Contact Form with Info'
+      component_tree:
+        56995c7f-6523-4ef7-af34-246d05eed027:
+          inputs:
+            heading_text: 'Ask us about anything'
+        e7706d44-4876-4238-9ba5-f16ffb96a42c:
+          inputs:
+            label: Webform
+        06914e88-8bb5-4caa-9676-234439736ca6:
+          inputs:
+            heading_text: 'Contact Information'
+  -
+    name: canvas.pattern.counters
+    data:
+      label: Counters
+      component_tree:
+        ac5eb124-b731-47cf-8595-8c2cdf78f978:
+          inputs:
+            heading_text: 469+
+        278695e6-effa-453e-b98f-51f06711512a:
+          inputs:
+            heading_text: 200+
+        8b4997e0-dac5-4dc3-87b5-fc2e573f39d4:
+          inputs:
+            heading_text: 10+
+  -
+    name: canvas.pattern.cta_banner
+    data:
+      label: 'Call to Action Banner'
+      component_tree:
+        a653b100-fccc-42c5-806f-54b69db2cce2:
+          inputs:
+            heading_text: 'Get the Work Before It’s Polished'
+        587e62cb-8c98-48cb-9ba4-911c967e0e08:
+          inputs:
+            label: 'Contact Us'
+  -
+    name: canvas.pattern.cta_cards
+    data:
+      label: 'Call to Action Cards'
+      component_tree:
+        a9167d87-1921-432e-bdc8-6f018d5d5773:
+          inputs:
+            heading_text: 'Explore More'
+        77efcf07-6f26-48f6-bc57-1bf4ff871796:
+          inputs:
+            heading_text: 'About Us'
+        7f65fa7d-17f4-4064-bcde-abdf26e8e75c:
+          inputs:
+            label: 'Learn more'
+        170cb322-ecb7-470b-91e0-8cefdef99932:
+          inputs:
+            heading_text: News
+        5ce80e8c-39e3-4946-9aae-e60156b93ab7:
+          inputs:
+            label: 'Read the News'
+  -
+    name: canvas.pattern.faq_accordion
+    data:
+      label: 'FAQ Accordion'
+      component_tree:
+        4f066e9f-2129-473f-87e8-1501ced1536d:
+          inputs:
+            heading_text: 'Frequently Asked Questions'
+        c22ad975-29b7-4676-baee-ad3260c860ba:
+          inputs:
+            title: 'What is The Rightup?'
+        770b323e-9883-43fb-aad3-94649ec0b661:
+          inputs:
+            title: 'How do I get started?'
+        7aa56c75-46a6-4b8a-b03c-0beea5858307:
+          inputs:
+            title: 'How do I pitch a story?'
+  -
+    name: canvas.pattern.feature_cards
+    data:
+      label: 'Feature Cards'
+      component_tree:
+        ea4cf2c9-d0eb-404a-85e9-0c306bdae67b:
+          inputs:
+            heading_text: 'More From The Rightup'
+        01bb3f3d-dea3-468f-b561-29121db437c2:
+          inputs:
+            heading_text: Multilingual
+        326928f2-8fb4-47bb-94fc-c1b61bc90a6b:
+          inputs:
+            heading_text: 'Enterprise Security'
+        7235c44d-fd98-437c-9091-15d63680338f:
+          inputs:
+            heading_text: Accessibility
+  -
+    name: canvas.pattern.feature_highlight
+    data:
+      label: 'Feature Highlight'
+      component_tree:
+        c5e39d2a-14b6-48ed-820d-142de7de8e1f:
+          inputs:
+            heading_text: 'Reporting Standards'
+  -
+    name: canvas.pattern.footer_global
+    data:
+      label: 'Site Footer'
+      component_tree:
+        70940a20-064d-48e6-8c09-34c5819c5c31:
+          inputs:
+            label: 'Footer sitemap menu'
+        4cb551a2-b88f-4a4a-a0fe-03839b486b1d:
+          inputs:
+            code: '<img class="footer-logo-image" src="/themes/contrib/vartheme_bs5_rightup/rightup-logo-white.svg" alt="The Rightup logo" style="height: auto;">'
+        f7ac0051-4994-494b-9564-7759fba8e0ec:
+          inputs:
+            label: 'Social media menu'
+        c6e766c3-abdf-473c-a7a7-442fceb4245e:
+          inputs:
+            label: 'Footer menu'
+  -
+    name: canvas.pattern.header_global
+    data:
+      label: 'Site Header'
+      component_tree:
+        41474f4e-b1b0-41bb-b4ee-47051ac01b32:
+          inputs:
+            label: 'Site branding'
+        bb57452c-6c92-4cde-aec4-418b78b0552f:
+          inputs:
+            label: 'Main navigation'
+  -
+    name: canvas.pattern.hero_slider
+    data:
+      label: 'Hero Slider'
+      component_tree:
+        fb300bf2-391e-47fc-965c-d037980a36a0:
+          inputs:
+            title: 'Design news before it’s polished'
+            button_text: 'Read the News'
+            button_url: /about-us
+        c3feefad-fcdc-4c1a-829e-235d58291003:
+          inputs:
+            title: 'Six sections, one publication'
+            button_text: 'About Us'
+            button_url: /about-us
+        d69b3e17-4c9a-4fe1-87cd-7de4f846d71d:
+          inputs:
+            title: 'Design pages without code'
+            button_text: 'Browse the Sections'
+            button_url: /features
+        035c2ad1-4dad-4517-a333-51234879c65e:
+          inputs:
+            title: 'Conversations with the people making things'
+            button_text: 'Contact us'
+            button_url: /contact-us
+  -
+    name: canvas.pattern.image_cards
+    data:
+      label: 'Image Cards'
+      component_tree:
+        c05f8e1f-9007-45e1-9e8c-5b69f438468b:
+          inputs:
+            heading_text: 'Made for the people who make things '
+        624cd552-b809-491b-a1af-a99704502acd:
+          inputs:
+            label: 'Browse the Sections'
+  -
+    name: canvas.pattern.media_banner_intro
+    data:
+      label: 'Page Intro Banner'
+      component_tree:
+        565d2149-dce3-431f-8b77-42c1750652fe:
+          inputs:
+            label: Breadcrumbs
+        39f7a34d-2f1a-4a6a-b07b-a11a9bae9515:
+          inputs:
+            heading_text: 'Contact Us'
+  -
+    name: canvas.pattern.text_with_cards
+    data:
+      label: 'Text with Cards'
+      component_tree:
+        47e8a75d-01c0-4aa3-9f20-bdb2004add5b:
+          inputs:
+            heading_text: 'Everything you need to build'
+        67ed0375-7a50-41b5-a538-14d3e0d3b657:
+          inputs:
+            heading_text: 'Built for design reporting'
+        8bf7a563-fd52-416c-b0e5-27afd9ce7b28:
+          inputs:
+            label: 'Read the News'
+        c34c5f68-f376-482f-9b26-9dbe7c7084fc:
+          inputs:
+            heading_text: 'Studio Profiles'
+        c636b7cd-d964-45a8-ac12-9106dd25021c:
+          inputs:
+            heading_text: 'Weekly Podcast'
+  -
+    name: core.entity_view_mode.node.live_feed
+    data:
+      label: 'Live feed'
+  -
+    name: core.entity_view_mode.node.rightup_episode
+    data:
+      label: 'Episode row'
+  -
+    name: core.entity_view_mode.node.rightup_featured
+    data:
+      label: 'Featured story'
+  -
+    name: core.entity_view_mode.node.rightup_featured_small
+    data:
+      label: 'Featured small'
+  -
+    name: core.entity_view_mode.node.rightup_hero
+    data:
+      label: 'Hero story'
+  -
+    name: core.entity_view_mode.node.rightup_lead
+    data:
+      label: 'Lead story'
+  -
+    name: core.entity_view_mode.node.rightup_list
+    data:
+      label: 'List item'
+  -
+    name: core.entity_view_mode.node.rightup_show
+    data:
+      label: Show
+  -
+    name: core.entity_view_mode.node.rightup_side
+    data:
+      label: 'Side story'
+  -
+    name: core.entity_view_mode.node.rightup_slide
+    data:
+      label: Slide
+  -
+    name: core.entity_view_mode.node.rightup_teaser
+    data:
+      label: Teaser
+  -
+    name: core.entity_view_mode.node.rightup_text
+    data:
+      label: 'Text card'
+  -
+    name: core.entity_view_mode.user.author_banner
+    data:
+      label: 'Author banner'
+      description: 'The author page banner: the role label and the biography, printed beside the name in the page banner.'
+  -
+    name: entityqueue.entity_queue.live_feed
+    data:
+      label: 'Live feed'
+  -
+    name: entityqueue.entity_queue.rightup_editors_picks
+    data:
+      label: "Editors' picks"
+  -
+    name: entityqueue.entity_queue.rightup_featured
+    data:
+      label: Featured
+  -
+    name: entityqueue.entity_queue.rightup_top_stories
+    data:
+      label: 'Top stories'
+  -
+    name: field.field.user.user.field_author_bio
+    data:
+      label: Biography
+      description: 'A short third-person biography, printed on the author page under the name. Two or three sentences: what they cover, where they have written before, and where they are based.'
+  -
+    name: field.field.user.user.field_author_role
+    data:
+      label: 'Author role'
+      description: 'The role this person is credited with on the site, printed above their name on the author page, for example Staff writer, Contributor or Editor at large.'
+  -
+    name: system.menu.secondary
+    data:
+      label: 'Secondary menu'
+      description: 'Mini sitemap links shown in the footer.'
+  -
+    name: views.view.live_feed
+    data:
+      label: 'Live feed'
+      description: 'The items an editor has curated into the Live feed queue, in queue order.'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: 'Live feed'
+        block_1:
+          display_title: 'Live feed block'
+          display_options:
+            block_description: 'Live feed'
+  -
+    name: views.view.rightup_author_articles
+    data:
+      label: 'Articles by author'
+      description: 'Everything one author has published, listed on their own author page under a banner carrying their name, role and biography.'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: 'Articles by author'
+            pager:
+              options:
+                tags:
+                  next: 'Next ›'
+                  previous: '‹ Previous'
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options_all_label: '- All -'
+                  offset_label: Offset
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area:
+                content:
+                  value: '<p>This author has not published anything yet.</p>'
+            arguments:
+              uid:
+                exception:
+                  title: All
+                title: '{{ arguments.uid }}'
+        page_author:
+          display_title: 'Author page'
+          display_options:
+            display_description: "The author page: one author's banner and everything they have published."
+  -
+    name: views.view.rightup_news
+    data:
+      label: 'News lists'
+      description: 'News lists for the home and category landing pages. Each Canvas placement sets the category, offset and count.'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            filters:
+              name:
+                expose:
+                  label: Category
+                  description: 'The category name, for example Architecture. Leave empty for every category.'
+        editors_picks:
+          display_title: "Editors' picks"
+          display_options:
+            block_description: "News: Editors' picks"
+            block_category: 'Lists (Views)'
+        featured:
+          display_title: 'Featured: lead'
+          display_options:
+            block_description: 'News: Featured: lead'
+            block_category: 'Lists (Views)'
+        featured_more:
+          display_title: 'Featured: more'
+          display_options:
+            block_description: 'News: Featured: more'
+            block_category: 'Lists (Views)'
+        featured_slider:
+          display_title: 'Featured: slider'
+          display_options:
+            block_description: 'News: Featured: slider'
+            block_category: 'Lists (Views)'
+        latest:
+          display_title: 'Latest stories list'
+          display_options:
+            block_description: 'News: Latest stories list'
+            block_category: 'Lists (Views)'
+        latest_grid:
+          display_title: 'Latest stories grid'
+          display_options:
+            block_description: 'News: Latest stories grid'
+            block_category: 'Lists (Views)'
+        lead:
+          display_title: 'Lead story'
+          display_options:
+            filters:
+              name:
+                expose:
+                  label: Category
+                  description: 'The category name, for example Architecture. Leave empty for every category.'
+            block_description: 'News: Lead story'
+            block_category: 'Lists (Views)'
+        more:
+          display_title: 'More stories'
+          display_options:
+            filters:
+              name:
+                expose:
+                  label: Category
+                  description: 'The category name, for example Architecture. Leave empty for every category.'
+            block_description: 'News: More stories'
+            block_category: 'Lists (Views)'
+        podcast_episodes:
+          display_title: 'Podcast episodes'
+          display_options:
+            filters:
+              title:
+                expose:
+                  label: Show
+                  description: 'The podcast show title, for example Last Call. Leave empty for every show.'
+            block_description: 'News: Podcast episodes'
+            block_category: 'Lists (Views)'
+        podcast_show:
+          display_title: 'Podcast show'
+          display_options:
+            filters:
+              title:
+                expose:
+                  label: Show
+                  description: 'The podcast show title, for example Last Call. Leave empty for every show.'
+            block_description: 'News: Podcast show'
+            block_category: 'Lists (Views)'
+        side:
+          display_title: 'Side stories'
+          display_options:
+            filters:
+              name:
+                expose:
+                  label: Category
+                  description: 'The category name, for example Architecture. Leave empty for every category.'
+            block_description: 'News: Side stories'
+            block_category: 'Lists (Views)'
+        top_hero:
+          display_title: 'Top stories: hero'
+          display_options:
+            block_description: 'News: Top stories: hero'
+            block_category: 'Lists (Views)'
+        top_pair:
+          display_title: 'Top stories: text pair'
+          display_options:
+            block_description: 'News: Top stories: text pair'
+            block_category: 'Lists (Views)'
+        top_side:
+          display_title: 'Top stories: side'
+          display_options:
+            block_description: 'News: Top stories: side'
+            block_category: 'Lists (Views)'
+        top_text:
+          display_title: 'Top stories: text'
+          display_options:
+            block_description: 'News: Top stories: text'
+            block_category: 'Lists (Views)'

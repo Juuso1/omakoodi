@@ -1,0 +1,11 @@
+uuid: f6e191ea-b465-43b5-b25f-3b39adc7222b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.figure
+name: Stats
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.vartheme_bs5_rightup.figure

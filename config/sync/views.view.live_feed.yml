@@ -1,0 +1,141 @@
+uuid: b4e4dd91-eb49-4e4d-af70-5e083e2025a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.live_feed
+    - entityqueue.entity_queue.live_feed
+    - node.type.news
+    - node.type.podcast_episode
+  module:
+    - entityqueue
+    - node
+_core:
+  default_config_hash: YuWeQ0-t3BoBAaat3S3FNoo4G812PoFZpsT8V9S7HWU
+id: live_feed
+label: 'Live feed'
+module: views
+description: 'The items an editor has curated into the Live feed queue, in queue order.'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Live feed'
+      fields: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 10
+      sorts:
+        entityqueue_relationship_in_queue:
+          id: entityqueue_relationship_in_queue
+          table: node_field_data
+          field: entityqueue_relationship_in_queue
+          relationship: entityqueue_relationship
+          plugin_id: entity_queue_in_queue
+          order: DESC
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: entityqueue_relationship
+          plugin_id: entity_queue_position
+          order: ASC
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            news: news
+            podcast_episode: podcast_episode
+        langcode:
+          id: langcode
+          table: node_field_data
+          field: langcode
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: langcode
+          plugin_id: language
+          operator: in
+          value:
+            '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
+            und: und
+            zxx: zxx
+          group: 1
+          exposed: false
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: false
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: live_feed
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: true
+      relationships:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          admin_label: 'Live feed queue'
+          plugin_id: entity_queue
+          required: false
+          limit_queue:
+            live_feed: live_feed
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+      tags:
+        - 'config:entityqueue.entity_queue.live_feed'
+  block_1:
+    id: block_1
+    display_title: 'Live feed block'
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Live feed'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+      tags:
+        - 'config:entityqueue.entity_queue.live_feed'

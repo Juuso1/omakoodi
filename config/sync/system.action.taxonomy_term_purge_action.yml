@@ -1,0 +1,12 @@
+uuid: b218ac3e-506d-41a6-912e-335bc6aa1eb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - trash
+id: taxonomy_term_purge_action
+label: 'Permanently delete taxonomy term'
+type: taxonomy_term
+plugin: 'entity:purge_action:taxonomy_term'
+configuration: {  }

@@ -1,0 +1,27 @@
+uuid: 5fd598e4-1dc8-4fa8-8cd5-6cf9f988fe08
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.podcast_episodes
+  module:
+    - views
+active_version: 8b219a1472a4f5ca
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:podcast_episodes-related'
+        label: 'Podcast episodes: Related podcast episodes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Podcast episodes: Related podcast episodes'
+id: block.views_block.podcast_episodes-related
+provider: views
+source: block
+source_local_id: 'views_block:podcast_episodes-related'

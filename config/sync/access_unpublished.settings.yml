@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: yh1u2_07ELBkoth1erMwtXfwfmMgiVyTaIrPPoyg5Kk
+hash_key: auHash
+label: ''
+duration: 172800
+cleanup_tokens_on_publish: false
+cleanup_expired_tokens: false
+cleanup_expired_tokens_period: '-2 weeks'
+modify_http_headers: {  }

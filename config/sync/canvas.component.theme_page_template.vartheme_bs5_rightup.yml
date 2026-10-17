@@ -1,0 +1,32 @@
+uuid: efaa8602-18df-44a2-b45a-df5b0e376bff
+langcode: en
+status: true
+dependencies:
+  module:
+    - canvas_page_template_component
+active_version: 15fe1e06320b1035
+versioned_properties:
+  active:
+    settings: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'The Content region.'
+          examples:
+            - ''
+        header:
+          title: Header
+          description: 'The Header region.'
+          examples:
+            - ''
+        footer:
+          title: Footer
+          description: 'The Footer region.'
+          examples:
+            - ''
+label: 'Vartheme BS5 Rightup page template'
+id: theme_page_template.vartheme_bs5_rightup
+provider: canvas_page_template_component
+source: theme_page_template
+source_local_id: vartheme_bs5_rightup

@@ -1,0 +1,73 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: ece46038-593c-4f85-bd8f-a6df3f371789
+  bundle: news
+  default_langcode: en
+  depends:
+    c60b96e7-d54e-4249-b730-f686432d442b: user
+    f99ee5a2-64b7-49b2-b31c-d9409afe3c08: media
+    50114c5e-67f5-4532-bf45-6a65b755a79e: taxonomy_term
+default:
+  revision_uid:
+  - entity: c60b96e7-d54e-4249-b730-f686432d442b
+  revision_log:
+  - value: Created new News post
+  status:
+  - value: true
+  uid:
+  - entity: c60b96e7-d54e-4249-b730-f686432d442b
+  title:
+  - value: Arclight Studio Unveils New Identity for Nordic Airline
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  revision_translation_affected:
+  - value: true
+  moderation_state:
+  - value: published
+  path:
+  - alias: /news/arclight-studio-unveils-new-identity-nordic-airline
+    langcode: en
+  field_content:
+  - value: '<p>The new mark is a single line that starts at the tail fin and does not stop until it has crossed the fuselage, the boarding pass and the coffee cup.</p>
+
+      <p>The system has to survive people who do not care about it. That is the actual test, and it happens in procurement, in email signatures and on signage nobody briefed.</p>
+
+      <p>Nils Arvidsen, creative director at Arclight, has been close to it from the start.</p>
+
+      <h2>Background</h2>
+
+      <p>The line is drawn once, at one weight, and then cut at different points depending on where it appears. On a tail fin it is a wing; on a boarding pass it is an underscore.</p>
+
+      <p>Budget was fixed before the brief was finished, which is the wrong order and, everyone involved agrees, the usual one.</p>
+
+      <p>Rolling it out means repainting fourteen aircraft over three years, which is why the first thing anyone will actually see is the paper.</p>
+
+      <blockquote><p>If you have to explain which part of the mark is the logo, you have made two marks.</p><footer>Arvidsen</footer></blockquote>
+
+      <h2>The method</h2>
+
+      <p>The airline''s previous identity used seven colours across its fleet livery. This one uses two, and a white that the studio specified as a paint rather than a print colour.</p>
+
+      <p>The system survives or fails on its worst application, not its best, and nobody presents that slide.</p>
+
+      <p>The first week brought the kind of attention nobody plans for, and the second brought the criticism that actually changed something.</p>
+
+      <p>What they will not say, on the record, is how close it came to being cancelled in the spring.</p>
+
+      <h2>Where it goes</h2>
+
+      <p>Boarding passes change next month. The first repainted aircraft flies in spring.</p>'
+    format: full_html
+  field_description:
+  - value: A single flowing line carries the new system from the tail fin to the boarding pass.
+  field_featured_image:
+  - entity: f99ee5a2-64b7-49b2-b31c-d9409afe3c08
+  field_news_categories:
+  - entity: 50114c5e-67f5-4532-bf45-6a65b755a79e
+  created:
+  - value: 1783760400
+  changed:
+  - value: 1783760400

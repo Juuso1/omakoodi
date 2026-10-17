@@ -1,0 +1,172 @@
+recipe: 'Varbase Editor Base'
+config:
+  -
+    name: editor.editor.full_html
+    data:
+      settings:
+        plugins:
+          ckeditor5_codeBlock:
+            languages:
+              -
+                label: 'Plain text'
+              -
+                label: C
+              -
+                label: 'C#'
+              -
+                label: C++
+              -
+                label: CSS
+              -
+                label: Diff
+              -
+                label: HTML
+              -
+                label: Java
+              -
+                label: JavaScript
+              -
+                label: PHP
+              -
+                label: Python
+              -
+                label: Ruby
+              -
+                label: TypeScript
+              -
+                label: XML
+          ckeditor5_paste_filter_pasteFilter:
+            filters:
+              -
+                search: '<o:p><\/o:p>'
+              -
+                search: '(<[^>]*) (style="[^"]*")'
+                replace: $1
+              -
+                search: '(<[^>]*) (face="[^"]*")'
+                replace: $1
+              -
+                search: '(<[^>]*) (class="[^"]*")'
+                replace: $1
+              -
+                search: '(<[^>]*) (valign="[^"]*")'
+                replace: $1
+              -
+                search: '<font[^>]*>'
+              -
+                search: '<\/font>'
+              -
+                search: '<span[^>]*>'
+              -
+                search: '<\/span>'
+              -
+                search: '<p>&nbsp;<\/p>'
+              -
+                search: '<p><\/p>'
+              -
+                search: '<b><\/b>'
+              -
+                search: '<i><\/i>'
+              -
+                search: '<a name="OLE_LINK[^"]*">(.*?)<\/a>'
+                replace: $1
+          ckeditor5_style:
+            styles:
+              -
+                label: 'Display 1 (h2)'
+              -
+                label: 'Display 2 (h2)'
+              -
+                label: 'Display 3 (h2)'
+              -
+                label: 'Display 4 (h2)'
+              -
+                label: 'Display 5 (h2)'
+              -
+                label: 'Display 6 (h2)'
+              -
+                label: 'Display 1 (h3)'
+              -
+                label: 'Display 2 (h3)'
+              -
+                label: 'Display 3 (h3)'
+              -
+                label: 'Display 4 (h3)'
+              -
+                label: 'Display 5 (h3)'
+              -
+                label: 'Display 6 (h3)'
+              -
+                label: 'Display 1 (h4)'
+              -
+                label: 'Display 2 (h4)'
+              -
+                label: 'Display 3 (h4)'
+              -
+                label: 'Display 4 (h4)'
+              -
+                label: 'Display 5 (h4)'
+              -
+                label: 'Display 6 (h4)'
+              -
+                label: 'Display 1 (h5)'
+              -
+                label: 'Display 2 (h5)'
+              -
+                label: 'Display 3 (h5)'
+              -
+                label: 'Display 4 (h5)'
+              -
+                label: 'Display 5 (h5)'
+              -
+                label: 'Display 6 (h5)'
+              -
+                label: 'Display 1 (h6)'
+              -
+                label: 'Display 2 (h6)'
+              -
+                label: 'Display 3 (h6)'
+              -
+                label: 'Display 4 (h6)'
+              -
+                label: 'Display 5 (h6)'
+              -
+                label: 'Display 6 (h6)'
+              -
+                label: Callout
+              -
+                label: 'Alert success'
+              -
+                label: 'Callout Info'
+              -
+                label: 'Alert info'
+              -
+                label: 'Callout warning'
+              -
+                label: 'Alert warning'
+              -
+                label: 'Callout danger'
+              -
+                label: 'Alert danger'
+              -
+                label: 'Table Striped'
+              -
+                label: 'Table hover'
+              -
+                label: 'Table Bordered'
+  -
+    name: filter.format.code_html
+    data:
+      name: 'HTML code'
+  -
+    name: filter.format.content_format
+    data:
+      name: Content
+  -
+    name: filter.format.full_html
+    data:
+      name: 'Rich editor'
+  -
+    name: linkit.linkit_profile.linkit_all_nodes
+    data:
+      label: 'Linkit: All Nodes'

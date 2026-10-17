@@ -1,0 +1,24 @@
+uuid: 7ab243a3-fb3d-4734-b2cc-70d8c532e3e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: iSIKWfW_-Mlz7Uue8nvOqjBgEyw5QncETka8ywid86Y
+id: rightup_top_stories
+label: 'Top stories'
+description: null
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news: news
+queue_settings:
+  min_size: 0
+  max_size: 10
+  act_as_queue: true
+  reverse: false

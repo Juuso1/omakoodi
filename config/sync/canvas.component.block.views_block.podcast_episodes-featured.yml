@@ -1,0 +1,27 @@
+uuid: c4377f8c-be21-47bb-8352-a0e21dd0e0d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.podcast_episodes
+  module:
+    - views
+active_version: 8764da8153651667
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:podcast_episodes-featured'
+        label: 'Featured podcast episodes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Featured podcast episodes'
+id: block.views_block.podcast_episodes-featured
+provider: views
+source: block
+source_local_id: 'views_block:podcast_episodes-featured'

@@ -1,0 +1,43 @@
+uuid: 660fc33f-4c3c-49e5-83e0-203f541a36f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.podcast_episode.field_audio
+    - field.field.node.podcast_episode.field_content
+    - field.field.node.podcast_episode.field_description
+    - field.field.node.podcast_episode.field_duration
+    - field.field.node.podcast_episode.field_episode_number
+    - field.field.node.podcast_episode.field_featured_image
+    - field.field.node.podcast_episode.field_host
+    - field.field.node.podcast_episode.field_listen_links
+    - field.field.node.podcast_episode.field_podcast
+    - field.field.node.podcast_episode.field_tags
+    - node.type.podcast_episode
+  module:
+    - user
+_core:
+  default_config_hash: Ds173K28FsraFxE6Ec9mdml-meAGqNwAxTX2SJFgfcU
+id: node.podcast_episode.full
+targetEntityType: node
+bundle: podcast_episode
+mode: full
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_audio: true
+  field_content: true
+  field_description: true
+  field_duration: true
+  field_episode_number: true
+  field_featured_image: true
+  field_host: true
+  field_listen_links: true
+  field_podcast: true
+  field_tags: true
+  search_api_excerpt: true

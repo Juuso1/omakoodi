@@ -1,0 +1,21 @@
+uuid: 13925f39-ee8b-45e5-a5b6-ab382761c76d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_host
+    - node.type.podcast
+_core:
+  default_config_hash: IB9gF2UoEReb2Knc5DvGx9dKenwq0uwj-msja4HlhHA
+id: node.podcast.field_host
+field_name: field_host
+entity_type: node
+bundle: podcast
+label: Host
+description: 'Who hosts it. Shown as "Hosted by …".'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

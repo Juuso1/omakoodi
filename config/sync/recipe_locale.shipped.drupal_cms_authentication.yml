@@ -1,0 +1,14 @@
+recipe: 'Authentication Tweaks'
+config:
+  -
+    name: eca.eca.auth_redirects
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Authentication redirects'
+      events:
+        user__logout:
+          label: 'User logout'
+      actions:
+        action_goto_action_login:
+          label: 'Back to login after logout'

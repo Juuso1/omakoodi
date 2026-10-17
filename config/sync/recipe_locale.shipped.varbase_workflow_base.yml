@@ -1,0 +1,27 @@
+recipe: 'Varbase Workflow Base'
+config:
+  -
+    name: workflows.workflow.varbase_editorial_workflow
+    data:
+      label: Editorial
+      type_settings:
+        states:
+          archived:
+            label: 'Archived / Unpublished'
+          draft:
+            label: Draft
+          review:
+            label: 'In review'
+          published:
+            label: Published
+        transitions:
+          archive:
+            label: 'Archive / Unpublish'
+          archived_published:
+            label: 'Restore from archive'
+          create_new_draft:
+            label: 'Create new draft'
+          publish:
+            label: Publish
+          review:
+            label: 'Send to review'

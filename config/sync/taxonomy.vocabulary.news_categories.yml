@@ -1,0 +1,11 @@
+uuid: bd691b87-7c93-4ffc-a8cd-99e9c6fbf53f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gdHklpynadWE0PkmCGcqCPqDev0YwBhApTaHS8Lnu8Q
+name: 'News Categories'
+vid: news_categories
+description: ''
+weight: 0
+new_revision: false

@@ -1,0 +1,25 @@
+uuid: ac2e26d2-d309-45d1-9b71-1e84d4dae7f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_listen_links
+    - node.type.podcast_episode
+  module:
+    - link
+_core:
+  default_config_hash: XDrJGW6mK9PQQCdV8xAdCfrtQ7K9soGaWl5DkMnAwWk
+id: node.podcast_episode.field_listen_links
+field_name: field_listen_links
+entity_type: node
+bundle: podcast_episode
+label: 'Listen on'
+description: "Direct links to this episode on each platform, such as Apple Podcasts, Spotify or YouTube Music. The link text is the platform name. Leave empty to use the podcast's links."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

@@ -1,0 +1,330 @@
+name: Varbase Content Base
+description: A foundational recipe for content structure and management in Varbase. Provides core content configuration for content types, taxonomy vocabularies, menu system, path aliases, and essential content-related modules.
+type: Varbase Content
+recipes:
+  - core/recipes/content_editor_role
+  - core/recipes/image_media_type
+install:
+  - node
+  - taxonomy
+  - text
+  - views
+  - field
+  - block
+  - config
+  - datetime
+  - file
+  - image
+  - options
+  - path
+  - entity
+  - ctools
+  - ctools_block
+  - ctools_views
+  - token
+  - token_filter
+  - better_exposed_filters
+  - date_filter
+  - field_group
+  - smart_trim
+  - contextual
+  - diff
+  - eca
+  - modeler_api
+  - modeler
+  - eca_ui
+  - eca_base
+  - eca_config
+  - eca_content
+  - eca_form
+  - eca_misc
+  - eca_user
+  - eca_render
+  - eca_access
+  - eca_cache
+  - eca_file
+  - eca_menu
+  - eca_queue
+  - eca_views
+  - eca_log
+  - eca_endpoint
+  - menu_ui
+  - menu_link_content
+  - filter
+  - field_ui
+  - help
+  - menu_block
+  - views_infinite_scroll
+  - entity_browser
+  - entity_usage
+  - entity_browser
+  - entityqueue
+  - entityqueue_form_widget
+  - inline_entity_form
+  - inline_form_errors
+  - menu_position
+  - tagify
+  - content_lock
+  - content_lock_timeout
+  - node_edit_protection
+  - vmi
+  - varbase_components
+  # The content basics drupal_cms_content_type_base used to provide: the Page
+  # content type, the basic editorial workflow, scheduling, trash, autosave and
+  # the content listings. That recipe was removed from Drupal CMS 2.2 and its
+  # last release requires Tagify 1, which no longer installs beside Drupal CMS.
+  - autosave_form
+  - bpmn_io
+  - canvas
+  - canvas_stark
+  - drupal_cms_helper
+  - linkit
+  - pathauto
+  - scheduler
+  - scheduler_content_moderation_integration
+  - tagify_user_list
+  - trash
+  - workflows
+  - content_moderation
+  # The rel attribute on menu links, which drupal_cms_privacy_basic used to
+  # install. The roles below are granted 'use menu link attributes'.
+  - menu_link_attributes
+config:
+  strict:
+    - field.storage.node.body
+    - field.storage.node.field_description
+    - field.storage.node.field_categories
+    - field.storage.taxonomy_term.field_description
+  import:
+    canvas: '*'
+    node:
+      - core.entity_view_mode.node.full
+      - core.entity_view_mode.node.rss
+      - core.entity_view_mode.node.teaser
+      - system.action.node_delete_action
+      - system.action.node_make_sticky_action
+      - system.action.node_make_unsticky_action
+      - system.action.node_promote_action
+      - system.action.node_publish_action
+      - system.action.node_save_action
+      - system.action.node_unpromote_action
+      - system.action.node_unpublish_action
+      - views.view.content
+    taxonomy: '*'
+    trash: '*'
+    scheduler: '*'
+    scheduler_content_moderation_integration: '*'
+  actions:
+    autosave_form.settings:
+      simpleConfigUpdate:
+        allowed_content_entity_types:
+          node:
+            bundles: []
+    menu_link_attributes.config:
+      simpleConfigUpdate:
+        attributes.rel:
+          label: Relationship
+          description: 'The "rel" attribute specifies the relationship between the current document and the linked document.'
+    scheduler.settings:
+      simpleConfigUpdate:
+        hide_seconds: true
+    trash.settings:
+      simpleConfigUpdate:
+        enabled_entity_types.node: []
+    views.view.scheduler_scheduled_media:
+      disable: {}
+    views.view.scheduler_scheduled_taxonomy_term:
+      disable: {}
+    content_lock.settings:
+      simpleConfigUpdate:
+        types:
+          node:
+            - '*'
+        verbose: true
+        timeout: 1800
+    tagify.settings:
+      simpleConfigUpdate:
+        set_default_widget: true
+    user.role.anonymous:
+      grantPermissions:
+        - 'access content'
+        - 'view media'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access content'
+        - 'access user profiles'
+        - 'view media'
+        - 'view own unpublished content'
+    user.role.content_editor:
+      grantPermissions:
+        - 'access media overview'
+        - 'access trash'
+        - 'create image media'
+        - 'create page content'
+        - 'delete any image media'
+        - 'delete any page content'
+        - 'delete canvas_page'
+        - 'delete page revisions'
+        - 'edit any image media'
+        - 'edit any page content'
+        - 'revert all revisions'
+        - 'schedule publishing of nodes'
+        - 'use text format content_format'
+        - 'use basic_editorial transition unpublish'
+        - 'use basic_editorial transition create_new_draft'
+        - 'use basic_editorial transition publish'
+        - 'view any unpublished content'
+        - 'view own unpublished media'
+        - 'view scheduled content'
+        - 'access contextual links'
+        - 'access content overview'
+        - 'view all revisions'
+        - 'view own unpublished content'
+        - 'access taxonomy overview'
+        - 'administer menu'
+        - 'create canvas_page'
+        - 'edit canvas_page'
+        - 'administer url aliases'
+        - 'create any term'
+        - 'create terms in tags'
+        - 'create url aliases'
+        - 'edit terms in tags'
+        - 'select terms in tags'
+        - 'select unpublished terms in tags'
+        - 'use menu link attributes'
+        - 'use views bulk edit'
+        - 'view any term'
+        - 'view any term name'
+        - 'view any unpublished term'
+        - 'view any unpublished term name'
+        - 'view any vocabulary name'
+        - 'view term names in tags'
+        - 'view terms in tags'
+        - 'view unpublished term names in tags'
+        - 'view unpublished terms in tags'
+        - 'view vocabulary labels'
+        - 'view vocabulary name of tags'
+    user.role.content_admin:
+      grantPermissions:
+        - 'access content overview'
+        - 'access contextual links'
+        - 'access taxonomy overview'
+        - 'administer folders'
+        - 'break content lock'
+        - 'create canvas_page'
+        - 'edit canvas_page'
+        - 'administer menu'
+        - 'administer patterns'
+        - 'administer taxonomy'
+        - 'create any term'
+        - 'create terms in tags'
+        - 'create url aliases'
+        - 'delete any term'
+        - 'delete terms in tags'
+        - 'edit terms in tags'
+        - 'manipulate all entityqueues'
+        - 'publish auto-saves'
+        - 'reorder terms in any vocabulary'
+        - 'reset any vocabulary'
+        - 'revert all revisions'
+        - 'select any term'
+        - 'select any unpublished term'
+        - 'select terms in tags'
+        - 'select unpublished terms in tags'
+        - 'update any term'
+        - 'use menu link attributes'
+        - 'use views bulk edit'
+        - 'view all revisions'
+        - 'view any term'
+        - 'view any term name'
+        - 'view any unpublished term'
+        - 'view any unpublished term name'
+        - 'view any vocabulary name'
+        - 'view own unpublished content'
+        - 'view term names in tags'
+        - 'view terms in tags'
+        - 'view unpublished term names in tags'
+        - 'view unpublished terms in tags'
+        - 'view vocabulary labels'
+        - 'view vocabulary name of tags'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'access content overview'
+        - 'access contextual links'
+        - 'access taxonomy overview'
+        - 'administer menu'
+        - 'administer url aliases'
+        - 'create any term'
+        - 'create terms in tags'
+        - 'create url aliases'
+        - 'edit terms in tags'
+        - 'select terms in tags'
+        - 'select unpublished terms in tags'
+        - 'use menu link attributes'
+        - 'use views bulk edit'
+        - 'view all revisions'
+        - 'view any term'
+        - 'view any term name'
+        - 'view any unpublished term'
+        - 'view any unpublished term name'
+        - 'view any vocabulary name'
+        - 'view own unpublished content'
+        - 'view term names in tags'
+        - 'view terms in tags'
+        - 'view unpublished term names in tags'
+        - 'view unpublished terms in tags'
+        - 'view vocabulary labels'
+        - 'view vocabulary name of tags'
+    user.role.site_admin:
+      grantPermissions:
+        - 'access content overview'
+        - 'access contextual links'
+        - 'access taxonomy overview'
+        - 'administer components'
+        - 'administer content menu items'
+        - 'administer content templates'
+        - 'administer folders'
+        - 'administer menu'
+        - 'administer page template'
+        - 'administer patterns'
+        - 'administer social-media-menu menu items'
+        - 'administer symfony_mailer_lite configuration'
+        - 'administer taxonomy'
+        - 'create any term'
+        - 'create canvas_page'
+        - 'create terms in tags'
+        - 'create url aliases'
+        - 'delete any term'
+        - 'delete canvas_page'
+        - 'delete terms in tags'
+        - 'edit canvas_page'
+        - 'edit terms in tags'
+        - 'manipulate all entityqueues'
+        - 'manipulate entityqueues'
+        - 'publish auto-saves'
+        - 'reorder terms in any vocabulary'
+        - 'reorder terms in tags'
+        - 'reset any vocabulary'
+        - 'revert all revisions'
+        - 'select any term'
+        - 'select any unpublished term'
+        - 'select terms in tags'
+        - 'select unpublished terms in tags'
+        - 'taxonomy manager export csv for tags'
+        - 'taxonomy manager export list for tags'
+        - 'update any term'
+        - 'use menu link attributes'
+        - 'use views bulk edit'
+        - 'view all revisions'
+        - 'view any term'
+        - 'view any term name'
+        - 'view any unpublished term'
+        - 'view any unpublished term name'
+        - 'view any vocabulary name'
+        - 'view own unpublished content'
+        - 'view term names in tags'
+        - 'view terms in tags'
+        - 'view unpublished term names in tags'
+        - 'view unpublished terms in tags'
+        - 'view vocabulary labels'
+        - 'view vocabulary name of tags'

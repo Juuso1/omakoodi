@@ -1,0 +1,13 @@
+uuid: e2e2190e-ce05-4159-beaa-1788cedb899b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: xMUVw8iPwIlYZncGtNkzPNo4Fs5su5sQ_ZihwCZaECs
+id: node.rightup_episode
+label: 'Episode row'
+description: null
+targetEntityType: node
+cache: true

@@ -1,0 +1,40 @@
+{
+  "name": "drupal/varbase_media_base",
+  "description": "A base recipe to install core media modules and apply default Varbase media configurations including media library, focal point, and media types.",
+  "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "Media", "Media Library", "Focal Point"],
+  "type": "drupal-recipe",
+  "notification-url": "https://packages.drupal.org/8/downloads",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_media_base",
+    "source": "http://cgit.drupalcode.org/varbase_media_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/dropzonejs": "~2",
+    "drupal/drimage_improved": "~1",
+    "drupal/media_library_form_element": "~2.1.0",
+    "drupal/media_bulk_upload": "~3",
+    "drupal/embed": "~1",
+    "drupal/media_library_edit": "~3",
+    "drupal/crop": "~2",
+    "drupal/focal_point": "~2",
+    "drupal/drupal_cms_helper": "~2",
+    "drupal/eca": "~3",
+    "drupal/media_file_delete": "~1",
+    "drupal/media_library_bulk_upload": "~1",
+    "drupal/modeler_api": "~1",
+    "drupal/svg_image": "~3.1",
+    "drupal/token": "~1",
+    "drupal/varbase_media": "~11.0.0",
+    "vardot/dropzone": "^5.9.3"
+  },
+  "version": "1.0.2"
+}

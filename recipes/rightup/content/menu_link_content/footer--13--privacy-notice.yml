@@ -1,0 +1,23 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 000b4b47-00fb-566f-a3b8-472d8addde3f
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+  - value: true
+  title:
+  - value: 'Privacy Notice'
+  menu_name:
+  - value: footer
+  link:
+  - uri: 'internal:/privacy-notice'
+    title: ''
+    options: {}
+  external:
+  - value: false
+  weight:
+  - value: 13
+  expanded:
+  - value: false

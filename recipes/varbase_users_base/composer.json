@@ -1,0 +1,26 @@
+{
+  "name": "drupal/varbase_users_base",
+  "description": "A recipe to manage default Varbase user roles and user management configurations, including role definitions, account settings, and the modules needed to support user management on the site.",
+  "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "Users", "User Roles", "User Management"],
+  "type": "drupal-recipe",
+  "notification-url": "https://packages.drupal.org/8/downloads",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_users_base",
+    "source": "http://cgit.drupalcode.org/varbase_users_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/persistent_login": "~2.3.0",
+    "drupal/eca": "~3",
+    "drupal/modeler_api": "~1"
+  },
+  "version": "1.0.1"
+}

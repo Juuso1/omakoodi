@@ -1,0 +1,42 @@
+uuid: 6709a7f9-6736-4398-8e22-bf38a2b6f222
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vartheme_bs5_rightup
+active_version: b3ee8425095fa35b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        pane_id:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        is_active:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: "The tab's body content."
+label: 'Tab Pane'
+id: sdc.vartheme_bs5_rightup.tab-pane
+provider: vartheme_bs5_rightup
+source: sdc
+source_local_id: 'vartheme_bs5_rightup:tab-pane'

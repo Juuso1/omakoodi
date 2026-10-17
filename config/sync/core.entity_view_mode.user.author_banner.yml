@@ -1,0 +1,13 @@
+uuid: ef45c017-8fa7-432d-bb5c-b3e706c1e08e
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: B_CvCY-oBWnkyhSbTlsqcgBxdJWVi5nu2MIA5dt18pU
+id: user.author_banner
+label: 'Author banner'
+description: 'The author page banner: the role label and the biography, printed beside the name in the page banner.'
+targetEntityType: user
+cache: true

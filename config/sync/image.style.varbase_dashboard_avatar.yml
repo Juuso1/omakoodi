@@ -1,0 +1,23 @@
+uuid: 5d6ea713-4579-45f8-a1f3-a614d7204cb9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: opMkD80zeI3zCCUzyfOum31x66t6P4kLE7mVNAxi50w
+name: varbase_dashboard_avatar
+label: 'Dashboard avatar (128×128)'
+effects:
+  59aecc76-ff2d-4348-80ae-1b0569ec1c40:
+    uuid: 59aecc76-ff2d-4348-80ae-1b0569ec1c40
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 128
+      height: 128
+      anchor: center-center
+  d89bb5b4-7424-4a43-8fde-ae5b1e980d25:
+    uuid: d89bb5b4-7424-4a43-8fde-ae5b1e980d25
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

@@ -1,0 +1,10 @@
+uuid: 0a959bcd-0dc4-4749-acbd-327330a03473
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AYZQr5vanVfu4x9qGljyLRLoUpBZa7-aiZuWuGSuoZ4
+id: secondary
+label: 'Secondary menu'
+description: 'Mini sitemap links shown in the footer.'
+locked: false

@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: _Hm47pFZlsOb89kEcdLFMJ6TqsUezQWYZeNmYOkcqHI
+site_key: '${site_uuid}'
+api_key: '${site_uuid}'
+api_endpoint: local
+enable_validation_logging: false

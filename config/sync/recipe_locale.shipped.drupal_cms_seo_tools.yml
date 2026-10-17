@@ -1,0 +1,202 @@
+recipe: 'SEO Tools'
+config:
+  -
+    name: eca.eca.node_sitemap_settings
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Automatically configure sitemap settings for content types'
+      events:
+        config__save_config:
+          label: 'Create node bundle'
+        drupal__recipe_applied_tools:
+          label: 'SEO Tools applied'
+      conditions:
+        eca_scalar_bundle:
+          configuration:
+            left: '[current-page:url:path]'
+            right: /admin/structure/types/add
+        eca_scalar_empty:
+          configuration:
+            left: '[priority]'
+            right: priority
+        eca_scalar_exists:
+          configuration:
+            left: '[priority]'
+            right: priority
+      actions:
+        eca_token_set_value_token:
+          label: 'Remember bundle id'
+          configuration:
+            token_value: '[config:type]'
+        eca_config_write_index:
+          label: 'Set index'
+          configuration:
+            config_value: '1'
+        eca_config_write_priority:
+          label: 'Set priority'
+          configuration:
+            config_value: '0.9'
+        eca_config_write_changefreq:
+          label: 'Set changefreq'
+          configuration:
+            config_value: daily
+        eca_config_write_images:
+          label: 'Set include_images'
+          configuration:
+            config_value: '0'
+        eca_get_bundle_list_bundles:
+          label: 'Get bundles'
+        eca_list_remove_id_1:
+          label: 'Get next bundle ID'
+        eca_config_read_bundle_1:
+          label: 'Read sitemap setting'
+        eca_switch_account_user:
+          label: 'Switch user'
+        eca_switch_account_1ghfkn0:
+          label: 'Switch user'
+  -
+    name: eca.eca.setup_seo_fields
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Set up SEO fields'
+          documentation: 'Initializes SEO fields on new and existing content types.'
+      events:
+        drupal__recipe_applied_1_1:
+          label: 'SEO Tools recipe applied'
+        content_entity__bundlecreate_1_1:
+          label: 'Content type created'
+      actions:
+        eca_token_set_value_18gj2sf:
+          label: 'Rename token'
+          configuration:
+            token_value: '[event:bundle]'
+        eca_get_bundle_list_009fgt1:
+          label: 'Find all content types'
+        eca_list_remove_02x83vs:
+          label: 'For each content type...'
+        eca_config_action_06zpaqh:
+          label: 'Group SEO fields on form'
+          configuration:
+            data: |-
+              module: field_group
+              key: group_seo
+              value:
+                children:
+                  - field_seo_title
+                  - field_seo_description
+                  - field_seo_image
+                  - field_seo_analysis
+                label: 'Search Engine Optimization (SEO) Information'
+                region: content
+                parent_name: ''
+                weight: 50
+                format_type: details
+                format_settings:
+                  classes: ''
+                  show_empty_fields: false
+                  id: group_seo
+                  label_as_html: false
+                  open: false
+                  description: ''
+                  required_fields: false
+        eca_config_action_0sr2qee:
+          label: 'Show field_seo_analysis on form'
+          configuration:
+            data: |-
+              name: field_seo_analysis
+              options:
+                type: yoast_seo_widget
+                weight: 18
+                region: content
+                settings:
+                  render_theme: NULL
+                  render_view_mode: default
+                  edit_title: 0
+                  edit_description: 0
+        eca_config_action_1wxj5ei:
+          label: 'Show field_seo_description on form'
+          configuration:
+            data: |-
+              name: field_seo_description
+              options:
+                type: string_textarea
+                weight: 16
+                region: content
+                settings:
+                  rows: 5
+                  placeholder: ''
+        eca_config_action_0x21fxa:
+          label: 'Show field_seo_image on form'
+          configuration:
+            data: |-
+              name: field_seo_image
+              options:
+                type: media_library_widget
+                weight: 17
+                region: content
+                settings:
+                  media_types: {  }
+        eca_config_action_1wh8d86:
+          label: 'Show field_seo_title on form'
+          configuration:
+            data: |-
+              name: field_seo_title
+              options:
+                type: string_textfield
+                weight: 15
+                region: content
+                settings:
+                  size: 60
+                  placeholder: ''
+        eca_config_action_0yj4bqb:
+          label: 'Create field_seo_analysis'
+          configuration:
+            data: |-
+              label: 'SEO analysis'
+              description: 'Pick the main keyword this page is about.'
+        eca_config_action_1v4877e:
+          label: 'Create field_seo_image'
+          configuration:
+            data: |-
+              label: 'SEO image'
+              description: 'Upload an image to be used when the page is shared on social media sites.'
+        eca_config_action_0r92fy7:
+          label: 'Configure field_seo_image'
+          configuration:
+            data: |-
+              handler: 'default:media'
+              handler_settings:
+                target_bundles:
+                  image: image
+        eca_config_action_1x3vm8l:
+          label: 'Create field_seo_description'
+          configuration:
+            data: |-
+              label: 'SEO description'
+              description: 'Write a description for search engines and social media sites.'
+        eca_config_action_1immo8n:
+          label: 'Create field_seo_title'
+          configuration:
+            data: |-
+              label: 'SEO title'
+              description: 'Use this field to overwrite the default HTML page title for SEO.'
+        eca_config_action_1jcz6wj:
+          label: 'Create form display'
+          configuration:
+            data: |-
+              targetEntityType: node
+              bundle: '[content_type]'
+              mode: default
+              status: true
+        eca_switch_account_0ef7w95:
+          label: 'Temporarily become administrator'
+  -
+    name: image.style.social_media_facebook
+    data:
+      label: 'Social media - Facebook'
+  -
+    name: image.style.social_media_x
+    data:
+      label: 'Social media - X (Twitter)'

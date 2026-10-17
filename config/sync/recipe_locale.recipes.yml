@@ -1,0 +1,111 @@
+_core:
+  default_config_hash: 2W033glcHluYLhGVciWJYSbzffzYPv3vlRaLuu2BpS8
+recipes:
+  varbase_users_base:
+    package: drupal/varbase_users_base
+    version: 1.0.1
+    label: 'Varbase Users Base'
+  drupal_cms_anti_spam:
+    package: drupal/drupal_cms_anti_spam
+    version: 2.1.6
+    label: Anti-spam
+  drupal_cms_authentication:
+    package: drupal/drupal_cms_authentication
+    version: 2.1.6
+    label: 'Authentication Tweaks'
+  drupal_cms_forms:
+    package: drupal/drupal_cms_forms
+    version: 2.2.4
+    label: Forms
+  drupal_cms_seo_basic:
+    package: drupal/drupal_cms_seo_basic
+    version: 2.1.6
+    label: 'Basic SEO'
+  drupal_cms_seo_tools:
+    package: drupal/drupal_cms_seo_tools
+    version: 2.1.6
+    label: 'SEO Tools'
+  drupal_cms_accessibility_tools:
+    package: drupal/drupal_cms_accessibility_tools
+    version: 2.2.4
+    label: 'Accessibility Tools'
+  drupal_cms_search:
+    package: drupal/drupal_cms_search
+    version: 2.2.4
+    label: Search
+  easy_email_standard:
+    package: drupal/easy_email_standard
+    version: ''
+    label: 'Easy Email: Standard Mail'
+  easy_email_text_format:
+    package: drupal/easy_email_text_format
+    version: ''
+    label: 'Easy Email: Text Format'
+  easy_email_types_core:
+    package: drupal/easy_email_types_core
+    version: ''
+    label: 'Easy Email: Core Templates'
+  easy_email_types_default:
+    package: drupal/easy_email_types_default
+    version: ''
+    label: 'Easy Email: Default Template'
+  easy_email_express:
+    package: drupal/easy_email_express
+    version: ''
+    label: 'Easy Email: Express Mail'
+  varbase_admin_base:
+    package: drupal/varbase_admin_base
+    version: 1.0.7
+    label: 'Varbase Admin Base'
+  varbase_security_base:
+    package: drupal/varbase_security_base
+    version: 1.0.1
+    label: 'Varbase Security Base'
+  varbase_media_base:
+    package: drupal/varbase_media_base
+    version: 1.0.2
+    label: 'Varbase Media Base'
+  varbase_editor_base:
+    package: drupal/varbase_editor_base
+    version: 1.0.1
+    label: 'Varbase Editor Base'
+  varbase_content_base:
+    package: drupal/varbase_content_base
+    version: 1.0.4
+    label: 'Varbase Content Base'
+  varbase_workflow_base:
+    package: drupal/varbase_workflow_base
+    version: 1.0.1
+    label: 'Varbase Workflow Base'
+  varbase_search_base:
+    package: drupal/varbase_search_base
+    version: 1.0.4
+    label: 'Varbase Search Base'
+  varbase_seo_base:
+    package: drupal/varbase_seo_base
+    version: 1.0.2
+    label: 'Varbase SEO Base'
+  varbase_webform_base:
+    package: drupal/varbase_webform_base
+    version: 1.0.2
+    label: 'Varbase Webform Base'
+  varbase_page_base:
+    package: drupal/varbase_page_base
+    version: 1.0.1
+    label: 'Varbase Page Base'
+  varbase_news_base:
+    package: drupal/varbase_news_base
+    version: 1.0.4
+    label: 'Varbase News Base'
+  varbase_podcasts_base:
+    package: drupal/varbase_podcasts_base
+    version: 2.0.2
+    label: 'Varbase Podcasts Base'
+  varbase_performance_base:
+    package: drupal/varbase_performance_base
+    version: 1.0.1
+    label: 'Varbase Performance Base'
+  rightup:
+    package: drupal/rightup
+    version: 1.0.5
+    label: Rightup

@@ -1,0 +1,13 @@
+uuid: ec54bda7-b39e-44a6-8b23-48eb182e2caf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: DPomJ1NRozvH88HPNnO8sZORH9DDxt-Hv-8v2GzInx0
+id: node.rightup_text
+label: 'Text card'
+description: null
+targetEntityType: node
+cache: true

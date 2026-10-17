@@ -1,0 +1,315 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 0fc99125-127b-5ad2-aa79-d5af264b7ab7
+  default_langcode: en
+  depends:
+    4906f0d7-0353-4d54-9837-086dd60336a9: file
+    81a56c89-31ab-4e1b-8c23-35a1f712c03c: media
+default:
+  status:
+  - value: true
+  owner:
+  - target_id: 1
+  title:
+  - value: Culture
+  components:
+  - uuid: b6e3bd00-f2d6-5f3a-b5f5-4f4ffa09cfd8
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: 67-33
+      section_header: true
+      column_divider: true
+      column_divider_color: border-black
+      gutter: gx-4 gy-4
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+  - parent_uuid: b6e3bd00-f2d6-5f3a-b5f5-4f4ffa09cfd8
+    slot: header_slot
+    uuid: 24426003-48e0-53fd-9fbf-21d80b134661
+    component_id: block.system_breadcrumb_block
+    inputs:
+      label: Breadcrumbs
+      label_display: '0'
+  - parent_uuid: b6e3bd00-f2d6-5f3a-b5f5-4f4ffa09cfd8
+    slot: header_slot
+    uuid: d68a88a7-3145-5c21-9ba1-460abe96b693
+    component_id: sdc.vartheme_bs5_rightup.heading
+    inputs:
+      heading_text: Culture
+      level: 1
+      text_size: h1
+  - parent_uuid: b6e3bd00-f2d6-5f3a-b5f5-4f4ffa09cfd8
+    slot: col_1
+    uuid: 100c2c86-9c0e-5b1f-961f-dc1d51dfdf98
+    component_id: block.views_block.rightup_news-lead
+    inputs:
+      label: 'News: Lead story'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed:
+        filter-name:
+          value: Culture
+          plugin_id: string
+          exposed: false
+          expose:
+            use_operator: false
+  - parent_uuid: b6e3bd00-f2d6-5f3a-b5f5-4f4ffa09cfd8
+    slot: col_2
+    uuid: 7722f51e-20a2-5bad-a4aa-6928bbf5caf3
+    component_id: block.views_block.rightup_news-side
+    inputs:
+      label: 'News: Side stories'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed:
+        filter-name:
+          value: Culture
+          plugin_id: string
+          exposed: false
+          expose:
+            use_operator: false
+  - uuid: a6038e61-1791-53f0-8e19-4f59b6430047
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: '100'
+      section_header: true
+      gutter: gx-4 gy-4
+      padding_block_start: pt-5
+  - parent_uuid: a6038e61-1791-53f0-8e19-4f59b6430047
+    slot: header_slot
+    uuid: 2702c77c-9e8f-5acb-89f6-f811a8c120d0
+    component_id: sdc.vartheme_bs5_rightup.divider
+    inputs:
+      text: More Culture
+      text_size: fs-6
+      border_color: border-black
+  - parent_uuid: a6038e61-1791-53f0-8e19-4f59b6430047
+    slot: col_1
+    uuid: 80f2a8e8-1e16-5bc6-8712-4993381d1235
+    component_id: block.views_block.rightup_news-more
+    inputs:
+      label: 'News: More stories'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed:
+        filter-name:
+          value: Culture
+          plugin_id: string
+          exposed: false
+          expose:
+            use_operator: false
+  - uuid: dd5f38db-a6c3-5d60-82b0-636cdc0f17a4
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: '100'
+      section_header: true
+      gutter: gx-4 gy-4
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+  - parent_uuid: dd5f38db-a6c3-5d60-82b0-636cdc0f17a4
+    slot: header_slot
+    uuid: a1ec9a46-f479-57f3-b18a-93c2c2ff0730
+    component_id: sdc.vartheme_bs5_rightup.divider
+    inputs:
+      text: Editors' Picks
+      text_size: fs-6
+      border_color: border-black
+  - parent_uuid: dd5f38db-a6c3-5d60-82b0-636cdc0f17a4
+    slot: col_1
+    uuid: 1a8fd4b0-af1b-50dd-bbe5-f758e95ad019
+    component_id: block.views_block.rightup_news-editors_picks
+    inputs:
+      label: 'News: Editors'' picks'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed:
+        filter-name:
+          value: Culture
+          plugin_id: string
+          exposed: false
+          expose:
+            use_operator: false
+  - uuid: 645ed559-8c65-530f-a0a2-3cceb6fd1c81
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: 67-33
+      bg_edge2edge: true
+      background_color: bg-accent-subtle
+      vertical_alignment: align-items-center
+      padding_block_start: pt-4
+      padding_block_end: pb-4
+  - parent_uuid: 645ed559-8c65-530f-a0a2-3cceb6fd1c81
+    slot: col_1
+    uuid: 4025c8ea-4270-57fd-b443-f6383db71e93
+    component_id: sdc.vartheme_bs5_rightup.heading
+    inputs:
+      heading_text: The best of The Rightup, delivered to you weekly.
+      level: 2
+      text_size: h4
+  - parent_uuid: 645ed559-8c65-530f-a0a2-3cceb6fd1c81
+    slot: col_2
+    uuid: 25472d5e-71f6-59d3-8ebe-8a263c5aab41
+    component_id: block.webform_block
+    inputs:
+      label: Newsletter Subscribe
+      label_display: '0'
+      webform_id: newsletter_subscribe
+      default_data: ''
+      redirect: false
+      lazy: false
+  - uuid: cf7e99af-a6bb-5136-aa6e-21c25cc0b54f
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: 75-25
+      gutter: gx-5 gy-5
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+  - parent_uuid: cf7e99af-a6bb-5136-aa6e-21c25cc0b54f
+    slot: col_1
+    uuid: 8f6c3f8f-1e11-538d-8c91-7cd4c4e45147
+    component_id: sdc.vartheme_bs5_rightup.divider
+    inputs:
+      text: The Latest
+      text_size: fs-6
+      border_color: border-black
+  - parent_uuid: cf7e99af-a6bb-5136-aa6e-21c25cc0b54f
+    slot: col_1
+    uuid: 2a99596c-f557-5db5-b4b9-143f635dc610
+    component_id: block.views_block.rightup_news-latest
+    inputs:
+      label: 'News: Latest stories list'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed: {}
+  - parent_uuid: cf7e99af-a6bb-5136-aa6e-21c25cc0b54f
+    slot: col_2
+    uuid: 109806e6-08c4-5fce-83b6-224056d8597d
+    component_id: sdc.vartheme_bs5_rightup.card-overlay
+    inputs:
+      media_image:
+        CANVAS_ENTITY_REFERENCE:
+          target_uuid: 81a56c89-31ab-4e1b-8c23-35a1f712c03c
+          target_type: media
+      ratio: ratio-1x1
+      padded: true
+      overlay_color: bg-dark
+      overlay_opacity: bg-opacity-25
+      h_align: text-center
+      v_align: align-items-center
+  - parent_uuid: 109806e6-08c4-5fce-83b6-224056d8597d
+    slot: content
+    uuid: fae33da3-70ec-5633-ab2e-e44073458843
+    component_id: sdc.vartheme_bs5_rightup.text
+    inputs:
+      text:
+        value: <p>Advertisement</p>
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-white
+  - parent_uuid: 109806e6-08c4-5fce-83b6-224056d8597d
+    slot: content
+    uuid: 36184212-6a75-57e2-8b9a-6fcadf8ed609
+    component_id: sdc.vartheme_bs5_rightup.heading
+    inputs:
+      heading_text: Reach the People Who Make Things
+      level: 2
+      text_size: h3
+      text_color: text-white
+      align: text-center
+  - parent_uuid: 109806e6-08c4-5fce-83b6-224056d8597d
+    slot: content
+    uuid: 1eb07c31-a66b-5691-9737-7a9212ff7e47
+    component_id: sdc.vartheme_bs5_rightup.button
+    inputs:
+      label: Advertise With Us
+      href:
+        uri: internal:/contact-us
+        options: {}
+      variant: btn-accent
+      size: btn-md
+      alignment: center
+  - uuid: dc9dbd96-0bbd-54a4-b39f-471ead8aeaaa
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: '100'
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+  - parent_uuid: dc9dbd96-0bbd-54a4-b39f-471ead8aeaaa
+    slot: col_1
+    uuid: a42580b0-91e8-501a-ae75-34375363e48f
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: none
+      columns: '100'
+      background_color: bg-tertiary
+      text_color: text-white
+      horizontal_alignment: text-center
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+      padding_inline_start: ps-5
+      padding_inline_end: pe-5
+  - parent_uuid: a42580b0-91e8-501a-ae75-34375363e48f
+    slot: col_1
+    uuid: f59c2c39-e5b6-506c-89d9-c1563f45e05b
+    component_id: sdc.vartheme_bs5_rightup.heading
+    inputs:
+      heading_text: Design News Before It's Polished
+      level: 2
+      text_size: h1
+      text_color: text-white
+      align: text-center
+  - parent_uuid: a42580b0-91e8-501a-ae75-34375363e48f
+    slot: col_1
+    uuid: db737d57-7495-5df7-b0bc-fd3608e13389
+    component_id: sdc.vartheme_bs5_rightup.text
+    inputs:
+      text:
+        value: <p class="text-align-center">One email a week. Studio breakdowns, process notes, and the projects we're watching before anyone else is.</p>
+        format: canvas_html_block
+      text_size: fs-5
+      text_color: text-white
+  - parent_uuid: a42580b0-91e8-501a-ae75-34375363e48f
+    slot: col_1
+    uuid: b6c975d3-16be-54c4-a39c-1346c3498a22
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: none
+      columns: 33-33-33
+  - parent_uuid: b6c975d3-16be-54c4-a39c-1346c3498a22
+    slot: col_1
+    uuid: a0a23417-82d5-5ff6-8d27-e0fb0e8f5a49
+    component_id: sdc.vartheme_bs5_rightup.spacer
+    inputs:
+      size: py-0
+  - parent_uuid: b6c975d3-16be-54c4-a39c-1346c3498a22
+    slot: col_2
+    uuid: 6e6e8fa8-809a-59a3-9ecf-47186cf80976
+    component_id: block.webform_block
+    inputs:
+      label: Newsletter Subscribe
+      label_display: '0'
+      webform_id: newsletter_subscribe
+      default_data: ''
+      redirect: false
+      lazy: false
+  - parent_uuid: b6c975d3-16be-54c4-a39c-1346c3498a22
+    slot: col_3
+    uuid: d4d1c01a-87ba-58d7-9feb-a114a406081a
+    component_id: sdc.vartheme_bs5_rightup.spacer
+    inputs:
+      size: py-0
+  path:
+  - alias: /culture
+    langcode: en

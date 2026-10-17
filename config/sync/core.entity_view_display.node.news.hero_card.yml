@@ -1,0 +1,62 @@
+uuid: 2c26f050-30b1-41c1-aec5-dcb8c710600d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero_card
+    - field.field.node.news.field_content
+    - field.field.node.news.field_description
+    - field.field.node.news.field_featured_image
+    - field.field.node.news.field_news_categories
+    - field.field.node.news.field_seo_analysis
+    - field.field.node.news.field_seo_description
+    - field.field.node.news.field_seo_image
+    - field.field.node.news.field_seo_title
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - smart_trim
+    - user
+_core:
+  default_config_hash: XrLrf6Kk57MQ8KWtPE0o860RbN5mcxI9f1yfi8Q_IGo
+id: node.news.hero_card
+targetEntityType: node
+bundle: news
+mode: hero_card
+content:
+  field_description:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 300
+      trim_type: words
+      trim_suffix: ' ...'
+      summary_handler: full
+      trim_options:
+        text: true
+      more_link: '0'
+      more_text: More
+      more_class: more-link
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: background_media
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  field_content: true
+  field_news_categories: true
+  field_seo_analysis: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true
+  field_tags: true
+  links: true
+  search_api_excerpt: true

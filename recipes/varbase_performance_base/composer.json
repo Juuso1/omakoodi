@@ -1,0 +1,26 @@
+{
+  "name": "drupal/varbase_performance_base",
+  "description": "A recipe to manage default performance optimization modules, caching configurations, and speed enhancements for Varbase.",
+  "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "Performance", "Caching", "Image Optimization", "ImageMagick", "WebP"],
+  "type": "drupal-recipe",
+  "notification-url": "https://packages.drupal.org/8/downloads",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_performance_base",
+    "source": "http://cgit.drupalcode.org/varbase_performance_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/imageapi_optimize": "~4.1.0",
+    "drupal/imagemagick": "~4",
+    "drupal/fast_404": "~3.0"
+  },
+  "version": "1.0.1"
+}

@@ -1,0 +1,24 @@
+uuid: 103c39ad-66ad-4ba8-94a9-742884d52af1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 2Cl7CgOMEjyBreNh85NFV1DLSHyYrAXX3Y3U266oo9o
+id: podcasts
+label: Podcasts
+description: null
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      podcast: podcast
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse: false

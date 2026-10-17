@@ -1,0 +1,12 @@
+uuid: aff516b6-9b63-47fc-92ae-143307f3c7eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - trash
+id: file_purge_action
+label: 'Permanently delete file'
+type: file
+plugin: 'entity:purge_action:file'
+configuration: {  }

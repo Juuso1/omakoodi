@@ -1,0 +1,11 @@
+uuid: 6dca81ba-3c03-4f98-8abc-61ea88f2e79d
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.read-more
+name: Content
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.vartheme_bs5_rightup.read-more

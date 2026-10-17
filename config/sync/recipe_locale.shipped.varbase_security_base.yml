@@ -1,0 +1,47 @@
+recipe: 'Varbase Security Base'
+config:
+  -
+    name: eca.eca.privacy_setting_link
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Show link to privacy settings'
+      events:
+        config__save_config:
+          label: 'Save config'
+      conditions:
+        eca_scalar_app:
+          configuration:
+            left: '[config_name]'
+            right: klaro.klaro_app.
+        eca_scalar_enabled:
+          configuration:
+            left: '[config:status]'
+            right: '1'
+        eca_scalar_disabled:
+          configuration:
+            left: '[config_original:status]'
+            right: '1'
+        eca_scalar_required_1:
+          configuration:
+            left: '[config:required]'
+            right: '1'
+      actions:
+        eca_void_and_condition_1:
+          label: AND
+        eca_void_and_condition_2:
+          label: AND
+        eca_switch_account_3:
+          label: 'Switch to user 1'
+        eca_token_load_entity_link:
+          label: 'Load menu link'
+          configuration:
+            properties: 'uuid: d7f4f1b2-af94-46b8-ac63-a8a5b14fb0f5'
+        eca_set_field_value_link_1:
+          label: 'Enable menu link'
+          configuration:
+            field_value: '1'
+  -
+    name: password_policy.password_policy.default_policy
+    data:
+      label: 'Default policy'

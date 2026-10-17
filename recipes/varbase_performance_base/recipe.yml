@@ -1,0 +1,31 @@
+name: Varbase Performance Base
+description: A recipe to manage default performance optimization modules, caching configurations, and speed enhancements for Varbase. Includes page caching, asset aggregation, image optimization, lazy loading, and CDN integration support.
+type: Varbase Performance
+recipes:
+  - core/recipes/core_recommended_maintenance
+install:
+  - page_cache
+  - dynamic_page_cache
+  - imagemagick
+  - imageapi_optimize
+  - fast404
+config:
+  actions:
+    system.performance:
+      simpleConfigUpdate:
+        cache.page.max_age: 900
+        css.preprocess: true
+        js.preprocess: true
+    system.image:
+      simpleConfigUpdate:
+        toolkit: imagemagick
+    imagemagick.settings:
+      simpleConfigUpdate:
+        binaries: imagemagick
+        imagemagick_version: v6
+        quality: 75
+        log_warnings: true
+        debug: false
+    automated_cron.settings:
+      simpleConfigUpdate:
+        interval: 10800

@@ -1,0 +1,13 @@
+uuid: 9a2a94ac-c545-403a-8799-8fafead5130f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JAzKHxpwSeJt9ABYIKumWiBxyFXooj4kUuGl1gnBLCI
+id: node.rightup_featured_small
+label: 'Featured small'
+description: null
+targetEntityType: node
+cache: true

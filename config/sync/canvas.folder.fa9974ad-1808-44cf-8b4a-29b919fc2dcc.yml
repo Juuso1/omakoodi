@@ -1,0 +1,11 @@
+uuid: fa9974ad-1808-44cf-8b4a-29b919fc2dcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.eca.varbase_user_profile_details
+name: ECA
+configEntityTypeId: component
+weight: 0
+items:
+  - block.eca.varbase_user_profile_details

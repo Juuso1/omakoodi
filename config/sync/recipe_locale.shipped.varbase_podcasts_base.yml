@@ -1,0 +1,512 @@
+recipe: 'Varbase Podcasts Base'
+config:
+  -
+    name: canvas.component.block.views_block.podcast_episodes-by_podcast
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Podcast episodes: episodes of this podcast'
+      label: 'Podcast episodes: episodes of this podcast'
+  -
+    name: canvas.component.block.views_block.podcast_episodes-count_by_podcast
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Podcast episodes: episode count of this podcast'
+      label: 'Podcast episodes: episode count of this podcast'
+  -
+    name: canvas.component.block.views_block.podcast_episodes-details
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Episode details'
+      label: 'Episode details'
+  -
+    name: canvas.component.block.views_block.podcast_episodes-listen_on
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Listen on'
+      label: 'Listen on'
+  -
+    name: canvas.component.block.views_block.podcast_episodes-more_by_podcast
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'More episodes of this podcast'
+      label: 'More episodes of this podcast'
+  -
+    name: canvas.component.block.views_block.podcasts-all
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Podcasts: all podcasts'
+      label: 'Podcasts: all podcasts'
+  -
+    name: canvas.component.block.views_block.podcasts-more
+    data:
+      versioned_properties:
+        active:
+          settings:
+            default_settings:
+              label: 'Podcasts: more podcasts'
+      label: 'Podcasts: more podcasts'
+  -
+    name: canvas.content_template.node.podcast.full
+    data:
+      component_tree:
+        23fd9eb8-8586-4857-ad9f-81041081f596:
+          inputs:
+            label: Breadcrumbs
+        1d0c7d6d-ed82-41aa-84cb-2c561b2946b5:
+          inputs:
+            label: 'Episode count'
+        02dda662-5942-4808-af6d-fff8e3a8f9df:
+          inputs:
+            label: Episodes
+        5f9ec42f-dc4f-428b-917f-24096e9ee74e:
+          inputs:
+            label: 'More Podcasts'
+  -
+    name: canvas.content_template.node.podcast_episode.full
+    data:
+      component_tree:
+        bde680f4-2bd4-5717-9b54-4417fedb3544:
+          inputs:
+            label: Breadcrumbs
+  -
+    name: core.entity_form_display.node.podcast.default
+    data:
+      third_party_settings:
+        field_group:
+          group_general:
+            label: General
+          group_categorization:
+            label: Categorization
+          group_seo:
+            label: 'Search Engine Optimization (SEO)'
+          group_options:
+            label: Options
+          group_tabs:
+            label: 'Content settings'
+      content:
+        field_listen_links:
+          settings:
+            placeholder_url: 'https://'
+            placeholder_title: Spotify
+  -
+    name: core.entity_form_display.node.podcast_episode.default
+    data:
+      third_party_settings:
+        field_group:
+          group_general:
+            label: General
+          group_audio:
+            label: Audio
+          group_categorization:
+            label: Categorization
+          group_seo:
+            label: 'Search Engine Optimization (SEO)'
+          group_options:
+            label: Options
+          group_tabs:
+            label: 'Content settings'
+      content:
+        field_listen_links:
+          settings:
+            placeholder_url: 'https://'
+            placeholder_title: Spotify
+  -
+    name: core.entity_view_display.node.podcast.text_card_medium
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+            more:
+              text: More
+              aria_label: 'Read more about [node:title]'
+  -
+    name: core.entity_view_display.node.podcast_episode.text_card_medium
+    data:
+      content:
+        field_description:
+          settings:
+            trim_suffix: ' ...'
+            more:
+              text: More
+              aria_label: 'Read more about [node:title]'
+  -
+    name: entityqueue.entity_queue.podcasts
+    data:
+      label: Podcasts
+  -
+    name: field.field.node.podcast.field_content
+    data:
+      label: 'Show notes'
+      description: 'The full show notes: what the episode covers, guests, links and timestamps.'
+  -
+    name: field.field.node.podcast.field_description
+    data:
+      label: Summary
+      description: 'A one or two sentence summary of the episode. Shown on cards and listings, and used as the meta description when no SEO description is set.'
+  -
+    name: field.field.node.podcast.field_featured_image
+    data:
+      label: 'Cover art'
+      description: 'The episode cover image, square where possible. Shown on the podcast card and at the top of the episode page.'
+  -
+    name: field.field.node.podcast.field_host
+    data:
+      label: Host
+      description: 'Who hosts it. Shown as "Hosted by …".'
+  -
+    name: field.field.node.podcast.field_listen_links
+    data:
+      label: 'Listen on'
+      description: 'Where to listen to this podcast: one link per platform, such as Apple Podcasts, Spotify or the RSS feed. The link text is the platform name.'
+  -
+    name: field.field.node.podcast.field_tags
+    data:
+      label: Tags
+      description: 'Free tagging for the episode. Editors may add new tags.'
+  -
+    name: field.field.node.podcast_episode.field_audio
+    data:
+      label: Audio
+      description: 'The episode audio: an uploaded audio file, or audio hosted on SoundCloud, Spotify or Apple Podcasts.'
+  -
+    name: field.field.node.podcast_episode.field_content
+    data:
+      label: 'Show notes'
+      description: 'The full show notes: what the episode covers, guests, links and timestamps.'
+  -
+    name: field.field.node.podcast_episode.field_description
+    data:
+      label: Summary
+      description: 'A one or two sentence summary of the episode. Shown on cards and listings, and used as the meta description when no SEO description is set.'
+  -
+    name: field.field.node.podcast_episode.field_duration
+    data:
+      label: Duration
+      description: 'Running time as it should read to a listener, for example 42:15.'
+  -
+    name: field.field.node.podcast_episode.field_episode_number
+    data:
+      label: 'Episode number'
+      description: 'The episode number within the show.'
+  -
+    name: field.field.node.podcast_episode.field_featured_image
+    data:
+      label: 'Cover art'
+      description: 'The episode cover image, square where possible. Shown on the podcast card and at the top of the episode page.'
+  -
+    name: field.field.node.podcast_episode.field_host
+    data:
+      label: Host
+      description: 'Who hosts it. Shown as "Hosted by …".'
+  -
+    name: field.field.node.podcast_episode.field_listen_links
+    data:
+      label: 'Listen on'
+      description: "Direct links to this episode on each platform, such as Apple Podcasts, Spotify or YouTube Music. The link text is the platform name. Leave empty to use the podcast's links."
+  -
+    name: field.field.node.podcast_episode.field_podcast
+    data:
+      label: Podcast
+  -
+    name: field.field.node.podcast_episode.field_tags
+    data:
+      label: Tags
+      description: 'Free tagging for the episode. Editors may add new tags.'
+  -
+    name: node.type.podcast
+    data:
+      name: Podcast
+      description: 'Use <em>Podcast</em> for a show: its name, cover art and description. Episodes are published as <em>Podcast episode</em> and belong to a Podcast.'
+  -
+    name: node.type.podcast_episode
+    data:
+      name: 'Podcast episode'
+      description: 'Use <em>Podcast episode</em> to publish one episode of a podcast: its audio, cover art, show notes, duration and episode number. Every episode belongs to a Podcast.'
+  -
+    name: pathauto.pattern.podcast_content
+    data:
+      label: Podcast
+      pattern: '/podcasts/[node:title]'
+  -
+    name: pathauto.pattern.podcast_episode_content
+    data:
+      label: 'Podcast episode'
+      pattern: '/podcasts/[node:field_podcast:entity:title]/[node:title]'
+  -
+    name: views.view.podcast_episodes
+    data:
+      label: 'Podcast episodes'
+      description: 'Episodes of the podcasts, with a block that lists the episodes of one podcast on its page.'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: Podcasts
+            fields:
+              title:
+                separator: ', '
+            pager:
+              options:
+                tags:
+                  next: ››
+                  previous: ‹‹
+                expose:
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options_all_label: '- All -'
+                  offset_label: Offset
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area:
+                content:
+                  value: '<p>There are no podcast episodes yet.</p>'
+        all:
+          display_title: 'All podcast episodes'
+          display_options:
+            pager:
+              options:
+                tags:
+                  next: ››
+                  previous: ‹‹
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options_all_label: '- All -'
+                  offset_label: Offset
+            exposed_form:
+              options:
+                submit_button: 'Apply Filter'
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+                text_input_required: 'Select any filter and click on Apply to see results'
+                text_input_required_format: full_html
+                bef:
+                  general:
+                    secondary_label: 'Advanced options'
+                  filter:
+                    search_title:
+                      advanced:
+                        placeholder_text: 'Search by...'
+            filters:
+              search_title:
+                expose:
+                  label: 'Search by'
+              field_tags_target_id:
+                expose:
+                  label: Industry
+            header:
+              area:
+                content:
+                  value: '<h2 class="visually-hidden">All podcast episodes</h2>'
+              result:
+                content: '<span class="vb-result-summary"><span class="vb-result-summary__label">Shown episodes:</span> <span class="vb-result-summary__count">@start-@end of @total</span></span>'
+        by_podcast:
+          display_title: 'Episodes of this podcast'
+          display_options:
+            fields:
+              title:
+                separator: ', '
+              view_node:
+                text: Listen
+              field_description:
+                separator: ', '
+              field_episode_number:
+                separator: ', '
+              field_host:
+                separator: ', '
+              field_duration:
+                separator: ', '
+            pager:
+              options:
+                tags:
+                  next: 'View More Episodes'
+                views_infinite_scroll:
+                  button_text: 'View More Episodes'
+            arguments:
+              field_podcast_target_id:
+                exception:
+                  title: All
+            display_description: 'Episodes that belong to the podcast in the URL.'
+            block_description: 'Podcast episodes: episodes of this podcast'
+        count_by_podcast:
+          display_title: 'Episode count of this podcast'
+          display_options:
+            fields:
+              nid:
+                alter:
+                  text: '{{ nid }} Episodes'
+                separator: ', '
+            empty:
+              area_text_custom:
+                content: '0 Episodes'
+            arguments:
+              field_podcast_target_id:
+                exception:
+                  title: All
+            block_description: 'Podcast episodes: episode count of this podcast'
+        details:
+          display_title: 'Episode details'
+          display_options:
+            fields:
+              created:
+                separator: ', '
+              created_1:
+                separator: ', '
+              created_2:
+                separator: ', '
+              field_host:
+                separator: ', '
+            arguments:
+              nid:
+                exception:
+                  title: All
+            display_description: 'When the current episode was published and who hosts it.'
+            block_description: 'Episode details'
+        featured:
+          display_title: 'Featured podcast episodes'
+          display_options:
+            title: 'Latest podcast episodes'
+            block_description: 'Featured podcast episodes'
+        latest:
+          display_title: 'Latest podcast episodes'
+          display_options:
+            title: 'Latest podcast episodes'
+        listen_on:
+          display_title: 'Listen on'
+          display_options:
+            fields:
+              field_listen_links:
+                separator: ' '
+              field_listen_links_1:
+                separator: ' '
+            arguments:
+              nid:
+                exception:
+                  title: All
+            display_description: "Where to listen to the current episode: its own links, or its podcast's when it has none."
+            block_description: 'Listen on'
+        more_by_podcast:
+          display_title: 'More episodes of this podcast'
+          display_options:
+            fields:
+              field_episode_number:
+                separator: ', '
+              title:
+                separator: ', '
+              view_node:
+                text: Listen
+              field_host:
+                separator: ', '
+              view_node_1:
+                admin_label: 'Podcast URL'
+                text: Listen
+            arguments:
+              nid:
+                exception:
+                  title: All
+              nid_1:
+                exception:
+                  title: All
+            display_description: 'Other episodes of the podcast the current episode belongs to.'
+            footer:
+              area_text_custom:
+                content: '<a class="btn btn-primary" href="{{ view_node_1|striptags|trim }}">View All</a>'
+            block_description: 'More episodes of this podcast'
+        related:
+          display_title: 'Related podcast episodes'
+          display_options:
+            title: 'Related podcast episodes'
+            arguments:
+              field_tags_target_id:
+                exception:
+                  title: All
+              nid:
+                exception:
+                  title: All
+        rss:
+          display_title: 'RSS Feed'
+          display_options:
+            fields:
+              title:
+                separator: ', '
+              field_description:
+                separator: ', '
+              view_node:
+                text: view
+              uuid:
+                separator: ', '
+              uid:
+                separator: ', '
+              created:
+                separator: ', '
+            style:
+              options:
+                description: 'Subscribe to our RSS feed to stay up to date with our latest podcast episodes.'
+  -
+    name: views.view.podcasts
+    data:
+      label: Podcasts
+      description: 'Lists the podcasts (shows) with how many episodes each has.'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: Podcasts
+            fields:
+              title:
+                separator: ', '
+              field_description:
+                separator: ', '
+              view_node:
+                text: 'View Show'
+              image_url:
+                separator: ', '
+              nid:
+                label: Episodes
+                separator: ', '
+            filters:
+              episode_status:
+                admin_label: 'Published episodes only'
+              episode_none:
+                admin_label: 'Or no episodes'
+        all:
+          display_title: 'All podcasts'
+          display_options:
+            block_description: 'Podcasts: all podcasts'
+        more:
+          display_title: 'More podcasts'
+          display_options:
+            title: 'More Podcasts'
+            arguments:
+              nid:
+                exception:
+                  title: All
+            display_description: 'Three other podcasts, on a podcast page.'
+            block_description: 'Podcasts: more podcasts'

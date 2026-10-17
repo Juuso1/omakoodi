@@ -1,0 +1,24 @@
+uuid: 95b3f153-1e61-4239-a9e4-6bf59cc934b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.varbase_user_profile_details
+  module:
+    - eca_render
+active_version: 084de9ddaea26505
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'eca:varbase_user_profile_details'
+        label: 'User profile details'
+        label_display: '0'
+        provider: eca_render
+    fallback_metadata:
+      slot_definitions: null
+label: 'User profile details'
+id: block.eca.varbase_user_profile_details
+provider: eca_render
+source: block
+source_local_id: 'eca:varbase_user_profile_details'

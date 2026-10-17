@@ -1,0 +1,27 @@
+uuid: 70d189e4-6c2d-48d6-8213-67048fd3a44f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.podcast_episodes
+  module:
+    - views
+active_version: 6f329aeb115258bf
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:podcast_episodes-all'
+        label: 'Podcast episodes: All podcast episodes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Podcast episodes: All podcast episodes'
+id: block.views_block.podcast_episodes-all
+provider: views
+source: block
+source_local_id: 'views_block:podcast_episodes-all'

@@ -1,0 +1,50 @@
+uuid: 6a6c6447-2ed1-4f53-9172-acc85df65d2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.card
+    - core.entity_view_mode.node.card
+    - field.field.media.image.field_media_image
+    - field.field.node.news.field_description
+    - field.field.node.news.field_featured_image
+    - image.style.canvas_parametrized_width
+    - media.type.image
+    - node.type.news
+  module:
+    - file
+    - media
+    - node
+    - options
+_core:
+  default_config_hash: TleYD9SZyo8MhHXlJlO7AimryXaUf-x8Qq_BaiH84e8
+id: node.news.card
+content_entity_type_id: node
+content_entity_type_bundle: news
+content_entity_type_view_mode: card
+component_tree:
+  '0:7358e3cc-7e74-4531-8931-531236ad67ce':
+    uuid: 7358e3cc-7e74-4531-8931-531236ad67ce
+    component_id: sdc.vartheme_bs5_rightup.card
+    component_version: 91ca18128c643751
+    inputs:
+      orientation: image-top
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:news␝title␞␟value'
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:news␝field_description␞␟value'
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:news␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      background: bg-light
+      shadow: shadow
+      has_padding: false
+      url:
+        sourceType: host-entity-url
+        absolute: false
+      button_label: 'Learn more'
+      button_variant: btn-primary
+exposed_slots: {  }
+page_variant: null

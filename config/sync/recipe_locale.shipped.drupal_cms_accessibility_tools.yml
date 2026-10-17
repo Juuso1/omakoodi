@@ -1,0 +1,38 @@
+recipe: 'Accessibility Tools'
+config:
+  -
+    name: views.view.a11y_tools_editoria11y_results
+    data:
+      label: 'A11y Tools Editoria11y results'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: 'Pages with accessibility alerts'
+            fields:
+              id:
+                label: ID
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area_text_custom:
+                content: "There are currently no accessibility alerts. Only discovered alerts are listed here.\r\nBrowse your content with Editoria11y enabled to discover alerts."
+            use_more_text: 'View all Editoria11y reports'
+            link_url: /admin/reports/editoria11y
+        block_a11y_alerts:
+          display_title: 'Block: Pages with accessibility alerts'
+          display_options:
+            fields:
+              page_title:
+                label: Page
+              page_path:
+                label: 'Page path'
+              page_result_count:
+                label: 'Issues on page'
+            block_description: 'A11y Tools - Pages with accessibility alerts'
+            block_category: Dashboard

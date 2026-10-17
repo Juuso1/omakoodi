@@ -1,0 +1,24 @@
+uuid: 5df1503c-8409-46ca-8490-b6d422d24788
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.podcast_episode
+  module:
+    - text
+_core:
+  default_config_hash: B0sNylIAYHUPnOPPS_2EZRMGSybAeKEXyByu5mYAzWU
+id: node.podcast_episode.field_content
+field_name: field_content
+entity_type: node
+bundle: podcast_episode
+label: 'Show notes'
+description: 'The full show notes: what the episode covers, guests, links and timestamps.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

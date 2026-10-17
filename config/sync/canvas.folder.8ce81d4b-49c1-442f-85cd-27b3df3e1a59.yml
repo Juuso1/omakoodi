@@ -1,0 +1,39 @@
+uuid: 8ce81d4b-49c1-442f-85cd-27b3df3e1a59
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.anchor
+    - canvas.component.sdc.vartheme_bs5_rightup.author
+    - canvas.component.sdc.vartheme_bs5_rightup.badge
+    - canvas.component.sdc.vartheme_bs5_rightup.blockquote
+    - canvas.component.sdc.vartheme_bs5_rightup.button
+    - canvas.component.sdc.vartheme_bs5_rightup.byline
+    - canvas.component.sdc.vartheme_bs5_rightup.date
+    - canvas.component.sdc.vartheme_bs5_rightup.heading
+    - canvas.component.sdc.vartheme_bs5_rightup.icon
+    - canvas.component.sdc.vartheme_bs5_rightup.image
+    - canvas.component.sdc.vartheme_bs5_rightup.live-feed-item
+    - canvas.component.sdc.vartheme_bs5_rightup.media-banner
+    - canvas.component.sdc.vartheme_bs5_rightup.taxonomy
+    - canvas.component.sdc.vartheme_bs5_rightup.text
+    - canvas.component.sdc.vartheme_bs5_rightup.video
+name: Base
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.vartheme_bs5_rightup.anchor
+  - sdc.vartheme_bs5_rightup.author
+  - sdc.vartheme_bs5_rightup.badge
+  - sdc.vartheme_bs5_rightup.blockquote
+  - sdc.vartheme_bs5_rightup.button
+  - sdc.vartheme_bs5_rightup.byline
+  - sdc.vartheme_bs5_rightup.date
+  - sdc.vartheme_bs5_rightup.heading
+  - sdc.vartheme_bs5_rightup.icon
+  - sdc.vartheme_bs5_rightup.image
+  - sdc.vartheme_bs5_rightup.live-feed-item
+  - sdc.vartheme_bs5_rightup.media-banner
+  - sdc.vartheme_bs5_rightup.taxonomy
+  - sdc.vartheme_bs5_rightup.text
+  - sdc.vartheme_bs5_rightup.video

@@ -1,0 +1,11 @@
+uuid: cc9079ea-4e5d-4a3f-b839-6a1404374038
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.live-feed
+name: Organism
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.vartheme_bs5_rightup.live-feed

@@ -1,0 +1,25 @@
+uuid: 7272f510-37b5-4059-8f90-e329caccca26
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rightup_news
+  module:
+    - views
+active_version: 08c008ee0167726d
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_exposed_filter_block:rightup_news-editors_picks'
+        label: 'Exposed form: rightup_news-editors_picks'
+        label_display: '0'
+        provider: views
+        views_label: ''
+    fallback_metadata:
+      slot_definitions: null
+label: 'Exposed form: rightup_news-editors_picks'
+id: block.views_exposed_filter_block.rightup_news-editors_picks
+provider: views
+source: block
+source_local_id: 'views_exposed_filter_block:rightup_news-editors_picks'

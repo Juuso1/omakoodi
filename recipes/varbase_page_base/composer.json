@@ -1,0 +1,26 @@
+{
+  "name": "drupal/varbase_page_base",
+  "description": "A recipe to provide a Page content type for Varbase, with specific features including SEO fields, editorial workflow, and menu configuration.",
+  "type": "drupal-recipe",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_page_base",
+    "source": "http://cgit.drupalcode.org/varbase_page_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/varbase_content_base": "~1.0.0",
+    "drupal/varbase_editor_base": "~1.0.0",
+    "drupal/varbase_media_base": "~1.0.0",
+    "drupal/varbase_seo_base": "~1.0.0",
+    "drupal/varbase_workflow_base": "~1.0.0"
+  },
+  "version": "1.0.1"
+}

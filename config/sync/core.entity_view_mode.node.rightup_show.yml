@@ -1,0 +1,13 @@
+uuid: da2d138b-803c-43ff-98ae-0f3fd40ab7fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: w6sI-8OP4GveipI6WawDVDS2FvcE1VPfpAA0ep0r9wM
+id: node.rightup_show
+label: Show
+description: null
+targetEntityType: node
+cache: true

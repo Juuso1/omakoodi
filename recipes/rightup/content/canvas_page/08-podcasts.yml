@@ -1,0 +1,93 @@
+_meta:
+  version: '1.0'
+  entity_type: canvas_page
+  uuid: 795ae22b-5b2b-57af-9071-99e454f0638d
+  default_langcode: en
+  depends:
+    f45f5f79-94c2-401e-b75f-f83237693c68: file
+    1bbdc230-2b35-45e4-9cbe-a98c374aaaa4: media
+    a48f6896-10f8-4940-aec3-3908faa68e4a: file
+    da526131-9c0f-4699-b74e-d3f0f83a3472: media
+    a6ad03d1-893d-4f6f-9360-108e4d67a0cf: file
+    929fa437-2f56-4518-b130-01fc5fb3fe67: media
+    a8c96589-6e8f-4e76-928f-ae3a31362a7a: file
+    6f02f337-6d5c-461f-bae8-526a828d2d0c: media
+    ebba1067-b99a-47ff-a515-844b53731244: file
+    1db59f67-7970-4c23-aef0-d70b32dc5bc0: media
+    78c1c327-3d57-45c2-a6c4-244113b705db: file
+    539f71e6-b97d-4900-872b-80d3a10ae9d2: media
+default:
+  status:
+  - value: true
+  owner:
+  - target_id: 1
+  title:
+  - value: Podcasts
+  components:
+  - uuid: 8c8c5fd1-6317-5b2b-a692-fea1f09f5d59
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: 67-33
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+      bg_edge2edge: true
+      background_color: bg-tertiary
+      text_color: text-white
+  - parent_uuid: 8c8c5fd1-6317-5b2b-a692-fea1f09f5d59
+    slot: col_1
+    uuid: 72219da1-a614-5026-88d6-9f0fb560119a
+    component_id: block.system_breadcrumb_block
+    inputs:
+      label: Breadcrumbs
+      label_display: '0'
+  - parent_uuid: 8c8c5fd1-6317-5b2b-a692-fea1f09f5d59
+    slot: col_1
+    uuid: b48b099f-d3bd-507d-859a-12f634aa612e
+    component_id: sdc.vartheme_bs5_rightup.heading
+    inputs:
+      heading_text: Conversations With the People Actually Making Things
+      level: 1
+      text_size: h1
+      text_color: text-white
+  - parent_uuid: 8c8c5fd1-6317-5b2b-a692-fea1f09f5d59
+    slot: col_1
+    uuid: 61c9fc7f-c328-5466-85d4-15dfef6dfab8
+    component_id: sdc.vartheme_bs5_rightup.text
+    inputs:
+      text:
+        value: <p>Every show from The Rightup, in one place — studio interviews, site walks, and the process notes that never make
+          it into a case study. New episodes drop weekly, with no polish added after the fact.</p>
+        format: canvas_html_block
+      text_size: fs-5
+      text_color: text-white
+  - uuid: a6923ed9-11cf-5efe-a590-b93d09333661
+    component_id: sdc.vartheme_bs5_rightup.section
+    inputs:
+      container_type: container
+      columns: "100"
+      section_header: true
+      gutter: gx-4 gy-4
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+  - parent_uuid: a6923ed9-11cf-5efe-a590-b93d09333661
+    slot: header_slot
+    uuid: 237338b6-4a2d-5ba8-a0ec-18cccd4ee7af
+    component_id: sdc.vartheme_bs5_rightup.divider
+    inputs:
+      text: Podcasts
+      text_size: fs-6
+      border_color: border-black
+  - parent_uuid: a6923ed9-11cf-5efe-a590-b93d09333661
+    slot: col_1
+    uuid: 0b7a4e51-6c3d-5f29-9a44-2d8e77c1b4a0
+    component_id: block.views_block.podcasts-all
+    inputs:
+      label_display: '0'
+      label: Podcasts
+      views_label: ''
+      items_per_page: null
+      exposed: {}
+  path:
+  - alias: /podcasts
+    langcode: en

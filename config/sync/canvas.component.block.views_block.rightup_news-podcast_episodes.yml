@@ -1,0 +1,29 @@
+uuid: 4756e227-5e93-47a3-914e-b285725c979d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rightup_news
+  module:
+    - views
+_core:
+  default_config_hash: _3YbvwkgV5Y2oH006JxdLVghLY6JJOHJlRQ6X5yglY8
+active_version: ac5558cfa3899b09
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:rightup_news-podcast_episodes'
+        label: 'News: Podcast episodes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'News: Podcast episodes'
+id: block.views_block.rightup_news-podcast_episodes
+provider: views
+source: block
+source_local_id: 'views_block:rightup_news-podcast_episodes'

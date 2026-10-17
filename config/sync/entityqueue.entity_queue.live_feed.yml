@@ -1,0 +1,25 @@
+uuid: e52c6c6d-80c1-4df2-8418-9d626c12f44c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: oZWfcMangqVnuyCeB5B5vBxBdNWZb-z2Me-D7y8IKBI
+id: live_feed
+label: 'Live feed'
+description: null
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news: news
+      podcast_episode: podcast_episode
+queue_settings:
+  min_size: 0
+  max_size: 10
+  act_as_queue: true
+  reverse: false

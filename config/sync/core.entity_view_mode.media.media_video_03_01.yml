@@ -1,0 +1,13 @@
+uuid: 960b417d-4143-4142-9583-15724b95bf8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: X00cbSmW6ytF82JKQfRO2c0KVu0g9h4XDzP9mEPapwg
+id: media.media_video_03_01
+label: 'Media Video 3:1'
+description: null
+targetEntityType: media
+cache: true

@@ -1,0 +1,29 @@
+recipe: 'Varbase Page Base'
+config:
+  -
+    name: core.entity_form_display.node.page.default
+    data:
+      third_party_settings:
+        field_group:
+          group_seo:
+            label: 'Search Engine Optimization (SEO) Information'
+  -
+    name: field.field.node.page.field_seo_analysis
+    data:
+      label: 'SEO analysis'
+      description: 'Pick the main keyword this page is about.'
+  -
+    name: field.field.node.page.field_seo_description
+    data:
+      label: 'SEO description'
+      description: 'Write a description for search engines and social media sites.'
+  -
+    name: field.field.node.page.field_seo_image
+    data:
+      label: 'SEO image'
+      description: 'Upload an image to be used when the page is shared on social media sites.'
+  -
+    name: field.field.node.page.field_seo_title
+    data:
+      label: 'SEO title'
+      description: 'Use this field to overwrite the default HTML page title for SEO.'

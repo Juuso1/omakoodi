@@ -1,0 +1,716 @@
+recipe: 'Varbase Media Base'
+config:
+  -
+    name: core.entity_form_mode.media.bulk_upload
+    data:
+      label: 'Bulk upload'
+  -
+    name: core.entity_view_mode.media.16_9_large
+    data:
+      label: '16:9 Large'
+  -
+    name: core.entity_view_mode.media.16_9_medium
+    data:
+      label: '16:9 Medium'
+  -
+    name: core.entity_view_mode.media.16_9_small
+    data:
+      label: '16:9 Small'
+  -
+    name: core.entity_view_mode.media.16_9_wide
+    data:
+      label: '16:9 Wide'
+  -
+    name: core.entity_view_mode.media.1_1_square_large
+    data:
+      label: '1:1 (Square) Large'
+  -
+    name: core.entity_view_mode.media.1_1_square_medium
+    data:
+      label: '1:1 (Square) Medium'
+  -
+    name: core.entity_view_mode.media.1_1_square_small
+    data:
+      label: '1:1 (Square) Small'
+  -
+    name: core.entity_view_mode.media.2_3_large
+    data:
+      label: '2:3 Large'
+  -
+    name: core.entity_view_mode.media.2_3_medium
+    data:
+      label: '2:3 Medium'
+  -
+    name: core.entity_view_mode.media.2_3_small
+    data:
+      label: '2:3 Small'
+  -
+    name: core.entity_view_mode.media.3_2_large
+    data:
+      label: '3:2 Large'
+  -
+    name: core.entity_view_mode.media.3_2_medium
+    data:
+      label: '3:2 Medium'
+  -
+    name: core.entity_view_mode.media.3_2_small
+    data:
+      label: '3:2 Small'
+  -
+    name: core.entity_view_mode.media.3_2_wide
+    data:
+      label: '3:2 Wide'
+  -
+    name: core.entity_view_mode.media.3_4_large
+    data:
+      label: '3:4 Large'
+  -
+    name: core.entity_view_mode.media.3_4_medium
+    data:
+      label: '3:4 Medium'
+  -
+    name: core.entity_view_mode.media.3_4_small
+    data:
+      label: '3:4 Small'
+  -
+    name: core.entity_view_mode.media.4_3_large
+    data:
+      label: '4:3 Large'
+  -
+    name: core.entity_view_mode.media.4_3_medium
+    data:
+      label: '4:3 Medium'
+  -
+    name: core.entity_view_mode.media.4_3_small
+    data:
+      label: '4:3 Small'
+  -
+    name: core.entity_view_mode.media.4_3_wide
+    data:
+      label: '4:3 Wide'
+  -
+    name: core.entity_view_mode.media.9_16_large
+    data:
+      label: '9:16 Large'
+  -
+    name: core.entity_view_mode.media.9_16_medium
+    data:
+      label: '9:16 Medium'
+  -
+    name: core.entity_view_mode.media.9_16_small
+    data:
+      label: '9:16 Small'
+  -
+    name: core.entity_view_mode.media.autoloop
+    data:
+      label: Autoloop
+  -
+    name: core.entity_view_mode.media.autoplay
+    data:
+      label: Autoplay
+  -
+    name: core.entity_view_mode.media.background_media
+    data:
+      label: 'Background media'
+  -
+    name: core.entity_view_mode.media.browser_teaser
+    data:
+      label: 'Entity Browser Preview'
+  -
+    name: core.entity_view_mode.media.field_preview
+    data:
+      label: 'Field Preview'
+  -
+    name: core.entity_view_mode.media.hero
+    data:
+      label: Hero
+  -
+    name: core.entity_view_mode.media.hero_wide
+    data:
+      label: 'Hero Wide'
+  -
+    name: core.entity_view_mode.media.large
+    data:
+      label: 'Large (Full width)'
+  -
+    name: core.entity_view_mode.media.looping
+    data:
+      label: Looping
+  -
+    name: core.entity_view_mode.media.media_01_01
+    data:
+      label: 'Media 1:1'
+  -
+    name: core.entity_view_mode.media.media_02_01
+    data:
+      label: 'Media 2:1'
+  -
+    name: core.entity_view_mode.media.media_03_01
+    data:
+      label: 'Media 3:1'
+  -
+    name: core.entity_view_mode.media.media_04_01
+    data:
+      label: 'Media 4:1'
+  -
+    name: core.entity_view_mode.media.media_04_03
+    data:
+      label: 'Media 4:3'
+  -
+    name: core.entity_view_mode.media.media_16_09
+    data:
+      label: 'Media 16:9'
+  -
+    name: core.entity_view_mode.media.media_21_09
+    data:
+      label: 'Media 21:9'
+  -
+    name: core.entity_view_mode.media.media_video_01_01
+    data:
+      label: 'Media Video 1:1'
+  -
+    name: core.entity_view_mode.media.media_video_02_01
+    data:
+      label: 'Media Video 2:1'
+  -
+    name: core.entity_view_mode.media.media_video_03_01
+    data:
+      label: 'Media Video 3:1'
+  -
+    name: core.entity_view_mode.media.media_video_04_01
+    data:
+      label: 'Media Video 4:1'
+  -
+    name: core.entity_view_mode.media.media_video_04_03
+    data:
+      label: 'Media Video 4:3'
+  -
+    name: core.entity_view_mode.media.media_video_16_09
+    data:
+      label: 'Media Video 16:9'
+  -
+    name: core.entity_view_mode.media.media_video_21_09
+    data:
+      label: 'Media Video 21:9'
+  -
+    name: core.entity_view_mode.media.medium
+    data:
+      label: 'Medium (1/2 of width)'
+  -
+    name: core.entity_view_mode.media.original
+    data:
+      label: Original
+  -
+    name: core.entity_view_mode.media.small
+    data:
+      label: 'Small (1/4 of width)'
+  -
+    name: eca.eca.define_breakpoints
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Define custom breakpoints'
+          documentation: 'Defines custom breakpoints for responsive images.'
+      events:
+        eca_render__breakpoints_alter_1ni95xs:
+          label: 'Alter breakpoint'
+      actions:
+        eca_render_alter_breakpoint_1ic6gni:
+          label: 'Define small breakpoint'
+          configuration:
+            definition: |-
+              label: Small
+              mediaQuery: 'all and (min-width: 500px)'
+              weight: 0
+              multipliers:
+                - 1x
+              group: custom
+        eca_render_alter_breakpoint_176hkyu:
+          label: 'Define medium breakpoint'
+          configuration:
+            definition: |-
+              label: Medium
+              mediaQuery: 'all and (min-width: 700px)'
+              weight: 1
+              multipliers:
+                - 1x
+              group: custom
+        eca_render_alter_breakpoint_1k0stlk:
+          label: 'Define large breakpoint'
+          configuration:
+            definition: |-
+              label: Large
+              mediaQuery: 'all and (min-width: 1000px)'
+              weight: 2
+              multipliers:
+                - 1x
+              group: custom
+        eca_render_alter_breakpoint_1e7fgzt:
+          label: 'Define x-large breakpoint'
+          configuration:
+            definition: |-
+              label: X-Large
+              mediaQuery: 'all and (min-width: 1300px)'
+              weight: 3
+              multipliers:
+                - 1x
+              group: custom
+  -
+    name: eca.eca.grant_media_type_permissions
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Grant media type permissions'
+          documentation: 'When a new media type is created, permissions to work with it are automatically granted to content editors.'
+      events:
+        config__save_1_1:
+          label: 'Media type created'
+      actions:
+        eca_config_action_1p0ypjk:
+          label: 'Grant permissions'
+          configuration:
+            data: '["create [config:id] media", "delete any [config:id] media", "edit any [config:id] media", "use media [config:id] bulk upload form"]'
+        eca_switch_account_0dshb6m:
+          label: 'Temporarily become administrator'
+  -
+    name: eca.eca.remote_video_consent
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Enable consent management for remote video'
+      events:
+        content_entity__insert_video:
+          label: 'Insert remote video'
+        config__save_config:
+          label: 'Save config'
+      conditions:
+        eca_scalar_is_2:
+          configuration:
+            left: '[config_name]'
+            right: klaro.klaro_app.youtube
+        eca_scalar_is_1:
+          configuration:
+            left: '[config_name]'
+            right: klaro.klaro_app.vimeo
+        eca_scalar_vimeo_1:
+          configuration:
+            left: '[media:field_media_oembed_video]'
+            right: vimeo.com
+        eca_scalar_disabled:
+          configuration:
+            left: '[status]'
+            right: '1'
+        eca_scalar_1:
+          configuration:
+            left: '[config:status]'
+            right: '1'
+        eca_scalar_enabled:
+          configuration:
+            left: '[config_original:status]'
+            right: '1'
+      actions:
+        eca_token_set_value_1:
+          label: 'Set default provider to YouTube'
+          configuration:
+            token_value: youtube
+        eca_token_set_value_provider_1:
+          label: 'Set provider to Vimeo'
+          configuration:
+            token_value: vimeo
+        eca_config_read_1:
+          label: 'Read current setting'
+        eca_config_write_1:
+          label: 'Enable provider'
+          configuration:
+            config_value: '1'
+        eca_switch_account_1:
+          label: 'Switch user account'
+        eca_void_and_condition_1:
+          label: AND
+        eca_void_and_condition_2:
+          label: AND
+        eca_config_write_provider:
+          label: 'Re-enable provider'
+          configuration:
+            config_value: '1'
+        eca_switch_account__1:
+          label: 'Switch user'
+        eca_token_load_entity_0rno7mm_1:
+          label: 'Load a remote video'
+          configuration:
+            properties: 'bundle: remote_video'
+  -
+    name: field.field.media.remote_audio.field_media_oembed_audio
+    data:
+      label: 'Audio URL'
+      description: 'The address of the episode on SoundCloud, Spotify, Apple Podcasts or another supported service.'
+  -
+    name: field.field.media.remote_video.field_media_cover_image
+    data:
+      label: 'Cover Image'
+  -
+    name: field.field.media.remote_video.field_provider
+    data:
+      label: Provider
+  -
+    name: field.field.media.svg_image.field_media_svg_image
+    data:
+      label: Image
+  -
+    name: field.field.media.video.field_media_cover_image
+    data:
+      label: 'Cover Image'
+  -
+    name: image.style.16_9_1008x567_focal_point_webp
+    data:
+      label: '16:9 | 1008x567 | Focal Point | WebP'
+  -
+    name: image.style.16_9_1312x738_focal_point_webp
+    data:
+      label: '16:9 | 1312x738 | Focal Point | WebP'
+  -
+    name: image.style.16_9_1800x1080_focal_point_webp
+    data:
+      label: '16:9 | 1800x1080 | Focal Point | WebP'
+  -
+    name: image.style.16_9_304x171_focal_point_webp
+    data:
+      label: '16:9 | 304x171 | Focal Point | WebP'
+  -
+    name: image.style.16_9_512x288_focal_point_webp
+    data:
+      label: '16:9 | 512x288 | Focal Point | WebP'
+  -
+    name: image.style.16_9_608x342_focal_point_webp
+    data:
+      label: '16:9 | 608x342 | Focal Point | WebP'
+  -
+    name: image.style.16_9_704x396_focal_point_webp
+    data:
+      label: '16:9 | 704x396 | Focal Point | WebP'
+  -
+    name: image.style.16_9_720x405_focal_point_webp
+    data:
+      label: '16:9 | 720x405 | Focal Point | WebP'
+  -
+    name: image.style.16_9_960x540_focal_point_webp
+    data:
+      label: '16:9 | 960x540 | Focal Point | WebP'
+  -
+    name: image.style.1_1_300x300_focal_point_webp
+    data:
+      label: '1:1 | 300x300 | Focal Point | WebP'
+  -
+    name: image.style.1_1_500x500_focal_point_webp
+    data:
+      label: '1:1 | 500x500 | Focal Point | WebP'
+  -
+    name: image.style.1_1_600x600_focal_point_webp
+    data:
+      label: '1:1 | 600x600 | Focal Point | WebP'
+  -
+    name: image.style.1_1_720x720_focal_point_webp
+    data:
+      label: '1:1 | 720x720 | Focal Point | WebP'
+  -
+    name: image.style.1_1_960x960_focal_point_webp
+    data:
+      label: '1:1 | 960x960 | Focal Point | WebP'
+  -
+    name: image.style.2_3_200x300_focal_point_webp
+    data:
+      label: '2:3 | 200x300 | Focal Point | WebP'
+  -
+    name: image.style.2_3_400x600_focal_point_webp
+    data:
+      label: '2:3 | 400x600 | Focal Point | WebP'
+  -
+    name: image.style.2_3_500x750_focal_point_webp
+    data:
+      label: '2:3 | 500x750 | Focal Point | WebP'
+  -
+    name: image.style.2_3_640x960_focal_point_webp
+    data:
+      label: '2:3 | 640x960 | Focal Point | WebP'
+  -
+    name: image.style.3_2_1002x668_focal_point_webp
+    data:
+      label: '3:2 | 1002x668 | Focal Point | WebP'
+  -
+    name: image.style.3_2_1302x868_focal_point_webp
+    data:
+      label: '3:2 | 1302x868 | Focal Point | WebP'
+  -
+    name: image.style.3_2_1800x1200_focal_point_webp
+    data:
+      label: '3:2 | 1800x1200 | Focal Point | WebP'
+  -
+    name: image.style.3_2_300x200_focal_point_webp
+    data:
+      label: '3:2 | 300x200 | Focal Point | WebP'
+  -
+    name: image.style.3_2_504x336_focal_point_webp
+    data:
+      label: '3:2 | 504x336 | Focal Point | WebP'
+  -
+    name: image.style.3_2_600x400_focal_point_webp
+    data:
+      label: '3:2 | 600x400 | Focal Point | WebP'
+  -
+    name: image.style.3_2_702x468_focal_point_webp
+    data:
+      label: '3:2 | 702x468 | Focal Point | WebP'
+  -
+    name: image.style.3_2_720x480_focal_point_webp
+    data:
+      label: '3:2 | 720x480 | Focal Point | WebP'
+  -
+    name: image.style.3_2_960x640_focal_point_webp
+    data:
+      label: '3:2 | 960x640 | Focal Point | WebP'
+  -
+    name: image.style.3_4_225x300_focal_point_webp
+    data:
+      label: '3:4 | 225x300 | Focal Point | WebP'
+  -
+    name: image.style.3_4_450x600_focal_point_webp
+    data:
+      label: '3:4 | 450x600 | Focal Point | WebP'
+  -
+    name: image.style.3_4_504x672_focal_point_webp
+    data:
+      label: '3:4 | 504x672 | Focal Point | WebP'
+  -
+    name: image.style.3_4_708x944_focal_point_webp
+    data:
+      label: '3:4 | 708x944 | Focal Point | WebP'
+  -
+    name: image.style.3_4_720x960_focal_point_webp
+    data:
+      label: '3:4 | 720x960 | Focal Point | WebP'
+  -
+    name: image.style.4_3_1000x750_focal_point_webp
+    data:
+      label: '4:3 | 1000x750 | Focal Point | WebP'
+  -
+    name: image.style.4_3_1300x975_focal_point_webp
+    data:
+      label: '4:3 | 1300x975 | Focal Point | WebP'
+  -
+    name: image.style.4_3_1800x1350_focal_point_webp
+    data:
+      label: '4:3 | 1800x1350 | Focal Point | WebP'
+  -
+    name: image.style.4_3_300x225_focal_point_webp
+    data:
+      label: '4:3 | 300x225 | Focal Point | WebP'
+  -
+    name: image.style.4_3_500x375_focal_point_webp
+    data:
+      label: '4:3 | 500x375 | Focal Point | WebP'
+  -
+    name: image.style.4_3_600x450_focal_point_webp
+    data:
+      label: '4:3 | 600x450 | Focal Point | WebP'
+  -
+    name: image.style.4_3_700x525_focal_point_webp
+    data:
+      label: '4:3 | 700x525 | Focal Point | WebP'
+  -
+    name: image.style.4_3_720x540_focal_point_webp
+    data:
+      label: '4:3 | 720x540 | Focal Point | WebP'
+  -
+    name: image.style.4_3_960x720_focal_point_webp
+    data:
+      label: '4:3 | 960x720 | Focal Point | WebP'
+  -
+    name: image.style.5_2_1000x400_focal_point_webp
+    data:
+      label: '5:2 | 1000x400 | Focal Point | WebP'
+  -
+    name: image.style.5_2_1300x520_focal_point_webp
+    data:
+      label: '5:2 | 1300x520 | Focal Point | WebP'
+  -
+    name: image.style.5_2_1800x720_focal_point_webp
+    data:
+      label: '5:2 | 1800x720 | Focal Point | WebP'
+  -
+    name: image.style.9_16_171x304_focal_point_webp
+    data:
+      label: '9:16 | 171x304 | Focal Point | WebP'
+  -
+    name: image.style.9_16_342x608_focal_point_webp
+    data:
+      label: '9:16 | 342x608 | Focal Point | WebP'
+  -
+    name: image.style.9_16_504x896_focal_point_webp
+    data:
+      label: '9:16 | 504x896 | Focal Point | WebP'
+  -
+    name: image.style.9_16_540x960_focal_point_webp
+    data:
+      label: '9:16 | 540x960 | Focal Point | WebP'
+  -
+    name: image.style.field_preview
+    data:
+      label: 'Field Preview (150x150)'
+  -
+    name: image.style.media_library_square_thumbnail
+    data:
+      label: 'Media Library Square Thumbnail'
+  -
+    name: image.style.uncropped_300w_webp
+    data:
+      label: 'Uncropped | 300w | WebP'
+  -
+    name: image.style.uncropped_500w_webp
+    data:
+      label: 'Uncropped | 500w | WebP'
+  -
+    name: image.style.uncropped_600w_webp
+    data:
+      label: 'Uncropped | 600w | WebP'
+  -
+    name: image.style.uncropped_700w_webp
+    data:
+      label: 'Uncropped | 700w | WebP'
+  -
+    name: image.style.uncropped_720w_webp
+    data:
+      label: 'Uncropped | 720w | WebP'
+  -
+    name: image.style.uncropped_960w_webp
+    data:
+      label: 'Uncropped | 960w | WebP'
+  -
+    name: media.type.remote_audio
+    data:
+      label: 'Remote audio'
+      description: 'Audio hosted on an external service, for example SoundCloud, Spotify or Apple Podcasts.'
+  -
+    name: media.type.svg_image
+    data:
+      label: 'SVG Image'
+      description: 'A locally hosted SVG file that can be displayed as an image.'
+  -
+    name: media_bulk_upload.media_bulk_config.media_bulk_upload
+    data:
+      label: 'Media bulk upload'
+  -
+    name: responsive_image.styles.16_9_large
+    data:
+      label: '16:9 Large'
+  -
+    name: responsive_image.styles.16_9_medium
+    data:
+      label: '16:9 Medium'
+  -
+    name: responsive_image.styles.16_9_small
+    data:
+      label: '16:9 Small'
+  -
+    name: responsive_image.styles.16_9_wide
+    data:
+      label: '16:9 Wide'
+  -
+    name: responsive_image.styles.1_1_large
+    data:
+      label: '1:1 (Square) Large'
+  -
+    name: responsive_image.styles.1_1_medium
+    data:
+      label: '1:1 (Square) Medium'
+  -
+    name: responsive_image.styles.1_1_square_small
+    data:
+      label: '1:1 (Square) Small'
+  -
+    name: responsive_image.styles.2_3_large
+    data:
+      label: '2:3 Large'
+  -
+    name: responsive_image.styles.2_3_medium
+    data:
+      label: '2:3 Medium'
+  -
+    name: responsive_image.styles.2_3_small
+    data:
+      label: '2:3 Small'
+  -
+    name: responsive_image.styles.3_2_large
+    data:
+      label: '3:2 Large'
+  -
+    name: responsive_image.styles.3_2_medium
+    data:
+      label: '3:2 Medium'
+  -
+    name: responsive_image.styles.3_2_small
+    data:
+      label: '3:2 Small'
+  -
+    name: responsive_image.styles.3_2_wide
+    data:
+      label: '3:2 Wide'
+  -
+    name: responsive_image.styles.3_4_large
+    data:
+      label: '3:4 Large'
+  -
+    name: responsive_image.styles.3_4_medium
+    data:
+      label: '3:4 Medium'
+  -
+    name: responsive_image.styles.3_4_small
+    data:
+      label: '3:4 Small'
+  -
+    name: responsive_image.styles.4_3_large
+    data:
+      label: '4:3 Large'
+  -
+    name: responsive_image.styles.4_3_medium
+    data:
+      label: '4:3 Medium'
+  -
+    name: responsive_image.styles.4_3_small
+    data:
+      label: '4:3 Small'
+  -
+    name: responsive_image.styles.4_3_wide
+    data:
+      label: '4:3 Wide'
+  -
+    name: responsive_image.styles.9_16_large
+    data:
+      label: '9:16 Large'
+  -
+    name: responsive_image.styles.9_16_medium
+    data:
+      label: '9:16 Medium'
+  -
+    name: responsive_image.styles.9_16_small
+    data:
+      label: '9:16 Small'
+  -
+    name: responsive_image.styles.hero_large
+    data:
+      label: 'Hero Large'
+  -
+    name: responsive_image.styles.hero_wide
+    data:
+      label: 'Hero Wide'
+  -
+    name: responsive_image.styles.uncropped_large
+    data:
+      label: 'Uncropped Large'
+  -
+    name: responsive_image.styles.uncropped_medium
+    data:
+      label: 'Uncropped Medium'
+  -
+    name: responsive_image.styles.uncropped_small
+    data:
+      label: 'Uncropped Small'

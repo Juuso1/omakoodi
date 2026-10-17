@@ -1,0 +1,13 @@
+/public_html/sites/*/files/
+/public_html/sites/*/settings.local.php
+/public_html/sites/*/settings.ddev.php
+/.ddev/
+*.sql
+*.sql.gz
+*.tar.gz
+/vendor/
+/public_html/core/
+/public_html/modules/contrib/
+/public_html/themes/contrib/
+/public_html/profiles/contrib/
+/public_html/libraries/

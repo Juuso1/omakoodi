@@ -1,0 +1,29 @@
+uuid: 473d0dab-7165-4b77-8fda-3cc4f53b63f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.live_feed
+  module:
+    - views
+_core:
+  default_config_hash: xaHaMk79GM-WCS-dYQgvh23lPTGUnjQ3YzBrZF51o4Q
+active_version: ff968f0968e1f863
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:live_feed-block_1'
+        label: 'Live feed'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Live feed'
+id: block.views_block.live_feed-block_1
+provider: views
+source: block
+source_local_id: 'views_block:live_feed-block_1'

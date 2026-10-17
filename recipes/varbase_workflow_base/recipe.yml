@@ -1,0 +1,76 @@
+name: Varbase Workflow Base
+description: A recipe to manage advanced editorial and publishing workflow with content moderation. Build on top of the basic Workflow integration in Drupal CMS.
+type: Varbase Workflow
+install:
+  - workflows
+  - content_moderation
+  - access_unpublished
+  - scheduler
+  - scheduler_content_moderation_integration
+  - admin_audit_trail_workflows
+config:
+  strict: false
+  import:
+    workflows: '*'
+    content_moderation: '*'
+    access_unpublished: '*'
+    scheduler: '*'
+    scheduler_content_moderation_integration: '*'
+  actions:
+    user.role.content_editor:
+      grantPermissions:
+        - 'use basic_editorial transition create_new_draft'
+        - 'use basic_editorial transition publish'
+        - 'use basic_editorial transition unpublish'
+        - 'use varbase_editorial_workflow transition archive'
+        - 'use varbase_editorial_workflow transition create_new_draft'
+        - 'use varbase_editorial_workflow transition publish'
+        - 'use varbase_editorial_workflow transition archived_published'
+        - 'use varbase_editorial_workflow transition review'
+        - 'view any unpublished content'
+        - 'view latest version'
+        - 'schedule publishing of nodes'
+        - 'view scheduled content'
+    user.role.content_admin:
+      grantPermissions:
+        - 'use basic_editorial transition create_new_draft'
+        - 'use basic_editorial transition publish'
+        - 'use basic_editorial transition unpublish'
+        - 'use varbase_editorial_workflow transition archive'
+        - 'use varbase_editorial_workflow transition create_new_draft'
+        - 'use varbase_editorial_workflow transition publish'
+        - 'use varbase_editorial_workflow transition archived_published'
+        - 'use varbase_editorial_workflow transition review'
+        - 'view any unpublished content'
+        - 'view latest version'
+        - 'schedule publishing of nodes'
+        - 'view scheduled content'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'use basic_editorial transition create_new_draft'
+        - 'use basic_editorial transition publish'
+        - 'use basic_editorial transition unpublish'
+        - 'use varbase_editorial_workflow transition archive'
+        - 'use varbase_editorial_workflow transition create_new_draft'
+        - 'use varbase_editorial_workflow transition publish'
+        - 'use varbase_editorial_workflow transition archived_published'
+        - 'use varbase_editorial_workflow transition review'
+        - 'view any unpublished content'
+        - 'view latest version'
+        - 'schedule publishing of nodes'
+        - 'view scheduled content'
+    user.role.site_admin:
+      grantPermissions:
+        - 'access tokens overview'
+        - 'use basic_editorial transition create_new_draft'
+        - 'use basic_editorial transition publish'
+        - 'use basic_editorial transition unpublish'
+        - 'use varbase_editorial_workflow transition archive'
+        - 'use varbase_editorial_workflow transition create_new_draft'
+        - 'use varbase_editorial_workflow transition publish'
+        - 'use varbase_editorial_workflow transition archived_published'
+        - 'use varbase_editorial_workflow transition review'
+        - 'view any unpublished content'
+        - 'view latest version'
+        - 'schedule publishing of nodes'
+        - 'view scheduled content'

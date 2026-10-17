@@ -1,0 +1,29 @@
+uuid: c81cf5e2-9919-4325-b5ef-a42b20954a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.podcast_episodes
+  module:
+    - views
+_core:
+  default_config_hash: 9f2oHbDdazPfw8Nu5a2vFM3BYQMOm_20uIJWv-0D2EI
+active_version: 573b7f68699a04e1
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:podcast_episodes-count_by_podcast'
+        label: 'Podcast episodes: episode count of this podcast'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Podcast episodes: episode count of this podcast'
+id: block.views_block.podcast_episodes-count_by_podcast
+provider: views
+source: block
+source_local_id: 'views_block:podcast_episodes-count_by_podcast'

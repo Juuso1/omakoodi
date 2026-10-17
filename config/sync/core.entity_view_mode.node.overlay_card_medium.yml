@@ -1,0 +1,13 @@
+uuid: c3a24b8b-e2d1-45d2-9a11-f8eea998e866
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: G2BP0q5tIT3OhxW7Q1BacazhCASBhSimGw7sGjLJP60
+id: node.overlay_card_medium
+label: 'Overlay card - medium'
+description: null
+targetEntityType: node
+cache: true

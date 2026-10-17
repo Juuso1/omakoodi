@@ -1,0 +1,38 @@
+uuid: 206b96a9-6c69-41df-b500-d12fe5f3a7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.varbase_dashboard_welcome
+  module:
+    - views
+active_version: bb91639be18286f7
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:varbase_dashboard_welcome-block_welcome'
+        label: 'Dashboard welcome'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+  f7311682b181f6fd:
+    settings:
+      default_settings:
+        id: 'views_block:varbase_dashboard_welcome-block_welcome'
+        label: 'Dashboard welcome'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Dashboard welcome'
+id: block.views_block.varbase_dashboard_welcome-block_welcome
+provider: views
+source: block
+source_local_id: 'views_block:varbase_dashboard_welcome-block_welcome'

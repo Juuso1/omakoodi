@@ -1,0 +1,24 @@
+uuid: 6ab3542e-6e89-4bd3-8653-afe75362e037
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.search_category
+  module:
+    - facets
+active_version: 513d724f7a4634c4
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'facet_block:search_category'
+        label: Category
+        label_display: '0'
+        provider: facets
+    fallback_metadata:
+      slot_definitions: null
+label: Category
+id: block.facet_block.search_category
+provider: facets
+source: block
+source_local_id: 'facet_block:search_category'

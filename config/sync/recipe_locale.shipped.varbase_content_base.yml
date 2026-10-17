@@ -1,0 +1,432 @@
+recipe: 'Varbase Content Base'
+config:
+  -
+    name: core.entity_view_mode.node.card
+    data:
+      label: Card
+  -
+    name: eca.eca.content_duplicate
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Duplicate content'
+      events:
+        eca_render__entity_operations_link:
+          label: 'Operation links'
+        content_entity__prepareform_entity:
+          label: 'Prepare entity form'
+        eca_render__local_tasks_tasks:
+          label: 'Alter local task'
+      actions:
+        eca_render_build_link:
+          label: Link
+          configuration:
+            value: |-
+              "#type": link
+              "#url": /[entity:entity_type]/add/[entity:bundle_id]?duplicate=[entity:id]
+              "#title": Duplicate
+        eca_token_load_entity_entity:
+          label: 'Load original entity'
+        action_message_action_message:
+          label: 'Show duplicate message'
+          configuration:
+            message: 'You are duplicating "[original:label]"'
+        eca_clone_entity_duplicate:
+          label: 'Duplicate content'
+        eca_clone_entity_link:
+          label: Duplicate
+        eca_token_load_route_param_parmeter:
+          label: 'Load route parameter'
+        eca_token_load_query_arg_query:
+          label: 'Load entity ID'
+  -
+    name: eca.eca.content_template_disable_preview
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Disable preview when Canvas is enabled'
+          documentation: "Disables Drupal's built-in preview functionality when a Canvas content template is created for a content type."
+      events:
+        config__save_1_1:
+          label: 'Content template created'
+      conditions:
+        eca_scalar_1svhele:
+          configuration:
+            left: '[config:status]'
+            right: '1'
+        eca_scalar_1cmipw9:
+          configuration:
+            left: '[config:content_entity_type_view_mode]'
+            right: full
+      actions:
+        eca_config_action_1jfklob:
+          label: 'Disable preview for content type'
+          configuration:
+            data: '0'
+        eca_void_and_condition_0mr4y0c:
+          label: and
+        eca_switch_account_1q56yux:
+          label: 'Temporarily become administrator'
+  -
+    name: eca.eca.enable_full_view_mode_node_type
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Activate Full content view mode for new node types'
+          documentation: 'When a new node type is created through the UI (not during config sync), automatically activates the Full content view mode and an empty Canvas content template for it.'
+      events:
+        config_save_node_type_new:
+          label: 'Node type created'
+      actions:
+        eca_switch_account_admin:
+          label: 'Switch user'
+        eca_token_set_value_bundle:
+          label: 'Remember bundle id'
+          configuration:
+            token_value: '[config:type]'
+        eca_config_action_create_full_display:
+          label: 'Activate Full content view mode'
+          configuration:
+            data: |-
+              targetEntityType: node
+              bundle: "[bundle]"
+              mode: full
+              status: true
+        eca_config_action_create_canvas_template:
+          label: 'Create empty Canvas content template'
+          configuration:
+            data: |-
+              langcode: en
+              status: true
+              content_entity_type_id: node
+              content_entity_type_bundle: "[bundle]"
+              content_entity_type_view_mode: full
+              component_tree: []
+              exposed_slots: {}
+  -
+    name: eca.eca.redirect_403_to_login
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Redirect 403 to Login'
+          annotations:
+            TextAnnotation_1r1r1r1:
+              text: 'Triggered when an HTTP response is created, allowing inspection and modification.'
+            TextAnnotation_1r2r2r2:
+              text: 'Check if the HTTP response status code is 403 (Access Denied).'
+            TextAnnotation_1r3r3r3:
+              text: 'Verify that the current user is anonymous (not logged in).'
+            TextAnnotation_1r4r4r4:
+              text: 'Combine both conditions: must be 403 error AND user must be anonymous.'
+            TextAnnotation_1r5r5r5:
+              text: 'Redirect anonymous users to the login page, preserving the original destination URL.'
+      events:
+        kernel__response_1:
+          label: 'Response created'
+      conditions:
+        eca_scalar_1q09u8b:
+          configuration:
+            left: '[event:code]'
+            right: '403'
+      actions:
+        eca_void_and_condition_0v21nbd:
+          label: And
+        action_goto_action_0nji5tn:
+          label: 'Redirect to URL'
+  -
+    name: eca.eca.unpublished_404
+    data:
+      third_party_settings:
+        modeler_api:
+          label: 'Unpublished 404'
+      events:
+        kernel__exception_status_code_exception:
+          label: 'Uncaught Exception'
+      conditions:
+        eca_scalar_403:
+          configuration:
+            left: '[event:code]'
+            right: '403'
+      actions:
+        eca_void_and_condition_and:
+          label: AND
+        eca_switch_account_1:
+          label: 'Switch to user 1'
+        eca_token_load_route_param_route:
+          label: 'Load node from route'
+        eca_throw_exception_exception:
+          label: 'Not found exception'
+  -
+    name: field.field.node.page.field_content
+    data:
+      label: Content
+      description: 'The content of this page.'
+  -
+    name: field.field.node.page.field_description
+    data:
+      label: Description
+      description: 'Describe the page content. This appears as the description in search engine results.'
+  -
+    name: field.field.node.page.field_featured_image
+    data:
+      label: 'Featured image'
+      description: 'Include an image. This appears as the image in search engine results.'
+  -
+    name: field.field.node.page.field_tags
+    data:
+      label: Tags
+      description: 'Include tags for relevant topics.'
+  -
+    name: node.type.page
+    data:
+      name: 'Utility page'
+      description: "Use <em>utility page</em> for your static content, such as a 'Privacy policy' page."
+  -
+    name: pathauto.pattern.page_content
+    data:
+      label: 'Page content'
+      pattern: '/[node:title]'
+  -
+    name: system.menu.social-media-menu
+    data:
+      label: 'Social media menu'
+      description: 'Shows a list of social media links, which are related the public social network accounts'
+  -
+    name: taxonomy.vocabulary.tags
+    data:
+      name: Tags
+      description: 'Use tags to group articles on similar topics into categories.'
+  -
+    name: views.view.publishing_content
+    data:
+      label: 'Publishing content'
+      description: 'Shows a list of publishing-managed content on the site.'
+      display:
+        default:
+          display_title: Master
+          display_options:
+            title: 'Publishing content'
+            fields:
+              node_bulk_form:
+                action_title: Action
+              title:
+                label: Title
+                separator: ', '
+              uid:
+                label: Author
+                separator: ', '
+              created:
+                label: 'Create date'
+                separator: ', '
+              changed:
+                label: 'Updated date'
+                separator: ', '
+              status:
+                label: Published
+                separator: ', '
+              operations:
+                label: Operations
+            pager:
+              options:
+                tags:
+                  next: ››
+                  previous: ‹‹
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options_all_label: '- All -'
+                  offset_label: Offset
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            filters:
+              moderation_state:
+                expose:
+                  label: 'Moderation state'
+              uid:
+                expose:
+                  label: 'Authored by'
+              combine:
+                expose:
+                  label: Contains
+              type:
+                expose:
+                  label: Type
+            use_more_text: more
+        block_drafts:
+          display_title: 'My drafts Block'
+          display_options:
+            title: 'My Drafts'
+            fields:
+              title:
+                label: Title
+                separator: ', '
+              changed:
+                label: 'Updated date'
+                separator: ', '
+              operations:
+                label: Operations
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area_text_custom:
+                content: 'No drafted content by you. Only your drafts, are listed here.'
+            arguments:
+              uid:
+                exception:
+                  title: All
+            display_description: 'Shows a list of all draft content for the currently logged-in user.'
+            use_more_text: 'See all drafts'
+            link_url: /admin/content/moderated
+            display_comment: 'Shows a list of all drafted for the currently logged-in user.'
+            block_description: 'My drafts'
+            block_category: Dashboard
+        block_scheduled:
+          display_title: 'Scheduled Block'
+          display_options:
+            title: Scheduled
+            fields:
+              title:
+                label: Title
+                separator: ', '
+              unpublish_on:
+                label: 'Unpublish on'
+                separator: ', '
+              publish_on:
+                label: 'Scheduled On | Unpublished On'
+                alter:
+                  text: "{% if publish_on %}\r\n{{ publish_on }} |\r\n{% endif %}\r\n{% if unpublish_on %}\r\n {{ unpublish_on }}\r\n{% endif %}"
+                separator: ', '
+              operations:
+                label: Operations
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area_text_custom:
+                content: 'No scheduled content available. Only scheduled content are listed here.'
+            filters:
+              publish_on:
+                expose:
+                  label: 'Publish on'
+              unpublish_on:
+                expose:
+                  label: 'Unpublish on'
+            display_description: 'Shows a list of all content scheduled for future publication on the site.'
+            use_more_text: 'See all scheduled'
+            link_url: /admin/content/scheduled
+            block_description: Scheduled
+            block_category: Dashboard
+  -
+    name: views.view.recent_content
+    data:
+      label: 'Recent content'
+      description: 'Find and manage content.'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: 'Recent content'
+            fields:
+              title:
+                label: Title
+                separator: ', '
+              type:
+                label: Type
+                separator: ', '
+              status:
+                label: Status
+                settings:
+                  format_custom_false: Unpublished
+                  format_custom_true: Published
+                separator: ', '
+              changed:
+                label: Updated
+                separator: ', '
+            exposed_form:
+              options:
+                submit_button: Filter
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area_text_custom:
+                content: "You don't have any content yet."
+            use_more_text: 'See all content'
+            link_url: /admin/content
+        block_recent_content:
+          display_title: Block
+          display_options:
+            display_comment: 'Recent content block for the Welcome dashboard'
+            block_category: Dashboard
+  -
+    name: views.view.recent_pages
+    data:
+      label: 'Recent pages'
+      display:
+        default:
+          display_title: Default
+          display_options:
+            title: 'Recent pages'
+            fields:
+              title:
+                label: Title
+                separator: ', '
+              status:
+                label: Status
+                settings:
+                  format_custom_false: Unpublished
+                  format_custom_true: Published
+                separator: ', '
+              changed:
+                label: Updated
+                separator: ', '
+            exposed_form:
+              options:
+                submit_button: Apply
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            empty:
+              area:
+                content:
+                  value: 'You have not created any pages yet.'
+            use_more_text: 'See all pages'
+            link_url: /admin/content/pages
+        block_recent_pages:
+          display_title: Block
+  -
+    name: workflows.workflow.basic_editorial
+    data:
+      label: Basic
+      type_settings:
+        states:
+          draft:
+            label: Draft
+          published:
+            label: Published
+          unpublished:
+            label: Unpublished
+        transitions:
+          create_new_draft:
+            label: 'Create new draft'
+          publish:
+            label: Publish
+          unpublish:
+            label: Unpublish

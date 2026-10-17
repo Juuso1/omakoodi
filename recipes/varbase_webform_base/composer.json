@@ -1,0 +1,27 @@
+{
+  "name": "drupal/varbase_webform_base",
+  "description": "A recipe to manage default installed webform modules, configurations, and permissions for Varbase webform experience.",
+  "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "Webform", "Forms", "Web Forms"],
+  "type": "drupal-recipe",
+  "notification-url": "https://packages.drupal.org/8/downloads",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_webform_base",
+    "source": "http://cgit.drupalcode.org/varbase_webform_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/webform": "~6.3.0",
+    "drupal/webform_views": "~5",
+    "drupal/eca": "~3",
+    "drupal/eca_webform": "~2"
+  },
+  "version": "1.0.2"
+}

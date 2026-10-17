@@ -1,0 +1,27 @@
+uuid: 6f5dd3db-98ae-4f87-a226-3f64107faf1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+active_version: e096bc92df683e11
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:news-featured'
+        label: 'Featured news posts'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Featured news posts'
+id: block.views_block.news-featured
+provider: views
+source: block
+source_local_id: 'views_block:news-featured'

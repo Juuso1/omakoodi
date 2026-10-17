@@ -1,0 +1,17 @@
+uuid: ccf76bcf-a7f7-4654-a185-f5eca9fc38e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.editoria11y_dismissals-recent_dismissals
+    - canvas.component.block.views_block.editoria11y_results-block_recent_issues
+    - canvas.component.block.views_block.editoria11y_results-block_top_issues
+    - canvas.component.block.views_block.editoria11y_results-block_top_results
+name: Editoria11y
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.editoria11y_dismissals-recent_dismissals
+  - block.views_block.editoria11y_results-block_recent_issues
+  - block.views_block.editoria11y_results-block_top_issues
+  - block.views_block.editoria11y_results-block_top_results
