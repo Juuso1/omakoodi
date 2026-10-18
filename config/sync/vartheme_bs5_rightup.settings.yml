@@ -8,8 +8,9 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  use_default: true
+  path: ''
+  use_default: false
 container_header: no-container
 container_content: container
 container_footer: no-container
-sticky_header: true
+sticky_header: 1
