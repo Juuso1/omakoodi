@@ -1,0 +1,13 @@
+uuid: 9facd97b-db8c-4f22-8a5c-e25b8bbda041
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: r43Nt8ThDaQr4svaWFzkhvZX03AD-maod4tII6e_Z-Q
+id: node.rightup_list
+label: 'List item'
+description: null
+targetEntityType: node
+cache: true

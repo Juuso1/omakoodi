@@ -1,0 +1,13 @@
+uuid: a03b57eb-b015-4c61-bbc6-50fbce4714fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: dHItwHuYMuzRfJvYtCD80uqVu99CJKaaydCq4fVgWNs
+id: node.featured_card_large
+label: 'Featured card - large'
+description: null
+targetEntityType: node
+cache: true

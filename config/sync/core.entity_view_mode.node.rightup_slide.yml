@@ -1,0 +1,13 @@
+uuid: a7cdfa57-0c81-46e2-914f-49ac036f2070
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: z90YOvGR170sIW1ZshdZI8fEVuk1rk7TO7bcj64JaVw
+id: node.rightup_slide
+label: Slide
+description: null
+targetEntityType: node
+cache: true

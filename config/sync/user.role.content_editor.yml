@@ -1,0 +1,211 @@
+uuid: 24090f54-76f5-42c6-be0e-7c86c74c11fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - dashboard.dashboard.welcome
+    - filter.format.canvas_html_inline
+    - filter.format.content_format
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_audio
+    - media.type.remote_video
+    - media.type.svg_image
+    - media.type.video
+    - node.type.news
+    - node.type.page
+    - node.type.podcast
+    - node.type.podcast_episode
+    - taxonomy.vocabulary.news_categories
+    - taxonomy.vocabulary.tags
+    - workflows.workflow.basic_editorial
+    - workflows.workflow.varbase_editorial_workflow
+  module:
+    - admin_audit_trail
+    - antibot
+    - canvas
+    - coffee
+    - content_moderation
+    - contextual
+    - dashboard
+    - dropzonejs
+    - editoria11y
+    - file
+    - filter
+    - help
+    - media
+    - media_bulk_upload
+    - media_library_bulk_upload
+    - menu_link_attributes
+    - navigation
+    - node
+    - path
+    - redirect
+    - scheduler
+    - system
+    - taxonomy
+    - taxonomy_access_fix
+    - taxonomy_manager
+    - toolbar
+    - trash
+    - views_bulk_edit
+    - webform
+    - yoast_seo
+_core:
+  default_config_hash: PtXbVf8en1dSB1t_kXPS0l--tnb4zbN3b5goBXzdrBg
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access admin audit trail'
+  - 'access administration pages'
+  - 'access coffee'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access navigation'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy manager list'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access trash'
+  - 'access webform overview'
+  - 'administer menu'
+  - 'administer redirects'
+  - 'administer url aliases'
+  - 'create any term'
+  - 'create audio media'
+  - 'create canvas_page'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create news content'
+  - 'create page content'
+  - 'create podcast content'
+  - 'create podcast_episode content'
+  - 'create remote_audio media'
+  - 'create remote_video media'
+  - 'create svg_image media'
+  - 'create terms in news_categories'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create webform'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any news content'
+  - 'delete any page content'
+  - 'delete any podcast content'
+  - 'delete any podcast_episode content'
+  - 'delete any remote_audio media'
+  - 'delete any remote_video media'
+  - 'delete any svg_image media'
+  - 'delete any video media'
+  - 'delete canvas_page'
+  - 'delete news revisions'
+  - 'delete own files'
+  - 'delete own news content'
+  - 'delete own page content'
+  - 'delete own podcast content'
+  - 'delete own podcast_episode content'
+  - 'delete page revisions'
+  - 'delete podcast revisions'
+  - 'delete podcast_episode revisions'
+  - 'dropzone upload files'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit any podcast content'
+  - 'edit any podcast_episode content'
+  - 'edit any remote_audio media'
+  - 'edit any remote_video media'
+  - 'edit any svg_image media'
+  - 'edit any video media'
+  - 'edit canvas_page'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own news content'
+  - 'edit own page content'
+  - 'edit own podcast content'
+  - 'edit own podcast_episode content'
+  - 'edit own remote_audio media'
+  - 'edit own remote_video media'
+  - 'edit own svg_image media'
+  - 'edit own video media'
+  - 'edit own webform'
+  - 'edit terms in tags'
+  - 'mark as hidden in editoria11y'
+  - 'reorder terms in news_categories'
+  - 'restore node entities'
+  - 'restore taxonomy_term entities'
+  - 'revert all revisions'
+  - 'revert news revisions'
+  - 'revert page revisions'
+  - 'revert podcast revisions'
+  - 'revert podcast_episode revisions'
+  - 'schedule publishing of nodes'
+  - 'select terms in news_categories'
+  - 'select terms in tags'
+  - 'select unpublished terms in news_categories'
+  - 'select unpublished terms in tags'
+  - 'skip antibot'
+  - 'use basic_editorial transition create_new_draft'
+  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition unpublish'
+  - 'use media audio bulk upload form'
+  - 'use media document bulk upload form'
+  - 'use media image bulk upload form'
+  - 'use media remote_video bulk upload form'
+  - 'use media svg_image bulk upload form'
+  - 'use media video bulk upload form'
+  - 'use media_bulk_upload bulk upload form'
+  - 'use menu link attributes'
+  - 'use text format canvas_html_inline'
+  - 'use text format content_format'
+  - 'use text format full_html'
+  - 'use varbase_editorial_workflow transition archive'
+  - 'use varbase_editorial_workflow transition archived_published'
+  - 'use varbase_editorial_workflow transition create_new_draft'
+  - 'use varbase_editorial_workflow transition publish'
+  - 'use varbase_editorial_workflow transition review'
+  - 'use views bulk edit'
+  - 'use yoast seo'
+  - 'view all revisions'
+  - 'view any term'
+  - 'view any term name'
+  - 'view any unpublished content'
+  - 'view any unpublished term'
+  - 'view any unpublished term name'
+  - 'view any vocabulary name'
+  - 'view deleted entities'
+  - 'view editoria11y checker'
+  - 'view latest version'
+  - 'view news revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view podcast revisions'
+  - 'view podcast_episode revisions'
+  - 'view scheduled content'
+  - 'view term names in news_categories'
+  - 'view term names in tags'
+  - 'view terms in news_categories'
+  - 'view terms in tags'
+  - 'view the administration theme'
+  - 'view unpublished term names in news_categories'
+  - 'view unpublished term names in tags'
+  - 'view unpublished terms in news_categories'
+  - 'view unpublished terms in tags'
+  - 'view vocabulary labels'
+  - 'view vocabulary name of news_categories'
+  - 'view vocabulary name of tags'
+  - 'view welcome dashboard'

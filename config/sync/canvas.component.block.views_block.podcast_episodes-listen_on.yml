@@ -1,0 +1,29 @@
+uuid: b747fd2d-0699-466d-a8cd-25b33f46d700
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.podcast_episodes
+  module:
+    - views
+_core:
+  default_config_hash: QAG2FIyuyyv3wuF9uS0-3GMzF8_NVC2cAu07DyPRtig
+active_version: dd8755ec8fecdcd7
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:podcast_episodes-listen_on'
+        label: 'Listen on'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Listen on'
+id: block.views_block.podcast_episodes-listen_on
+provider: views
+source: block
+source_local_id: 'views_block:podcast_episodes-listen_on'

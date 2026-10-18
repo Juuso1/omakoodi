@@ -1,0 +1,80 @@
+uuid: 97f2956f-34f5-45e3-84bc-2f06a4e26883
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - vartheme_bs5_rightup
+active_version: 2996f0a411d662bc
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        border_width:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: border-1
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        border_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: border-secondary
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        opacity:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: opacity-100
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        margin_start:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: ms-3
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        margin_end:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: me-3
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Vertical divider'
+id: sdc.vartheme_bs5_rightup.vertical-divider
+provider: vartheme_bs5_rightup
+source: sdc
+source_local_id: 'vartheme_bs5_rightup:vertical-divider'

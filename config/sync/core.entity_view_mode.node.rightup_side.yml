@@ -1,0 +1,13 @@
+uuid: f88ec478-1fa9-4dc8-a50b-411883aad04c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: HRt8BOq7titEVi4rqmk_8I3hQmTYHJUDbVJZRuQVrP0
+id: node.rightup_side
+label: 'Side story'
+description: null
+targetEntityType: node
+cache: true

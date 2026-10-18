@@ -1,0 +1,13 @@
+uuid: 70a92ef5-c8f0-4002-90e7-15c89297f013
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: TdYnLT6lY4iyTvn2iDOd5JqbIufgFY83VP02gmd3mWc
+id: media.media_video_01_01
+label: 'Media Video 1:1'
+description: null
+targetEntityType: media
+cache: true

@@ -1,0 +1,33 @@
+uuid: 68df2313-e48f-4b3b-b94e-2c0c5d214f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audio
+    - media.type.audio
+    - media.type.remote_audio
+    - node.type.podcast_episode
+_core:
+  default_config_hash: jEeLpzZjeJyPPY8kWCx9YPW6XEPDyYjgfoHpHKDYKwM
+id: node.podcast_episode.field_audio
+field_name: field_audio
+entity_type: node
+bundle: podcast_episode
+label: Audio
+description: 'The episode audio: an uploaded audio file, or audio hosted on SoundCloud, Spotify or Apple Podcasts.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+      remote_audio: remote_audio
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

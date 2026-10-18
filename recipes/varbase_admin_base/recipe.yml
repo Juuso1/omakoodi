@@ -1,0 +1,311 @@
+name: Varbase Admin Base
+description: A recipe to manage default installed modules, configs and permissions for Varbase admin experience.
+type: Varbase Admin
+recipes:
+  # The dashboard welcome shows the user's picture.
+  - core/recipes/user_picture
+install:
+  - node
+  - help
+  - taxonomy
+  - gin
+  - roleassign
+  - config_perms
+  - admin_audit_trail
+  - admin_audit_trail_file
+  - admin_audit_trail_media
+  - admin_audit_trail_user
+  - admin_audit_trail_taxonomy
+  - admin_audit_trail_node
+  - admin_audit_trail_menu
+  - admin_audit_trail_auth
+  - masquerade
+  - menu_admin_per_menu
+  - revision_log_default
+  - syslog
+  - update
+  - autosave_form
+  - settings_tray
+  - taxonomy_manager
+  - taxonomy_access_fix
+  - coffee
+  - length_indicator
+  - maxlength
+  - navigation
+  - navigation_extra_tools
+  - gin_toolbar
+  - gin_login
+  - gin_everywhere
+  - gin_type_tray
+  - trash
+  - eca_vbo
+  - ui_icons
+  - canvas_icon_picker
+  - smart_date
+  - varbase_recipes
+  # The admin experience drupal_cms_admin_ui used to set up. That recipe was
+  # removed from Drupal CMS 2.2 and its last release requires Tagify 1, which
+  # no longer installs beside Drupal CMS, so Varbase carries it here.
+  - announcements_feed
+  - automatic_updates
+  - contextual
+  - dashboard
+  - dblog
+  - drupal_cms_helper
+  - drupical
+  - file
+  - menu_block
+  - menu_link_content
+  - menu_ui
+  - project_browser
+  - sam
+  - tagify
+  - tagify_user_list
+  - views_ui
+  - view_password
+config:
+  import:
+    autosave_form:
+      - autosave_form.messages
+    navigation:
+      - navigation.settings
+      - system.menu.content
+      - system.menu.navigation-user-links
+    gin:
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_local_actions
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+      - block.block.gin_secondary_local_tasks
+    claro:
+      - block.block.claro_breadcrumbs
+      - block.block.claro_content
+      - block.block.claro_local_actions
+      - block.block.claro_messages
+      - block.block.claro_page_title
+      - block.block.claro_primary_local_tasks
+      - block.block.claro_secondary_local_tasks
+    system:
+      - system.menu.footer
+    # Core's own content and people admin views, created here as
+    # drupal_cms_content_type_base and drupal_cms_admin_ui used to, before any
+    # Varbase recipe adds to them.
+    node:
+      - views.view.content
+    user:
+      - views.view.user_admin_people
+  actions:
+    # Icon props across the Vartheme BS5 themes render through the Canvas Icon
+    # Picker, so an editor searches and sees icons instead of reading a select
+    # list of names. Set here rather than in each site template, so Varbase
+    # Starter, Educare, Horizon Aid and RightUp all inherit it from one file.
+    # These are the pack ids every Vartheme BS5 theme declares in its
+    # <theme>.icons.yml; the module's own default is an empty map.
+    canvas_icon_picker.settings:
+      simpleConfigUpdate:
+        allowed_packs:
+          - bootstrap_icons
+          - vartheme_social
+    announcements_feed.settings:
+      simpleConfigUpdate:
+        limit: 2
+    automatic_updates.settings:
+      simpleConfigUpdate:
+        allow_core_minor_updates: true
+    core.menu.static_menu_link_overrides:
+      overrideMenuLinks:
+        announcements_feed.announcement:
+          enabled: false
+    drupical.settings:
+      simpleConfigUpdate:
+        limit: 5
+    navigation.block_layout:
+      # Simple config, so applying the recipe twice does not add the
+      # Dashboard and Help items twice. The UUIDs are from
+      # navigation.block_layout.yml.
+      simpleConfigUpdate:
+        sections.0.components.2622e40b-8786-4b8c-8883-19e49da53023.configuration:
+          id: navigation_dashboard
+          label: Dashboard
+          label_display: '0'
+          provider: dashboard
+        sections.0.components.52e884dd-0301-4265-b2b3-9cea53a403f3:
+          uuid: 52e884dd-0301-4265-b2b3-9cea53a403f3
+          region: footer
+          configuration:
+            id: navigation_link
+            label: Help
+            label_display: '0'
+            provider: navigation
+            title: Help
+            uri: 'https://project.pages.drupalcode.org/drupal_cms'
+            icon_class: help
+          weight: -2
+          additional: []
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        allow_ui_install: true
+        max_selections: 1
+    system.theme:
+      simpleConfigUpdate:
+        admin: gin
+    update.settings:
+      simpleConfigUpdate:
+        check.disabled_extensions: true
+    user.settings:
+      simpleConfigUpdate:
+        register: admin_only
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    gin.settings:
+      simpleConfigUpdate:
+        logo:
+          path: profiles/contrib/varbase/images/varbase-medium-logo-emblem-color.png
+          use_default: false
+        favicon:
+          mimetype: image/vnd.microsoft.icon
+          path: profiles/contrib/varbase/images/favicon.ico
+          use_default: false
+        show_description_toggle: true
+    gin_login.settings:
+      simpleConfigUpdate:
+        logo:
+          use_default: false
+          path: themes/contrib/vartheme_bs5/logo.svg
+        brand_image:
+          use_default: true
+    navigation.settings:
+      simpleConfigUpdate:
+        logo:
+          provider: custom
+          path: profiles/contrib/varbase/images/varbase-medium-logo-emblem-color.png
+          max:
+            filesize: 1048576
+            height: 40
+            width: 40
+    trash.settings:
+      simpleConfigUpdate:
+        enabled_entity_types.file: []
+        enabled_entity_types.media: []
+        enabled_entity_types.taxonomy_term: []
+        enabled_entity_types.node: []
+        enabled_entity_types.canvas_page: []
+    user.role.anonymous:
+      grantPermissions:
+        - 'view any term'
+    user.role.authenticated:
+      grantPermissions:
+        - 'view any term'
+    user.role.content_editor:
+      grantPermissions:
+        - 'access admin audit trail'
+        - 'access administration pages'
+        - 'access coffee'
+        - 'access contextual links'
+        - 'access help pages'
+        - 'access media overview'
+        - 'access navigation'
+        - 'access site in maintenance mode'
+        - 'access site reports'
+        - 'access taxonomy manager list'
+        - 'access toolbar'
+        - 'access trash'
+        - 'restore node entities'
+        - 'restore taxonomy_term entities'
+        - 'view deleted entities'
+        - 'view editoria11y checker'
+        - 'mark as hidden in editoria11y'
+        - 'view the administration theme'
+        - 'view welcome dashboard'
+    user.role.content_admin:
+      grantPermissions:
+        - 'access admin audit trail'
+        - 'access administration pages'
+        - 'access coffee'
+        - 'access contextual links'
+        - 'access help pages'
+        - 'access media overview'
+        - 'access navigation'
+        - 'access navigation extra tools cache flushing'
+        - 'access navigation extra tools cron'
+        - 'access site in maintenance mode'
+        - 'access site reports'
+        - 'access taxonomy manager list'
+        - 'access toolbar'
+        - 'access trash'
+        - 'administer footer menu items'
+        - 'administer main menu items'
+        - 'restore file entities'
+        - 'restore media entities'
+        - 'restore node entities'
+        - 'restore taxonomy_term entities'
+        - 'view deleted entities'
+        - 'view editoria11y checker'
+        - 'mark as hidden in editoria11y'
+        - 'view the administration theme'
+        - 'view welcome dashboard'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'access admin audit trail'
+        - 'access administration pages'
+        - 'access coffee'
+        - 'access contextual links'
+        - 'access help pages'
+        - 'access media overview'
+        - 'access navigation'
+        - 'access site in maintenance mode'
+        - 'access site reports'
+        - 'access toolbar'
+        - 'access trash'
+        - 'view deleted entities'
+        - 'view editoria11y checker'
+        - 'mark as hidden in editoria11y'
+        - 'view the administration theme'
+        - 'view welcome dashboard'
+    user.role.site_admin:
+      grantPermissions:
+        - 'access admin audit trail'
+        - 'access administration pages'
+        - 'access coffee'
+        - 'access contextual links'
+        - 'access help pages'
+        - 'access media overview'
+        - 'access navigation'
+        - 'access navigation extra tools cache flushing'
+        - 'access navigation extra tools cron'
+        - 'access site in maintenance mode'
+        - 'access site reports'
+        - 'access taxonomy manager list'
+        - 'access toolbar'
+        - 'access trash'
+        - 'administer account menu items'
+        - 'administer account settings'
+        - 'administer admin menu items'
+        - 'administer blocks'
+        - 'administer footer menu items'
+        - 'administer main menu items'
+        - 'administer tools menu items'
+        - 'administer users'
+        - 'assign roles'
+        - 'masquerade as authenticated'
+        - 'masquerade as content_admin'
+        - 'masquerade as content_editor'
+        - 'masquerade as seo_admin'
+        - 'masquerade as site_admin'
+        - 'purge file entities'
+        - 'purge media entities'
+        - 'purge node entities'
+        - 'purge taxonomy_term entities'
+        - 'restore file entities'
+        - 'restore media entities'
+        - 'restore node entities'
+        - 'restore taxonomy_term entities'
+        - 'view deleted entities'
+        - 'view editoria11y checker'
+        - 'mark as hidden in editoria11y'
+        - 'view the administration theme'
+        - 'view user email addresses'
+        - 'view welcome dashboard'

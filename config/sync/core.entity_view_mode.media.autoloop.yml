@@ -1,0 +1,13 @@
+uuid: 37616ae7-22a4-442c-a6f5-fab5d1825690
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: tQWSUIaExfZzUraJG6Xo-x9t9IOnAltdGFVlF8j1L1o
+id: media.autoloop
+label: Autoloop
+description: null
+targetEntityType: media
+cache: true

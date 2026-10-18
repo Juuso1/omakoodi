@@ -1,0 +1,25 @@
+uuid: fbd895f5-a3e4-481b-859b-7e5289b5a309
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.accordion-block
+    - canvas.component.sdc.vartheme_bs5_rightup.accordion-container
+    - canvas.component.sdc.vartheme_bs5_rightup.divider
+    - canvas.component.sdc.vartheme_bs5_rightup.group
+    - canvas.component.sdc.vartheme_bs5_rightup.navbar
+    - canvas.component.sdc.vartheme_bs5_rightup.section
+    - canvas.component.sdc.vartheme_bs5_rightup.spacer
+    - canvas.component.sdc.vartheme_bs5_rightup.vertical-divider
+name: Layout
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.vartheme_bs5_rightup.accordion-block
+  - sdc.vartheme_bs5_rightup.accordion-container
+  - sdc.vartheme_bs5_rightup.divider
+  - sdc.vartheme_bs5_rightup.group
+  - sdc.vartheme_bs5_rightup.navbar
+  - sdc.vartheme_bs5_rightup.section
+  - sdc.vartheme_bs5_rightup.spacer
+  - sdc.vartheme_bs5_rightup.vertical-divider

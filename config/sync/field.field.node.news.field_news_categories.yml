@@ -1,0 +1,31 @@
+uuid: 89dfc8bd-cb33-43be-bb67-29c7a2b8e135
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_categories
+    - node.type.news
+    - taxonomy.vocabulary.news_categories
+_core:
+  default_config_hash: WnChT8GgNmfIehVMyzDVHA7oCCl6V4Y4j1Pl__sbSyQ
+id: node.news.field_news_categories
+field_name: field_news_categories
+entity_type: node
+bundle: news
+label: Categories
+description: 'Select the news categories.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      news_categories: news_categories
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

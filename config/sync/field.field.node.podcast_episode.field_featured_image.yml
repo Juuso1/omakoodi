@@ -1,0 +1,23 @@
+uuid: 73db76f7-ad27-4315-a088-3a92c646faca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_image
+    - node.type.podcast_episode
+_core:
+  default_config_hash: aSwQVSlqHRqj8bRFUdcLbo5vgQSoKza4_EWH3SfgofE
+id: node.podcast_episode.field_featured_image
+field_name: field_featured_image
+entity_type: node
+bundle: podcast_episode
+label: 'Cover art'
+description: 'The episode cover image, square where possible. Shown on the podcast card and at the top of the episode page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings: {  }
+field_type: entity_reference

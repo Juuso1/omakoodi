@@ -1,0 +1,13 @@
+uuid: 88ac28f5-3253-4995-b4c0-a89f34cf7734
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ZT3MiSJADvfOyW_amrgYyp4HnCURHChuuk8abrv6zrg
+id: node.rightup_featured
+label: 'Featured story'
+description: null
+targetEntityType: node
+cache: true

@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: wu0SiHADCU_dYBqmQ8KHH3rM_ZDU4E_Ncya3IBn-Ulw
+hidden_canvas_components:
+  - block.admin_menu_links
+  - block.ai_operations_status
+  - block.ai_setup_ai_provider
+  - block.events_block
+  - block.project_browser_block.ai_dashboard_recommended
+  - block.project_browser_block.varbase_recipes
+  - block.share
+  - block.social_auth_login
+  - block.views_block.recent_pages-block_recent_pages
+  - sdc.navigation.message
+  - sdc.webshare.share

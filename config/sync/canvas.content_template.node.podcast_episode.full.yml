@@ -1,0 +1,346 @@
+uuid: dccee014-c051-4a07-a8f5-542d2c799605
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_breadcrumb_block
+    - core.entity_view_mode.node.full
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.image.field_media_image
+    - field.field.node.podcast_episode.field_audio
+    - field.field.node.podcast_episode.field_content
+    - field.field.node.podcast_episode.field_description
+    - field.field.node.podcast_episode.field_duration
+    - field.field.node.podcast_episode.field_featured_image
+    - image.style.canvas_parametrized_width
+    - media.type.audio
+    - media.type.image
+    - media.type.remote_audio
+    - node.type.podcast_episode
+  module:
+    - file
+    - media
+    - node
+_core:
+  default_config_hash: NbtQ88VI3KmXiPD60qPpqwWfch6gfTZrlYF9yA6n5VM
+id: node.podcast_episode.full
+content_entity_type_id: node
+content_entity_type_bundle: podcast_episode
+content_entity_type_view_mode: full
+component_tree:
+  '0:69de13ac-39e5-565e-b5c8-606e1516d5e3':
+    uuid: 69de13ac-39e5-565e-b5c8-606e1516d5e3
+    component_id: sdc.vartheme_bs5_rightup.section
+    component_version: 038d91867e142dd2
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: bg-primary
+      text_color: text-white
+      columns: 67-33
+      gutter: 'gx-5 gy-5'
+      padding_block_start: pt-4
+      padding_block_end: pb-5
+      vertical_alignment: align-items-center
+      section_header: true
+  '0:col_1:0:6e23a8a0-d9d4-4394-a6da-4d4c7b5c38ce':
+    parent_uuid: 69de13ac-39e5-565e-b5c8-606e1516d5e3
+    slot: col_1
+    uuid: 6e23a8a0-d9d4-4394-a6da-4d4c7b5c38ce
+    component_id: sdc.vartheme_bs5_rightup.taxonomy
+    component_version: 6c96c2405efc9655
+    inputs:
+      label:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:podcast_episode␝field_episode_number␞␟value'
+      prefix: Episode
+      size: taxonomy-lg
+      color: text-accent
+      no_padding: true
+      justify_content: justify-content-start
+  '0:col_1:1:0751d455-1416-5b01-9069-9c4654b01bc4':
+    parent_uuid: 69de13ac-39e5-565e-b5c8-606e1516d5e3
+    slot: col_1
+    uuid: 0751d455-1416-5b01-9069-9c4654b01bc4
+    component_id: sdc.vartheme_bs5_rightup.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:podcast_episode␝title␞␟value'
+      level: 1
+      text_size: h1
+      text_color: text-white
+  '0:col_1:2:5d0e7b31-94c2-4a6f-8e15-b2c7f9a03d64':
+    parent_uuid: 69de13ac-39e5-565e-b5c8-606e1516d5e3
+    slot: col_1
+    uuid: 5d0e7b31-94c2-4a6f-8e15-b2c7f9a03d64
+    component_id: block.views_block.podcast_episodes-listen_on
+    component_version: dd8755ec8fecdcd7
+    inputs:
+      label: 'Listen on'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed: {  }
+  '0:col_1:3:2dfaf4b9-0ca0-578a-b001-cb68a728c6c3':
+    parent_uuid: 69de13ac-39e5-565e-b5c8-606e1516d5e3
+    slot: col_1
+    uuid: 2dfaf4b9-0ca0-578a-b001-cb68a728c6c3
+    component_id: sdc.vartheme_bs5_rightup.audio-player-local
+    component_version: de925c16eca13054
+    inputs:
+      audio_url:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:podcast_episode␝field_audio␞␟entity␜␜entity:media:audio␝field_media_audio_file␞␟entity␜␜entity:file␝uri␞␟value'
+      autoplay: false
+      loop: false
+      preload: none
+      show_skip: true
+      skip_seconds: '15'
+      show_time: true
+      show_download: false
+      accent_color: accent
+  '0:col_2:0:85deeb50-fa6b-53ee-b163-ca73f4fa7f54':
+    parent_uuid: 69de13ac-39e5-565e-b5c8-606e1516d5e3
+    slot: col_2
+    uuid: 85deeb50-fa6b-53ee-b163-ca73f4fa7f54
+    component_id: sdc.vartheme_bs5_rightup.image
+    component_version: 20b07c548b4cf729
+    inputs:
+      media:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:podcast_episode␝field_featured_image␞␟entity␜␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}'
+      target: self
+      ratio: ratio-1x1
+      fit: object-fit-cover
+      width: w-100
+      rounded: none
+      loading: eager
+  '0:header_slot:0:e4508d16-1ac0-5feb-9b34-4b539d763ce3':
+    parent_uuid: 69de13ac-39e5-565e-b5c8-606e1516d5e3
+    slot: header_slot
+    uuid: e4508d16-1ac0-5feb-9b34-4b539d763ce3
+    component_id: block.system_breadcrumb_block
+    component_version: 0d7e961dd03aa710
+    inputs:
+      label: Breadcrumbs
+      label_display: '0'
+  '1:col_1:0:3b1f0c52-7a64-4e19-9d0b-5c2e8a71f6d3':
+    parent_uuid: da4542ea-ac3e-580a-b3e7-67f452917b2b
+    slot: col_1
+    uuid: 3b1f0c52-7a64-4e19-9d0b-5c2e8a71f6d3
+    component_id: sdc.vartheme_bs5_rightup.group
+    component_version: aef7f7b22127c944
+    inputs:
+      direction: horizontal
+      gap: gap-3
+      wrap: wrap
+      align_items: align-items-start
+      justify_content: justify-content-between
+      margin_block_end: mb-4
+  '1:col_1:0:content:0:a94f2c68-3e17-4b5d-9c80-7f1d6e3b0a25':
+    parent_uuid: 3b1f0c52-7a64-4e19-9d0b-5c2e8a71f6d3
+    slot: content
+    uuid: a94f2c68-3e17-4b5d-9c80-7f1d6e3b0a25
+    component_id: block.views_block.podcast_episodes-details
+    component_version: 1c3eb06d16beeea9
+    inputs:
+      label: 'Episode details'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed: {  }
+  '1:col_1:0:content:1:10948b7f-e251-5852-a6b2-f24f960b1876':
+    parent_uuid: 3b1f0c52-7a64-4e19-9d0b-5c2e8a71f6d3
+    slot: content
+    uuid: 10948b7f-e251-5852-a6b2-f24f960b1876
+    component_id: sdc.vartheme_bs5_rightup.share
+    component_version: 24d3cc5800d6bb4f
+    inputs:
+      heading: Share
+      display_title: true
+      alignment: end
+      orientation: horizontal
+      native_share: false
+      placement: inline
+      share_title:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:podcast_episode␝title␞␟value'
+  '1:col_1:1:b58e2f14-6c07-4a39-8d51-e3a9c0f7b426':
+    parent_uuid: da4542ea-ac3e-580a-b3e7-67f452917b2b
+    slot: col_1
+    uuid: b58e2f14-6c07-4a39-8d51-e3a9c0f7b426
+    component_id: sdc.vartheme_bs5_rightup.group
+    component_version: aef7f7b22127c944
+    inputs:
+      direction: vertical
+      gap: gap-3
+      margin_block_end: mb-4
+  '1:col_1:1:content:0:16f6537d-6628-5865-a552-4cb45d6378fa':
+    parent_uuid: b58e2f14-6c07-4a39-8d51-e3a9c0f7b426
+    slot: content
+    uuid: 16f6537d-6628-5865-a552-4cb45d6378fa
+    component_id: sdc.vartheme_bs5_rightup.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: Details
+      level: 2
+      text_size: h4
+  '1:col_1:1:content:1:53c3e6d6-689d-5f47-916f-414faa92724c':
+    parent_uuid: b58e2f14-6c07-4a39-8d51-e3a9c0f7b426
+    slot: content
+    uuid: 53c3e6d6-689d-5f47-916f-414faa92724c
+    component_id: sdc.vartheme_bs5_rightup.text
+    component_version: 34499abda8277068
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:podcast_episode␝field_description␞␟value'
+      text_color: text-body
+  '1:col_1:2:2a7d4e90-f1b3-4c58-a6e2-5d0c8b9f3714':
+    parent_uuid: da4542ea-ac3e-580a-b3e7-67f452917b2b
+    slot: col_1
+    uuid: 2a7d4e90-f1b3-4c58-a6e2-5d0c8b9f3714
+    component_id: sdc.vartheme_bs5_rightup.group
+    component_version: aef7f7b22127c944
+    inputs:
+      direction: vertical
+      gap: gap-3
+      margin_block_end: mb-0
+  '1:col_1:2:content:0:56e260c9-d0bd-5f3a-9797-644d273cc887':
+    parent_uuid: 2a7d4e90-f1b3-4c58-a6e2-5d0c8b9f3714
+    slot: content
+    uuid: 56e260c9-d0bd-5f3a-9797-644d273cc887
+    component_id: sdc.vartheme_bs5_rightup.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'Audio Transcript'
+      level: 2
+      text_size: h4
+  '1:col_1:2:content:1:8e42a9d7-1c35-4b68-a0f4-6d97b3c5e218':
+    parent_uuid: 2a7d4e90-f1b3-4c58-a6e2-5d0c8b9f3714
+    slot: content
+    uuid: 8e42a9d7-1c35-4b68-a0f4-6d97b3c5e218
+    component_id: sdc.vartheme_bs5_rightup.read-more
+    component_version: e9cd7dcd729fdad9
+    inputs:
+      lines: 4
+      more_text: 'Read More'
+      less_text: 'Read Less'
+  '1:col_1:2:content:1:content:0:9233325e-a19d-5eb2-924d-4a2ea58f7ae4':
+    parent_uuid: 8e42a9d7-1c35-4b68-a0f4-6d97b3c5e218
+    slot: content
+    uuid: 9233325e-a19d-5eb2-924d-4a2ea58f7ae4
+    component_id: sdc.vartheme_bs5_rightup.rich-text
+    component_version: 82cd1f087fd469f4
+    inputs:
+      text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:podcast_episode␝field_content␞␟processed'
+      trim: false
+  '1:col_2:0:f26b8d05-6a93-4c7e-b4d1-9e05a7c2831f':
+    parent_uuid: da4542ea-ac3e-580a-b3e7-67f452917b2b
+    slot: col_2
+    uuid: f26b8d05-6a93-4c7e-b4d1-9e05a7c2831f
+    component_id: sdc.vartheme_bs5_rightup.divider
+    component_version: 3351739a2f3f46b5
+    inputs:
+      text: 'More Episodes'
+      text_size: fs-6
+      border_color: border-tertiary
+      margin_top: mt-0
+      margin_bottom: mb-3
+  '1:col_2:1:1e6c93a7-d580-4f2b-a7c4-3b9f0e5d1862':
+    parent_uuid: da4542ea-ac3e-580a-b3e7-67f452917b2b
+    slot: col_2
+    uuid: 1e6c93a7-d580-4f2b-a7c4-3b9f0e5d1862
+    component_id: block.views_block.podcast_episodes-more_by_podcast
+    component_version: 1eaf6193ab32ee73
+    inputs:
+      label: 'More Episodes'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed: {  }
+  '1:da4542ea-ac3e-580a-b3e7-67f452917b2b':
+    uuid: da4542ea-ac3e-580a-b3e7-67f452917b2b
+    component_id: sdc.vartheme_bs5_rightup.section
+    component_version: 038d91867e142dd2
+    inputs:
+      bg_edge2edge: false
+      container_type: container
+      columns: 67-33
+      gutter: 'gx-5 gy-5'
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+  '2:col_1:0:93552188-e00c-50c7-8551-48c261781f61':
+    parent_uuid: e6393fcd-92e7-527a-85c8-ea1974e66069
+    slot: col_1
+    uuid: 93552188-e00c-50c7-8551-48c261781f61
+    component_id: sdc.vartheme_bs5_rightup.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text: 'The best of The Rightup, delivered to you weekly.'
+      level: 2
+      text_size: h4
+  '2:col_2:0:dd10258d-79a4-516c-9c04-aa94593e569d':
+    parent_uuid: e6393fcd-92e7-527a-85c8-ea1974e66069
+    slot: col_2
+    uuid: dd10258d-79a4-516c-9c04-aa94593e569d
+    component_id: block.webform_block
+    component_version: b5dca6ca0519bf1b
+    inputs:
+      label: 'Newsletter Subscribe'
+      label_display: '0'
+      webform_id: newsletter_subscribe
+      default_data: ''
+      redirect: false
+      lazy: false
+  '2:e6393fcd-92e7-527a-85c8-ea1974e66069':
+    uuid: e6393fcd-92e7-527a-85c8-ea1974e66069
+    component_id: sdc.vartheme_bs5_rightup.section
+    component_version: 038d91867e142dd2
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: bg-accent-subtle
+      columns: 67-33
+      padding_block_start: pt-4
+      padding_block_end: pb-4
+      vertical_alignment: align-items-center
+  '3:c7a15e94-2f8b-4d36-b1e9-0a4f6d82c573':
+    uuid: c7a15e94-2f8b-4d36-b1e9-0a4f6d82c573
+    component_id: sdc.vartheme_bs5_rightup.section
+    component_version: 038d91867e142dd2
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      columns: '100'
+      padding_block_start: pt-5
+      padding_block_end: pb-5
+      section_header: true
+  '3:col_1:0:97b3f5c1-0e4a-4d82-8b69-c5a2d7e1f043':
+    parent_uuid: c7a15e94-2f8b-4d36-b1e9-0a4f6d82c573
+    slot: col_1
+    uuid: 97b3f5c1-0e4a-4d82-8b69-c5a2d7e1f043
+    component_id: block.views_block.podcasts-more
+    component_version: fa919fed33225238
+    inputs:
+      label: 'More Podcasts'
+      label_display: '0'
+      views_label: ''
+      items_per_page: null
+      exposed: {  }
+  '3:header_slot:0:40d7e1b9-85a2-4c63-9f07-e2b6a4d1c398':
+    parent_uuid: c7a15e94-2f8b-4d36-b1e9-0a4f6d82c573
+    slot: header_slot
+    uuid: 40d7e1b9-85a2-4c63-9f07-e2b6a4d1c398
+    component_id: sdc.vartheme_bs5_rightup.divider
+    component_version: 3351739a2f3f46b5
+    inputs:
+      text: 'More Podcasts'
+      text_size: fs-6
+      border_color: border-tertiary
+exposed_slots: {  }
+page_variant: null

@@ -1,0 +1,73 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: b06b15be-5dd6-422d-b3bf-87bd907894a8
+  bundle: news
+  default_langcode: en
+  depends:
+    1e3d963f-7398-4088-8cfb-2b53c4e1b66c: user
+    d03fc580-a33e-4a2f-8334-21f688b3fc5f: media
+    4190771e-e477-4d78-a6bf-1fcef05f99e1: taxonomy_term
+default:
+  revision_uid:
+  - entity: 1e3d963f-7398-4088-8cfb-2b53c4e1b66c
+  revision_log:
+  - value: Created new News post
+  status:
+  - value: true
+  uid:
+  - entity: 1e3d963f-7398-4088-8cfb-2b53c4e1b66c
+  title:
+  - value: Bloom & Ash, Kiro Tanaka, and Lea Wren Launch New Collective
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  revision_translation_affected:
+  - value: true
+  moderation_state:
+  - value: published
+  path:
+  - alias: /news/bloom-ash-kiro-tanaka-and-lea-wren-launch-new-collective
+    langcode: en
+  field_content:
+  - value: '<p>Three practices, one lease, and a client list they have agreed to share before they have agreed how to split it.</p>
+
+      <p>It is the kind of decision that looks obvious written down and costs somebody a difficult quarter in practice.</p>
+
+      <p>Lea Wren, who brokered the arrangement, has been close to it from the start.</p>
+
+      <h2>The decision</h2>
+
+      <p>The collective takes a single floor in a former printworks, with one set of overheads and three separate bank accounts.</p>
+
+      <p>The timeline tells its own story: eighteen months from first conversation to the point anyone outside the room saw anything, and then six weeks in which everything visible was decided.</p>
+
+      <p>The arrangement has one obvious failure mode, and they have written it into the agreement: any partner can leave with their own clients on ninety days'' notice.</p>
+
+      <blockquote><p>We are not merging. We are refusing to compete for the same eight jobs.</p><footer>Wren</footer></blockquote>
+
+      <h2>In practice</h2>
+
+      <p>Work comes in to the collective and is assigned by whoever has capacity, which means a client may be pitched by one studio and delivered by another.</p>
+
+      <p>Studios copy each other faster than they admit. Expect three versions of this arrangement by next summer, at least one of them badly costed.</p>
+
+      <p>Reaction has split along predictable lines. The people who have to maintain it have the sharpest questions, and the fairest ones.</p>
+
+      <p>What they will not say, on the record, is how close it came to being cancelled in the spring.</p>
+
+      <h2>What comes next</h2>
+
+      <p>They take their first shared commission in October.</p>'
+    format: full_html
+  field_description:
+  - value: Three practices will share a studio, a client list and a single invoice template.
+  field_featured_image:
+  - entity: d03fc580-a33e-4a2f-8334-21f688b3fc5f
+  field_news_categories:
+  - entity: 4190771e-e477-4d78-a6bf-1fcef05f99e1
+  created:
+  - value: 1783587600
+  changed:
+  - value: 1783587600

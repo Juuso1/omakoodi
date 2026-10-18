@@ -1,0 +1,40 @@
+{
+  "name": "drupal/varbase_editor_base",
+  "description": "A recipe to manage default installed modules, configs and permissions for Varbase editor functionality including CKEditor 5 with rich text editing capabilities.",
+  "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "Editor", "CKEditor", "Text Format"],
+  "type": "drupal-recipe",
+  "notification-url": "https://packages.drupal.org/8/downloads",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_editor_base",
+    "source": "http://cgit.drupalcode.org/varbase_editor_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/pathologic": "~2",
+    "drupal/ckeditor_bidi": "~5",
+    "drupal/ace_editor": "~2",
+    "drupal/extlink": "~2",
+    "drupal/linkit": "~7",
+    "drupal/editor_advanced_link": "~2.3.0",
+    "drupal/ckeditor_media_embed": "~2",
+    "drupal/ckeditor_media_resize": "~1.1.0",
+    "drupal/edit_media_modal": "~2.1.0",
+    "drupal/anchor_link": "~3",
+    "drupal/token": "~1",
+    "drupal/token_filter": "~2",
+    "drupal/entity_embed": "~1",
+    "drupal/ckeditor5_paste_filter": "~1",
+    "drupal/ckeditor5_plugin_pack": "~1.5.0",
+    "drupal/ckeditor_emoji": "~2",
+    "vardot/ckeditor5-media-embed-drupal": "~47.6.2"
+  },
+  "version": "1.0.1"
+}

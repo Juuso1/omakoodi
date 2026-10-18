@@ -1,0 +1,25 @@
+uuid: 26ebadee-019e-411f-aa2c-721c257ed504
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+active_version: 57a13fab9bca35ca
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_exposed_filter_block:news-all'
+        label: 'Exposed form: news-all'
+        label_display: '0'
+        provider: views
+        views_label: ''
+    fallback_metadata:
+      slot_definitions: null
+label: 'Exposed form: news-all'
+id: block.views_exposed_filter_block.news-all
+provider: views
+source: block
+source_local_id: 'views_exposed_filter_block:news-all'

@@ -1,0 +1,13 @@
+uuid: 7f98d373-4f90-46d6-8735-00733b21229d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ASMu8gfvyGmz2bPhF6vZ_V0jmC4C68PkEEwsU1SOMKw
+id: node.rightup_hero
+label: 'Hero story'
+description: null
+targetEntityType: node
+cache: true

@@ -1,0 +1,37 @@
+uuid: 778067ac-6251-47f2-a36c-45912e67348f
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.article-teaser
+    - canvas.component.sdc.vartheme_bs5_rightup.card
+    - canvas.component.sdc.vartheme_bs5_rightup.card-featured
+    - canvas.component.sdc.vartheme_bs5_rightup.card-icon
+    - canvas.component.sdc.vartheme_bs5_rightup.card-impressed
+    - canvas.component.sdc.vartheme_bs5_rightup.card-logo
+    - canvas.component.sdc.vartheme_bs5_rightup.card-overlay
+    - canvas.component.sdc.vartheme_bs5_rightup.card-pricing
+    - canvas.component.sdc.vartheme_bs5_rightup.card-slider
+    - canvas.component.sdc.vartheme_bs5_rightup.card-testimonial
+    - canvas.component.sdc.vartheme_bs5_rightup.card-text
+    - canvas.component.sdc.vartheme_bs5_rightup.horizontal-text-icon-card
+    - canvas.component.sdc.vartheme_bs5_rightup.podcast-card
+    - canvas.component.sdc.vartheme_bs5_rightup.text-number-card
+name: Card
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.vartheme_bs5_rightup.article-teaser
+  - sdc.vartheme_bs5_rightup.card
+  - sdc.vartheme_bs5_rightup.card-featured
+  - sdc.vartheme_bs5_rightup.card-icon
+  - sdc.vartheme_bs5_rightup.card-impressed
+  - sdc.vartheme_bs5_rightup.card-logo
+  - sdc.vartheme_bs5_rightup.card-overlay
+  - sdc.vartheme_bs5_rightup.card-pricing
+  - sdc.vartheme_bs5_rightup.card-slider
+  - sdc.vartheme_bs5_rightup.card-testimonial
+  - sdc.vartheme_bs5_rightup.card-text
+  - sdc.vartheme_bs5_rightup.horizontal-text-icon-card
+  - sdc.vartheme_bs5_rightup.podcast-card
+  - sdc.vartheme_bs5_rightup.text-number-card

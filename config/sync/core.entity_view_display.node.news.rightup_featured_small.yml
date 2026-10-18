@@ -1,0 +1,47 @@
+uuid: f5607f6e-ff0b-400f-8ee3-a89cc090025d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rightup_featured_small
+    - field.field.node.news.field_content
+    - field.field.node.news.field_description
+    - field.field.node.news.field_featured_image
+    - field.field.node.news.field_news_categories
+    - field.field.node.news.field_seo_analysis
+    - field.field.node.news.field_seo_description
+    - field.field.node.news.field_seo_image
+    - field.field.node.news.field_seo_title
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - user
+_core:
+  default_config_hash: hSosznSoAFHxJ2yyh51u_Gs0v-xpZ-aZLi8N-ZRuRro
+id: node.news.rightup_featured_small
+targetEntityType: node
+bundle: news
+mode: rightup_featured_small
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content: true
+  field_description: true
+  field_featured_image: true
+  field_news_categories: true
+  field_seo_analysis: true
+  field_seo_description: true
+  field_seo_image: true
+  field_seo_title: true
+  field_tags: true
+  langcode: true
+  search_api_excerpt: true

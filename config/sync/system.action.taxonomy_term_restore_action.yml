@@ -1,0 +1,12 @@
+uuid: 893a5e34-86b5-4819-a66e-d5fb83be19d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - trash
+id: taxonomy_term_restore_action
+label: 'Restore taxonomy term from trash'
+type: taxonomy_term
+plugin: 'entity:restore_action:taxonomy_term'
+configuration: {  }

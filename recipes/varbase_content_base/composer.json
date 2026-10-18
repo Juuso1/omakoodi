@@ -1,0 +1,56 @@
+{
+  "name": "drupal/varbase_content_base",
+  "description": "A foundational recipe for content structure and management in Varbase. Provides core content configuration including node types, taxonomy vocabularies, menu system, path aliases, and essential content-related modules.",
+  "type": "drupal-recipe",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_content_base",
+    "source": "http://cgit.drupalcode.org/varbase_content_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/token": "~1",
+    "drupal/token_filter": "~2",
+    "drupal/eca": "~3",
+    "drupal/modeler": "~1.0",
+    "drupal/field_group": "~4",
+    "drupal/smart_trim": "~2",
+    "drupal/menu_block": "~1",
+    "drupal/views_infinite_scroll": "~2",
+    "drupal/entity": "~1",
+    "drupal/entity_usage": "~2",
+    "drupal/entity_browser": "~2",
+    "drupal/entityqueue": "~1",
+    "drupal/entityqueue_form_widget": "~2",
+    "drupal/inline_entity_form": "~3",
+    "drupal/diff": "~2",
+    "drupal/menu_position": "~1",
+    "drupal/tagify": "~2.0",
+    "drupal/autosave_form": "~1",
+    "drupal/bpmn_io": "~3",
+    "drupal/canvas": "~1",
+    "drupal/drupal_cms_helper": "~2",
+    "drupal/linkit": "~7",
+    "drupal/menu_link_attributes": "~1",
+    "drupal/modeler_api": "~1",
+    "drupal/pathauto": "~1",
+    "drupal/scheduler": "~2",
+    "drupal/scheduler_content_moderation_integration": "~3",
+    "drupal/trash": "~3",
+    "drupal/better_exposed_filters": "~7",
+    "drupal/date_filter": "~1",
+    "drupal/content_lock": "~3",
+    "drupal/node_edit_protection": "~1.0",
+    "drupal/vmi": "~5.0.0",
+    "drupal/varbase_components": "~4.0.0",
+    "vardot/aos": "^2.3.4"
+  },
+  "version": "1.0.4"
+}

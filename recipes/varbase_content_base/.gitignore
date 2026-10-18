@@ -1,0 +1,8 @@
+# Node / functional-testing tooling (not part of the shipped recipe).
+/node_modules/
+/tests/reports/
+/tests/auth/
+/screenshots/
+/videos/
+package-lock.json
+yarn.lock

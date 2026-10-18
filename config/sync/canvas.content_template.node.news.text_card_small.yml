@@ -1,0 +1,45 @@
+uuid: f5a09e1f-abfc-4c6a-b342-22f50b5d108e
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.vartheme_bs5_rightup.card-text
+    - canvas.component.sdc.vartheme_bs5_rightup.heading
+    - core.entity_view_mode.node.text_card_small
+    - node.type.news
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: GXsqZ9W4SILpW2p2CexzKc6xPPkYlXxuveLit17rmOQ
+id: node.news.text_card_small
+content_entity_type_id: node
+content_entity_type_bundle: news
+content_entity_type_view_mode: text_card_small
+component_tree:
+  '0:32ac5ecd-0a2a-5872-8f5a-41355729459c':
+    uuid: 32ac5ecd-0a2a-5872-8f5a-41355729459c
+    component_id: sdc.vartheme_bs5_rightup.card-text
+    component_version: e029fefa26d20f4f
+    inputs:
+      card_border: false
+      padded: false
+      corner_style: rounded-3
+      equal_height: true
+      stretched_link: true
+      link_url:
+        sourceType: host-entity-url
+        absolute: false
+  '0:content:0:cc0f53da-9677-45e4-ae70-d3c0a818a24a':
+    parent_uuid: 32ac5ecd-0a2a-5872-8f5a-41355729459c
+    slot: content
+    uuid: cc0f53da-9677-45e4-ae70-d3c0a818a24a
+    component_id: sdc.vartheme_bs5_rightup.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: 'ℹ︎␜entity:node:news␝title␞␟value'
+      level: 3
+exposed_slots: {  }
+page_variant: null

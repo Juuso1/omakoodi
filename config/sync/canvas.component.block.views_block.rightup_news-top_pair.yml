@@ -1,0 +1,29 @@
+uuid: 42ec1930-6084-487e-9742-0de3c33dbaa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rightup_news
+  module:
+    - views
+_core:
+  default_config_hash: rv5alxlU5ggbuh76zM3q5rdPEdEiFfzpa-Ye9n8xAzs
+active_version: f0b0c944288445a3
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:rightup_news-top_pair'
+        label: 'News: Top stories: text pair'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'News: Top stories: text pair'
+id: block.views_block.rightup_news-top_pair
+provider: views
+source: block
+source_local_id: 'views_block:rightup_news-top_pair'

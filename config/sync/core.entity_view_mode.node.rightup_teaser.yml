@@ -1,0 +1,13 @@
+uuid: 27a5834f-8c18-4812-b7be-47b80304a073
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: bMx1VMAq7qbQJn9V_hcr4DOceiV6h93AuZTrumErHz0
+id: node.rightup_teaser
+label: Teaser
+description: null
+targetEntityType: node
+cache: true

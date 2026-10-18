@@ -1,0 +1,27 @@
+uuid: a35da4ff-b2db-4819-99e8-9d2516e42aea
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.podcast_episodes
+  module:
+    - views
+active_version: 6157f4655e98953f
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:podcast_episodes-latest'
+        label: 'Podcast episodes: Latest podcast episodes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'Podcast episodes: Latest podcast episodes'
+id: block.views_block.podcast_episodes-latest
+provider: views
+source: block
+source_local_id: 'views_block:podcast_episodes-latest'

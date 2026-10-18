@@ -1,0 +1,31 @@
+uuid: cde353e2-ffef-4f1a-8475-6cb65a2bbed6
+langcode: en
+status: true
+dependencies:
+  module:
+    - access_unpublished
+    - klaro
+    - media
+    - search
+    - system
+    - taxonomy_access_fix
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access user profiles'
+  - 'access_unpublished node news'
+  - 'access_unpublished node page'
+  - 'access_unpublished node podcast'
+  - 'access_unpublished node podcast_episode'
+  - 'access_unpublished taxonomy_term news_categories'
+  - 'access_unpublished taxonomy_term tags'
+  - 'search content'
+  - 'use klaro'
+  - 'view any term'
+  - 'view any term name'
+  - 'view media'

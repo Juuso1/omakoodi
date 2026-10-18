@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: gF5qH6vGef7PkoTXb5e356UjrncXhN8vv59j9V2ktfQ
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true
+container_header: no-container
+container_content: container
+container_footer: no-container
+sticky_header: true

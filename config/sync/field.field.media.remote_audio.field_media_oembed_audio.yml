@@ -1,0 +1,21 @@
+uuid: f4ef3fce-4ed7-4fcb-975c-177a3ac34195
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_audio
+    - media.type.remote_audio
+_core:
+  default_config_hash: MY-W4FN-9r4ObNFeFCq6Pxni9gX13pAEWFRBpfNvRVw
+id: media.remote_audio.field_media_oembed_audio
+field_name: field_media_oembed_audio
+entity_type: media
+bundle: remote_audio
+label: 'Audio URL'
+description: 'The address of the episode on SoundCloud, Spotify, Apple Podcasts or another supported service.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

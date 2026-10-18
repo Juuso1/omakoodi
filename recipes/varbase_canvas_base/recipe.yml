@@ -1,0 +1,6 @@
+name: Varbase Canvas Base
+description: A foundational recipe for Drupal Canvas in Varbase. Installs Drupal Canvas and the Canvas Override module for per-content Canvas layout editing.
+type: Varbase Canvas
+install:
+  - canvas
+  - canvas_override

@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: b9MwXm9HYzIGWt7hqoEOC8G2NSJTxuo5Re73wtyEZHw
+verbose: true
+types:
+  node:
+    - '*'
+types_translation_lock: {  }
+form_op_lock: {  }
+timeout: 1800

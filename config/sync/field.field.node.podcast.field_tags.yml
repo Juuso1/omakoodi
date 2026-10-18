@@ -1,0 +1,23 @@
+uuid: 2ea4d4b2-30c9-4527-ad3b-71b6a560c1d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.podcast
+_core:
+  default_config_hash: B14bAWXQ0En_ATyhRQc5tGbEv7gKTUbJYBm_6ODMHtc
+id: node.podcast.field_tags
+field_name: field_tags
+entity_type: node
+bundle: podcast
+label: Tags
+description: 'Free tagging for the episode. Editors may add new tags.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,158 @@
+uuid: 8e20e3a4-1f68-4f1b-b523-e08bd169f232
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.system_menu_block.footer
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.block.system_menu_block.social-media-menu
+    - canvas.component.sdc.vartheme_bs5_rightup.divider
+    - canvas.component.sdc.vartheme_bs5_rightup.group
+    - canvas.component.sdc.vartheme_bs5_rightup.html-code
+    - canvas.component.sdc.vartheme_bs5_rightup.section
+    - canvas.component.sdc.vartheme_bs5_rightup.text
+    - filter.format.canvas_html_block
+  module:
+    - options
+    - text
+  theme:
+    - vartheme_bs5_rightup
+_core:
+  default_config_hash: Xp9G2hqb0GgtD7BnSms4SPv2tWXtUHK4HMvRRL_9SYA
+id: vartheme_bs5_rightup.footer
+region: footer
+theme: vartheme_bs5_rightup
+component_tree:
+  '0:3ccae34f-9c1c-416a-84dc-26b7a4087af8':
+    uuid: 3ccae34f-9c1c-416a-84dc-26b7a4087af8
+    component_id: sdc.vartheme_bs5_rightup.section
+    component_version: 038d91867e142dd2
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: bg-black
+      text_color: text-white
+      columns: '100'
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      column_divider: false
+      section_header: false
+      section_footer: true
+      aos_once: false
+  '0:col_1:0:content:0:735a29e1-7d4d-46a2-a98f-626675fa98a6':
+    parent_uuid: f1710f59-e00b-4b7e-ab6a-e1d02c06659f
+    slot: content
+    uuid: 735a29e1-7d4d-46a2-a98f-626675fa98a6
+    component_id: sdc.vartheme_bs5_rightup.html-code
+    component_version: 656471f14c4594ec
+    inputs:
+      code: '<img class="footer-logo-image" src="/themes/contrib/vartheme_bs5_rightup/rightup-logo-white.svg" alt="The Rightup logo" style ="height: auto;">'
+  '0:col_1:0:content:1:a6068d50-17eb-4bf9-ba50-f15c0a0bd43f':
+    parent_uuid: f1710f59-e00b-4b7e-ab6a-e1d02c06659f
+    slot: content
+    uuid: a6068d50-17eb-4bf9-ba50-f15c0a0bd43f
+    component_id: block.system_menu_block.social-media-menu
+    component_version: 0fcdbc0a997e263a
+    inputs:
+      label: 'Social media menu'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: true
+  '0:col_1:0:f1710f59-e00b-4b7e-ab6a-e1d02c06659f':
+    parent_uuid: 3ccae34f-9c1c-416a-84dc-26b7a4087af8
+    slot: col_1
+    uuid: f1710f59-e00b-4b7e-ab6a-e1d02c06659f
+    component_id: sdc.vartheme_bs5_rightup.group
+    component_version: aef7f7b22127c944
+    inputs:
+      background_color: none
+      direction: horizontal
+      gap: gap-3
+      wrap: nowrap
+      align_items: align-items-center
+      justify_content: justify-content-between
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      padding_inline_start: ps-0
+      padding_inline_end: pe-0
+      margin_block_start: mt-0
+      margin_block_end: mb-0
+      margin_inline_start: ms-0
+      margin_inline_end: me-0
+      radius: none
+      border: none
+      border_color: none
+      border_width: none
+      aos_animation: none
+      aos_duration: default
+      aos_delay: '0'
+      aos_once: true
+  '0:footer_slot:0:3525ac28-c0ee-4bf6-871d-096ff9d07c3a':
+    parent_uuid: 3ccae34f-9c1c-416a-84dc-26b7a4087af8
+    slot: footer_slot
+    uuid: 3525ac28-c0ee-4bf6-871d-096ff9d07c3a
+    component_id: sdc.vartheme_bs5_rightup.divider
+    component_version: 3351739a2f3f46b5
+    inputs:
+      border_width: border-1
+      border_color: border-tertiary
+      opacity: opacity-75
+      margin_top: mt-0
+      margin_bottom: mb-0
+  '1:9e2935a6-8ad6-440a-8614-6184ffe7eb5a':
+    uuid: 9e2935a6-8ad6-440a-8614-6184ffe7eb5a
+    component_id: sdc.vartheme_bs5_rightup.section
+    component_version: 038d91867e142dd2
+    inputs:
+      bg_edge2edge: true
+      container_type: container
+      background_color: bg-black
+      text_color: text-white
+      columns: '100'
+      gutter: 'gx-3 gy-3'
+      padding_block_start: pt-0
+      padding_block_end: pb-0
+      column_divider: false
+      vertical_alignment: align-items-center
+      section_header: false
+      section_footer: false
+      aos_once: false
+  '1:col_1:0:fa8ff88a-efed-5c65-9ef8-a530ad60a14e':
+    parent_uuid: 9e2935a6-8ad6-440a-8614-6184ffe7eb5a
+    slot: col_1
+    uuid: fa8ff88a-efed-5c65-9ef8-a530ad60a14e
+    component_id: block.system_menu_block.main
+    component_version: 322535c0078cf59c
+    inputs:
+      label: 'Footer navigation'
+      label_display: '0'
+      level: 1
+      depth: 1
+      expand_all_items: false
+  '1:col_1:1:20e662f3-a52f-446e-a5ec-6978af1d9cdd':
+    parent_uuid: 9e2935a6-8ad6-440a-8614-6184ffe7eb5a
+    slot: col_1
+    uuid: 20e662f3-a52f-446e-a5ec-6978af1d9cdd
+    component_id: block.system_menu_block.footer
+    component_version: 075503dbc228a45c
+    inputs:
+      label: 'Footer menu'
+      label_display: '0'
+      level: 1
+      depth: null
+      expand_all_items: true
+  '1:col_1:2:edd1729e-2bd0-424f-ba2a-b8078f79e43c':
+    parent_uuid: 9e2935a6-8ad6-440a-8614-6184ffe7eb5a
+    slot: col_1
+    uuid: edd1729e-2bd0-424f-ba2a-b8078f79e43c
+    component_id: sdc.vartheme_bs5_rightup.text
+    component_version: 34499abda8277068
+    inputs:
+      text:
+        value: '<p>©2026, The Rightup. All Rights Reserved.</p>'
+        format: canvas_html_block
+      text_size: fs-6
+      text_color: text-white
+      opacity: opacity-50

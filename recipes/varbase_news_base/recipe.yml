@@ -1,0 +1,156 @@
+name: Varbase News Base
+description: A recipe to provide a news post content type, listing page, and related configuration for Varbase. Use News to publish news posts by different authors in the News section of the site.
+type: Varbase News
+recipes:
+- varbase_content_base
+- varbase_media_base
+- varbase_seo_base
+- varbase_workflow_base
+install:
+- selective_better_exposed_filters
+- webshare
+config:
+  strict: false
+  import:
+    webshare: '*'
+  actions:
+    webshare.settings:
+      simpleConfigUpdate:
+        icon_map:
+          linkedin:
+            pack: vartheme_social
+            icon: linkedin
+          facebook_share:
+            pack: vartheme_social
+            icon: facebook
+          x:
+            pack: vartheme_social
+            icon: x
+          whatsapp:
+            pack: vartheme_social
+            icon: whatsapp
+          copy:
+            pack: vartheme_social
+            icon: clipboard
+          email:
+            pack: vartheme_social
+            icon: email
+          telegram:
+            pack: vartheme_social
+            icon: telegram
+          reddit:
+            pack: vartheme_social
+            icon: reddit
+          pinterest:
+            pack: vartheme_social
+            icon: pinterest
+          threads:
+            pack: vartheme_social
+            icon: threads
+          bluesky:
+            pack: vartheme_social
+            icon: bluesky
+          tumblr:
+            pack: vartheme_social
+            icon: tumblr
+          mastodon:
+            pack: vartheme_social
+            icon: mastodon
+        native_share_icon:
+          pack: vartheme_social
+          icon: share-fill
+    user.role.anonymous:
+      grantPermissions:
+      - access_unpublished node news
+      - access_unpublished taxonomy_term news_categories
+      - access_unpublished taxonomy_term tags
+    user.role.authenticated:
+      grantPermissions:
+      - access_unpublished node news
+      - access_unpublished taxonomy_term news_categories
+      - access_unpublished taxonomy_term tags
+    user.role.content_editor:
+      grantPermissions:
+      - create news content
+      - create terms in news_categories
+      - delete any news content
+      - delete news revisions
+      - delete own news content
+      - edit any news content
+      - edit own news content
+      - reorder terms in news_categories
+      - revert news revisions
+      - select terms in news_categories
+      - select unpublished terms in news_categories
+      - view news revisions
+      - view term names in news_categories
+      - view terms in news_categories
+      - view unpublished term names in news_categories
+      - view unpublished terms in news_categories
+      - view vocabulary name of news_categories
+    user.role.content_admin:
+      grantPermissions:
+      - create news content
+      - create terms in news_categories
+      - delete any news content
+      - delete news revisions
+      - delete own news content
+      - delete terms in news_categories
+      - edit any news content
+      - edit own news content
+      - edit terms in news_categories
+      - reorder terms in news_categories
+      - revert news revisions
+      - select terms in news_categories
+      - select unpublished terms in news_categories
+      - view news revisions
+      - view term names in news_categories
+      - view terms in news_categories
+      - view unpublished term names in news_categories
+      - view unpublished terms in news_categories
+      - view vocabulary name of news_categories
+    user.role.seo_admin:
+      grantPermissions:
+      - create news content
+      - create terms in news_categories
+      - delete any news content
+      - delete own news content
+      - edit any news content
+      - edit own news content
+      - reorder terms in news_categories
+      - select terms in news_categories
+      - select unpublished terms in news_categories
+      - view news revisions
+      - view term names in news_categories
+      - view terms in news_categories
+      - view unpublished term names in news_categories
+      - view unpublished terms in news_categories
+      - view vocabulary name of news_categories
+    user.role.site_admin:
+      grantPermissions:
+      - create news content
+      - create terms in news_categories
+      - delete any news content
+      - delete news revisions
+      - delete own news content
+      - delete terms in news_categories
+      - edit any news content
+      - edit own news content
+      - edit terms in news_categories
+      - reorder terms in news_categories
+      - reset news_categories
+      - revert news revisions
+      - select terms in news_categories
+      - select unpublished terms in news_categories
+      - taxonomy manager export csv for news_categories
+      - taxonomy manager export list for news_categories
+      - view news revisions
+      - view term names in news_categories
+      - view terms in news_categories
+      - view unpublished term names in news_categories
+      - view unpublished terms in news_categories
+      - view vocabulary name of news_categories
+      - administer webshare
+    workflows.workflow.varbase_editorial_workflow:
+      addNodeTypes:
+      - news

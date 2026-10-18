@@ -1,0 +1,74 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c74f835f-20b9-47b7-9c4f-f5e6fe2de97e
+  bundle: news
+  default_langcode: en
+  depends:
+    a41226dd-499d-4eae-ba05-dd955a50c7d4: user
+    8c3b5cff-ace6-45ab-9613-3c34007fea48: media
+    8a80b689-1574-4def-8d9b-9f8edc647557: taxonomy_term
+default:
+  revision_uid:
+  - entity: a41226dd-499d-4eae-ba05-dd955a50c7d4
+  revision_log:
+  - value: Created new News post
+  status:
+  - value: true
+  uid:
+  - entity: a41226dd-499d-4eae-ba05-dd955a50c7d4
+  title:
+  - value: A Facade That Changes Color With the Weather
+  promote:
+  - value: false
+  sticky:
+  - value: true
+  revision_translation_affected:
+  - value: true
+  moderation_state:
+  - value: published
+  path:
+  - alias: /news/facade-changes-color-weather
+    langcode: en
+  field_content:
+  - value: '<p>At eleven degrees and rising the building is the colour of wet slate. By the afternoon it is closer to sand.</p>
+
+      <p>Buildings of this kind are rarely decided by architects alone. A structural engineer, a planning officer and a facilities manager who will never be named in the credits each moved this one several
+      metres from where it started, and the drawings record the argument.</p>
+
+      <p>Rena Osei, who visited on three days with different forecasts, has been close to it from the start.</p>
+
+      <h2>Background</h2>
+
+      <p>A thermochromic coating shifts the exterior tone by several degrees of value depending on humidity and heat.</p>
+
+      <p>Two of the people who started the project had left by the time it finished, and the handover notes are now part of the studio''s standard kit.</p>
+
+      <p>Longevity is the unanswered question: the coating is warranted for eight years.</p>
+
+      <blockquote><p>We can predict it to within about an hour. After that the weather does what it likes.</p><footer>the material scientist on the team</footer></blockquote>
+
+      <h2>The method</h2>
+
+      <p>The effect is strongest on the north elevation, which was not the design intent and is now the side that appears in every photograph.</p>
+
+      <p>What stops this being a one-off is the documentation. The practice has published the details, which means the next team does not have to rediscover the same three failures.</p>
+
+      <p>Peers have been generous in public and more pointed in private, mostly about cost.</p>
+
+      <p>There is no shortage of people willing to call it inevitable in hindsight. Nobody involved describes it that way.</p>
+
+      <h2>Where it goes</h2>
+
+      <p>The practice is monitoring the panels monthly and has promised to publish the data.</p>'
+    format: full_html
+  field_description:
+  - value: A thermochromic coating shifts the building's exterior tone by several degrees depending on humidity and heat, turning the whole structure into a slow-moving instrument.
+  field_featured_image:
+  - entity: 8c3b5cff-ace6-45ab-9613-3c34007fea48
+  field_news_categories:
+  - entity: 8a80b689-1574-4def-8d9b-9f8edc647557
+  created:
+  - value: 1761210000
+  changed:
+  - value: 1761210000

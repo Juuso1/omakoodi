@@ -1,0 +1,81 @@
+uuid: 1bc1825c-fbc0-4276-a0ad-fb719436a544
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.live_feed-block_1
+    - canvas.component.block.views_block.news-all
+    - canvas.component.block.views_block.news-featured
+    - canvas.component.block.views_block.news-latest
+    - canvas.component.block.views_block.news-related
+    - canvas.component.block.views_block.podcast_episodes-all
+    - canvas.component.block.views_block.podcast_episodes-by_podcast
+    - canvas.component.block.views_block.podcast_episodes-count_by_podcast
+    - canvas.component.block.views_block.podcast_episodes-details
+    - canvas.component.block.views_block.podcast_episodes-featured
+    - canvas.component.block.views_block.podcast_episodes-latest
+    - canvas.component.block.views_block.podcast_episodes-listen_on
+    - canvas.component.block.views_block.podcast_episodes-more_by_podcast
+    - canvas.component.block.views_block.podcast_episodes-related
+    - canvas.component.block.views_block.podcasts-all
+    - canvas.component.block.views_block.podcasts-more
+    - canvas.component.block.views_block.recent_pages-block_recent_pages
+    - canvas.component.block.views_block.rightup_news-editors_picks
+    - canvas.component.block.views_block.rightup_news-featured
+    - canvas.component.block.views_block.rightup_news-featured_more
+    - canvas.component.block.views_block.rightup_news-featured_slider
+    - canvas.component.block.views_block.rightup_news-latest
+    - canvas.component.block.views_block.rightup_news-latest_grid
+    - canvas.component.block.views_block.rightup_news-lead
+    - canvas.component.block.views_block.rightup_news-more
+    - canvas.component.block.views_block.rightup_news-podcast_episodes
+    - canvas.component.block.views_block.rightup_news-podcast_show
+    - canvas.component.block.views_block.rightup_news-side
+    - canvas.component.block.views_block.rightup_news-top_hero
+    - canvas.component.block.views_block.rightup_news-top_pair
+    - canvas.component.block.views_block.rightup_news-top_side
+    - canvas.component.block.views_block.rightup_news-top_text
+    - canvas.component.block.views_block.search-date_block
+    - canvas.component.block.views_block.search-header_search
+    - canvas.component.block.views_block.search-results_block
+    - canvas.component.block.views_block.varbase_dashboard_welcome-block_welcome
+name: 'Lists (Views)'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.live_feed-block_1
+  - block.views_block.news-all
+  - block.views_block.news-featured
+  - block.views_block.news-latest
+  - block.views_block.news-related
+  - block.views_block.podcast_episodes-all
+  - block.views_block.podcast_episodes-by_podcast
+  - block.views_block.podcast_episodes-count_by_podcast
+  - block.views_block.podcast_episodes-details
+  - block.views_block.podcast_episodes-featured
+  - block.views_block.podcast_episodes-latest
+  - block.views_block.podcast_episodes-listen_on
+  - block.views_block.podcast_episodes-more_by_podcast
+  - block.views_block.podcast_episodes-related
+  - block.views_block.podcasts-all
+  - block.views_block.podcasts-more
+  - block.views_block.recent_pages-block_recent_pages
+  - block.views_block.rightup_news-editors_picks
+  - block.views_block.rightup_news-featured
+  - block.views_block.rightup_news-featured_more
+  - block.views_block.rightup_news-featured_slider
+  - block.views_block.rightup_news-latest
+  - block.views_block.rightup_news-latest_grid
+  - block.views_block.rightup_news-lead
+  - block.views_block.rightup_news-more
+  - block.views_block.rightup_news-podcast_episodes
+  - block.views_block.rightup_news-podcast_show
+  - block.views_block.rightup_news-side
+  - block.views_block.rightup_news-top_hero
+  - block.views_block.rightup_news-top_pair
+  - block.views_block.rightup_news-top_side
+  - block.views_block.rightup_news-top_text
+  - block.views_block.search-date_block
+  - block.views_block.search-header_search
+  - block.views_block.search-results_block
+  - block.views_block.varbase_dashboard_welcome-block_welcome

@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  og_image: '[site:origin-url]/[default-active-theme:path]/share-image.png'
+  og_image_secure_url: '[site:origin-url]/[default-active-theme:path]/share-image.png'
+  og_image_url: '[site:origin-url]/[default-active-theme:path]/share-image.png'
+  title: '[current-page:title] | [site:name]'

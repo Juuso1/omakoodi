@@ -1,0 +1,273 @@
+################################################################################
+# GitLab CI for the Varbase Content Base recipe.
+#
+# Follows the STANDARD Varbase functional testing method / varbase_project stage
+# graph (build -> validate -> pre-test -> test -> post-test) instead of an ad-hoc
+# one-off job, so the recipe's browser CI is consistent with the distribution:
+#
+#   build      composer.json validate               (fast, always)
+#   validate   YAML lint of recipe.yml + config      (fast, always)
+#   pre-test   build a plain Drupal site + apply ONLY this recipe   (opt-in)
+#   test       run the Varbase functional testing suite (Playwright + Cucumber)  (opt-in)
+#   post-test  merge results + generate the branded HTML/PDF report (opt-in)
+#
+# The two fast jobs run on every push/MR and are the only default gates. The
+# three heavy browser jobs are OPT-IN (see the ".opt_in_*" rules): they run as
+# real, non-masking gates (allow_failure: false) only when the pipeline variable
+# RUN_RECIPE_BROWSER_TESTS is set to "1"; otherwise the heavy jobs are not
+# added to the pipeline at all (no manual button), so the fast default pipeline is unaffected. No job uses allow_failure: true.
+#
+# Deviations from varbase_project (documented, not accidental):
+#   - No parallel:matrix over SUITE folders: the recipe currently ships a single
+#     suite folder under tests/features/, so there is a single test job and a
+#     single cucumber_report.json (no per-suite CUCUMBER_JSON matrix to merge).
+#     Add folders under tests/features/ as the recipe's coverage grows.
+#   - Site DB is SQLite (no MySQL service): the pre-test job tars the built site
+#     as the inter-job artifact, the test job untars and serves it with drush.
+#   - Recipe applied IN ISOLATION on plain Drupal (only this recipe's own
+#     modules), versus the distribution suite that installs the full profile.
+################################################################################
+
+stages:
+  - build
+  - validate
+  - pre-test
+  - test
+  - post-test
+
+variables:
+  # Drupal 11.4.0 released 2026-07-01; pinned templates ref $CORE_STABLE is still 11.3.
+  DRUPAL_CORE: "11.4.0"
+  IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
+  COMPOSER_ALLOW_SUPERUSER: "1"
+  COMPOSER_MEMORY_LIMIT: "-1"
+  # Cache locations (kept inside the project dir so GitLab can cache them).
+  COMPOSER_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/composer"
+  PLAYWRIGHT_BROWSERS_PATH: "${CI_PROJECT_DIR}/.cache/ms-playwright"
+
+# Run for merge requests, branch pushes and tags.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_TAG
+
+################################################################################
+# Reusable anchors (hidden keys are ignored by GitLab; & / * are native YAML).
+################################################################################
+
+# Opt-in gate for the pre-test + test jobs: hard, non-masking gate when
+# RUN_RECIPE_BROWSER_TESTS=1, otherwise the job is not added (when: never).
+.opt_in_rules: &opt_in_rules
+  - if: '$RUN_RECIPE_BROWSER_TESTS == "1"'
+    when: on_success
+  - when: never
+
+# Opt-in gate for the report job: same as above but "always" so the report is
+# generated even when the test job failed (evidence over green).
+.opt_in_rules_report: &opt_in_rules_report
+  - if: '$RUN_RECIPE_BROWSER_TESTS == "1"'
+    when: always
+  - when: never
+
+# Cache shared by the browser jobs (keyed per branch).
+.recipe_cache: &recipe_cache
+  key: "recipe-browser-$CI_COMMIT_REF_SLUG"
+  paths:
+    - .cache/composer
+    - .cache/ms-playwright
+    - node_modules
+
+# PHP runtime + Composer (Drupal core extensions; SQLite; GitLab flattens the
+# nested array into before_script).
+.php_runtime: &php_runtime
+  - apt-get update -y
+  - apt-get install -y git unzip curl
+      libzip-dev libpng-dev libjpeg-dev libwebp-dev libfreetype6-dev libicu-dev
+      sqlite3 libsqlite3-dev
+  - docker-php-ext-configure gd --with-jpeg --with-webp --with-freetype
+  - docker-php-ext-install -j"$(nproc)" gd zip intl pdo_sqlite opcache
+  - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  - composer --version
+
+# Node.js 20 (the functional-testing engine declares engines.node ">=20").
+.node_runtime: &node_runtime
+  - curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+  - apt-get install -y nodejs
+  - node --version && npm --version
+
+################################################################################
+# = build = validate the recipe's composer.json (schema + metadata, offline).
+################################################################################
+build:composer-validate:
+  stage: build
+  image: composer:2
+  script:
+    - composer --version
+    - composer validate --no-check-all --no-check-publish
+
+################################################################################
+# = validate = lint every YAML file (recipe.yml + config/*) for syntax errors.
+################################################################################
+validate:yaml-lint:
+  stage: validate
+  image: python:3.12-slim
+  script:
+    - python --version
+    - pip install --quiet pyyaml
+    - |
+      python - <<'PY'
+      import glob, sys, yaml
+      bad = 0
+      for f in sorted(glob.glob('**/*.yml', recursive=True)):
+          try:
+              list(yaml.safe_load_all(open(f, encoding='utf-8')))
+          except Exception as e:
+              print('YAML ERROR:', f, '->', e); bad += 1
+      print('Checked YAML files; errors:', bad)
+      sys.exit(1 if bad else 0)
+      PY
+
+################################################################################
+# = pre-test = 📦 Install recipe site.
+#
+# Builds a plain Drupal site that requires THIS recipe from the checkout (a local
+# path repository points composer at $CI_PROJECT_DIR, so the recipe resolves its
+# own composer dependencies: eca, modeler, ...). Installs minimal Drupal on
+# SQLite, applies ONLY this recipe (core's script; Drush 13 has no `recipe`
+# command), and tars the built site as the inter-job artifact for the test job.
+################################################################################
+"📦 Install recipe site":
+  stage: pre-test
+  image: php:8.4-cli
+  needs: []
+  rules: *opt_in_rules
+  allow_failure: false
+  retry: 1
+  cache: *recipe_cache
+  variables:
+    COMPOSER_PROCESS_TIMEOUT: "2000"
+  before_script: *php_runtime
+  script:
+    - export BUILD="${CI_PROJECT_DIR}/../drupal-build"
+    - composer create-project drupal/recommended-project:"~11.4.0" "$BUILD" --no-interaction --no-install
+    - cd "$BUILD"
+    - composer config allow-plugins true -n
+    - composer config minimum-stability dev -n
+    - composer config prefer-stable true -n
+    - composer config repositories.recipe path "$CI_PROJECT_DIR"
+    - composer require "drupal/varbase_content_base:@dev" "drush/drush:^13" --no-interaction --no-progress
+    # Minimal Drupal on SQLite (no DB service), then apply the recipe. A cache
+    # rebuild first lets the recipe see previously enabled modules.
+    - php -d memory_limit=-1 vendor/bin/drush site:install minimal
+        --db-url=sqlite://localhost/sites/default/files/.ht.sqlite
+        --site-name="Content Base Recipe Test"
+        --account-name=admin --account-pass=admin -y
+    - php -d memory_limit=-1 vendor/bin/drush cache:rebuild
+    - php -d memory_limit=-1 web/core/scripts/drupal recipe "$CI_PROJECT_DIR"
+    - php -d memory_limit=-1 vendor/bin/drush cache:rebuild
+    # Tar the built site (built OUTSIDE the checkout to avoid a recursive path
+    # repo symlink; tar stores that symlink as a link, so no recursion).
+    - cd "$CI_PROJECT_DIR"
+    - tar czf drupal-build.tgz -C "${CI_PROJECT_DIR}/.." drupal-build
+  artifacts:
+    when: on_success
+    paths:
+      - drupal-build.tgz
+    expire_in: 1 day
+
+################################################################################
+# = test = 🧪 Automated Functional Testing.
+#
+# Untars the built site, serves it with drush, installs the functional-testing
+# engine (varbase-e2e: Playwright + Cucumber-js) and runs the recipe's suites
+# under tests/features/**. Each suite documents what it asserts in its own
+# README; the recipe is applied in isolation (only this recipe's own modules).
+################################################################################
+"🧪 Automated Functional Testing":
+  stage: test
+  image: php:8.4-cli
+  needs:
+    - job: "📦 Install recipe site"
+      artifacts: true
+  rules: *opt_in_rules
+  allow_failure: false
+  retry: 1
+  cache: *recipe_cache
+  variables:
+    LAUNCH_URL: "http://127.0.0.1:8888"
+    SUITE: "01-eca-workflow-modeler"
+    FEATURES: "tests/features/$SUITE/**/*.feature"
+    SLOW_MO: "0"
+    FORCE_COLOR: "1"
+    VARBASE_E2E_REPORT_DISABLE: "1"
+    # The custom login step reaches the built site's drush via this override
+    # (no site path / hostname hardcoded); scopes uli to LAUNCH_URL.
+    VARBASE_E2E_DRUSH: "php -d memory_limit=-1 ${CI_PROJECT_DIR}/../drupal-build/vendor/bin/drush"
+  before_script:
+    - *php_runtime
+    - *node_runtime
+  script:
+    # 1. Restore the built site produced by the install job.
+    - tar xzf drupal-build.tgz -C "${CI_PROJECT_DIR}/.."
+    - export BUILD="${CI_PROJECT_DIR}/../drupal-build"
+    - (cd "$BUILD" && php -d memory_limit=-1 vendor/bin/drush cache:rebuild)
+    # 2. Serve the site and wait until it answers.
+    - (cd "$BUILD" && php -d memory_limit=-1 vendor/bin/drush runserver 127.0.0.1:8888 > "${CI_PROJECT_DIR}/drush-server.log" 2>&1 &)
+    - npx --yes wait-on "$LAUNCH_URL" --timeout 60000
+    # 3. Install the functional-testing engine and run the suite from the checkout.
+    - npm install --no-audit --no-fund
+    - npx playwright install --with-deps chromium
+    - npx cucumber-js --config cucumber.js "$FEATURES" --tags "not @wip"
+  artifacts:
+    when: always
+    paths:
+      - tests/reports/
+      - screenshots/
+      - drush-server.log
+    expire_in: 7 days
+
+################################################################################
+# = post-test = 📊 Create reports.
+#
+# Merges the suite JSON and generates the branded HTML + PDF report. Uses
+# `dependencies` (not `needs`) so `when: always` still runs it after a failed
+# test job and downloads its artifacts. The test job is the gate; this job never
+# masks a failure.
+################################################################################
+"📊 Create reports":
+  stage: post-test
+  image: node:20
+  dependencies:
+    - "🧪 Automated Functional Testing"
+  rules: *opt_in_rules_report
+  allow_failure: false
+  cache: *recipe_cache
+  script:
+    - apt-get update -y && apt-get install -y jq
+    - npm install --no-audit --no-fund
+    - npx playwright install --with-deps chromium
+    - mkdir -p tests/reports
+    - |
+      if ! ls tests/reports/cucumber_report*.json >/dev/null 2>&1; then
+        echo "No cucumber_report JSON found (the test job produced no results); skipping report generation."
+        exit 0
+      fi
+    - REPORT="varbase-content-base--${CI_COMMIT_REF_SLUG}--automated-functional-testing-report--$(date -u +%F)--$(date -u +%H-%M)"
+    - jq -s 'add' tests/reports/cucumber_report*.json > "tests/reports/merged.json"
+    - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
+        --json "tests/reports/merged.json"
+        --out "tests/reports/${REPORT}.html"
+        --pdf-out "tests/reports/${REPORT}.pdf"
+        --format all
+        --app-version "$CI_COMMIT_REF_NAME"
+        --env ci
+        --browser Chromium
+        --platform linux
+        --metadata Project="Varbase Content Base recipe"
+  artifacts:
+    when: always
+    paths:
+      - tests/reports/
+      - screenshots/
+    expire_in: 30 days

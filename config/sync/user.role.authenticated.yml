@@ -1,0 +1,43 @@
+uuid: 14977a03-f561-4e9d-8216-661e88588569
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.webform_default
+  module:
+    - access_unpublished
+    - captcha
+    - file
+    - filter
+    - honeypot
+    - klaro
+    - media
+    - node
+    - search
+    - system
+    - taxonomy_access_fix
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access user profiles'
+  - 'access_unpublished node news'
+  - 'access_unpublished node page'
+  - 'access_unpublished node podcast'
+  - 'access_unpublished node podcast_episode'
+  - 'access_unpublished taxonomy_term news_categories'
+  - 'access_unpublished taxonomy_term tags'
+  - 'bypass honeypot protection'
+  - 'delete own files'
+  - 'search content'
+  - 'skip CAPTCHA'
+  - 'use klaro'
+  - 'use text format webform_default'
+  - 'view any term'
+  - 'view any term name'
+  - 'view media'
+  - 'view own unpublished content'

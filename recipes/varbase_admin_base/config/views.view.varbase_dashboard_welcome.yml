@@ -1,0 +1,131 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.user_picture
+    - image.style.varbase_dashboard_avatar
+  module:
+    - svg_image
+    - user
+id: varbase_dashboard_welcome
+label: 'Dashboard welcome'
+module: views
+description: 'Greets the signed-in user with their picture on the dashboard.'
+tag: ''
+base_table: users_field_data
+base_field: uid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: ''
+      fields:
+        user_picture:
+          id: user_picture
+          table: user__user_picture
+          field: user_picture
+          plugin_id: field
+          label: ''
+          exclude: true
+          element_type: div
+          element_class: varbase-dashboard-welcome__picture
+          element_label_colon: false
+          hide_empty: true
+          type: image
+          settings:
+            image_link: ''
+            image_style: varbase_dashboard_avatar
+            image_loading:
+              attribute: eager
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          entity_type: user
+          entity_field: name
+          plugin_id: field
+          label: ''
+          alter:
+            alter_text: true
+            text: '<table class="varbase-dashboard-welcome"><tr><td width="160">{{ user_picture }}</td><td><strong>Welcome,</strong><br>{{ name }}</td></tr></table>'
+          element_type: div
+          element_class: varbase-dashboard-welcome__title
+          element_label_colon: false
+          type: user_name
+          settings:
+            link_to_entity: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      access:
+        type: perm
+        options:
+          perm: 'access administration pages'
+      cache:
+        type: tag
+        options: {  }
+      arguments:
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_uid
+          default_action: default
+          default_argument_type: current_user
+          specify_validation: false
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      query:
+        type: views_query
+        options: {  }
+      footer: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.user_picture'
+  block_welcome:
+    id: block_welcome
+    display_title: Welcome
+    display_plugin: block
+    position: 1
+    display_options:
+      display_extenders: {  }
+      block_description: 'Dashboard welcome'
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.user_picture'
+

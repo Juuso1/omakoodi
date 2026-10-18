@@ -1,0 +1,74 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f7f95b19-d4d6-491e-965f-8ae74b85f15c
+  bundle: news
+  default_langcode: en
+  depends:
+    6c9b3d66-9df6-42da-bf04-d54ceeb6e773: user
+    797fea71-ec14-46bb-a796-b74b5b3e0ae5: media
+    8a80b689-1574-4def-8d9b-9f8edc647557: taxonomy_term
+default:
+  revision_uid:
+  - entity: 6c9b3d66-9df6-42da-bf04-d54ceeb6e773
+  revision_log:
+  - value: Created new News post
+  status:
+  - value: true
+  uid:
+  - entity: 6c9b3d66-9df6-42da-bf04-d54ceeb6e773
+  title:
+  - value: Fen & Marble Reveal First Look at Rotterdam Flagship
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  revision_translation_affected:
+  - value: true
+  moderation_state:
+  - value: published
+  path:
+  - alias: /news/fen-marble-reveal-first-look-rotterdam-flagship
+    langcode: en
+  field_content:
+  - value: '<p>The hoarding came down on a Tuesday morning, and the first thing visible from the street was the stair: a single spiral of blackened steel, rising through three floors without touching a
+      wall.</p>
+
+      <p>The site had been empty for nine years, long enough for the neighbourhood to form a settled opinion about what should happen to it, and long enough for two previous schemes to be abandoned at planning.</p>
+
+      <p>Tomas Weir, a partner at Fen & Marble and the project lead on the Rotterdam space, has been close to it from the start.</p>
+
+      <h2>The decision</h2>
+
+      <p>The ground floor is deliberately unprogrammed. No desks, no fixed counter, nothing bolted down except the stair and a twelve-metre bench cast from the same concrete as the slab.</p>
+
+      <p>Two of the people who started the project had left by the time it finished, and the handover notes are now part of the studio''s standard kit.</p>
+
+      <p>The decision to leave the ground floor open cost them roughly a third of their lettable area.</p>
+
+      <blockquote><p>We wanted a building that looks like it is being used, not like it is being photographed.</p><footer>Weir</footer></blockquote>
+
+      <h2>In practice</h2>
+
+      <p>Upstairs the studio put its model shop behind glass rather than in a back room, so the first thing a visiting client sees is unfinished work.</p>
+
+      <p>The detail that will matter in ten years is the one nobody photographed: the junction where the new work meets the old, and who is expected to maintain it.</p>
+
+      <p>Peers have been generous in public and more pointed in private, mostly about cost.</p>
+
+      <p>There is no shortage of people willing to call it inevitable in hindsight. Nobody involved describes it that way.</p>
+
+      <h2>What comes next</h2>
+
+      <p>They open to the public in November, with the model shop lit until ten.</p>'
+    format: full_html
+  field_description:
+  - value: The studio's first permanent space pairs a spiralling steel stair with a ground floor that stays open to the street.
+  field_featured_image:
+  - entity: 797fea71-ec14-46bb-a796-b74b5b3e0ae5
+  field_news_categories:
+  - entity: 8a80b689-1574-4def-8d9b-9f8edc647557
+  created:
+  - value: 1784106000
+  changed:
+  - value: 1784106000

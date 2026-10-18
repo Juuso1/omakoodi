@@ -1,0 +1,46 @@
+uuid: 11e3d8a8-2120-439e-ac9c-d259520aa342
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.small
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - drimage_improved
+_core:
+  default_config_hash: gAFzh3vIozIrX4yJJpNPR-jjQB_LRwYzinHzzRTKE8g
+id: media.image.small
+targetEntityType: media
+bundle: image
+mode: small
+content:
+  field_media_image:
+    type: drimage_improved
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      image_handling: scale
+      fetchpriority: auto
+      aspect_ratio:
+        width: 1
+        height: 1
+      background:
+        attachment: scroll
+        position: 'center center'
+        size: cover
+      iwc:
+        image_style: null
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

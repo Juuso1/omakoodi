@@ -1,0 +1,26 @@
+uuid: 0a345821-6ee0-46a1-a697-d4fbd58878b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.podcast
+  module:
+    - node
+_core:
+  default_config_hash: _oRMKEjuk5XbeCpkc_BbsmqI_4t-53oXwZ_WJ_etxaQ
+id: podcast_content
+label: Podcast
+type: 'canonical_entities:node'
+pattern: '/podcasts/[node:title]'
+selection_criteria:
+  555f610f-9f82-4489-828d-eae7b81a740e:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      podcast: podcast
+    uuid: 555f610f-9f82-4489-828d-eae7b81a740e
+selection_logic: and
+weight: -5
+relationships: {  }

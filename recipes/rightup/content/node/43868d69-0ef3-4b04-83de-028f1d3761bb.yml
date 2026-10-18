@@ -1,0 +1,73 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 43868d69-0ef3-4b04-83de-028f1d3761bb
+  bundle: news
+  default_langcode: en
+  depends:
+    6c9b3d66-9df6-42da-bf04-d54ceeb6e773: user
+    8235799f-3a5b-4c70-958d-df36f4bdcd44: media
+    4190771e-e477-4d78-a6bf-1fcef05f99e1: taxonomy_term
+default:
+  revision_uid:
+  - entity: 6c9b3d66-9df6-42da-bf04-d54ceeb6e773
+  revision_log:
+  - value: Created new News post
+  status:
+  - value: true
+  uid:
+  - entity: 6c9b3d66-9df6-42da-bf04-d54ceeb6e773
+  title:
+  - value: Inside the Studio That Turned Down Its Biggest Client
+  promote:
+  - value: false
+  sticky:
+  - value: false
+  revision_translation_affected:
+  - value: true
+  moderation_state:
+  - value: published
+  path:
+  - alias: /news/inside-studio-turned-down-its-biggest-client
+    langcode: en
+  field_content:
+  - value: '<p>A seven-figure retainer, three years guaranteed, and a studio of eleven people who said no in a meeting that lasted twenty minutes.</p>
+
+      <p>It is the kind of decision that looks obvious written down and costs somebody a difficult quarter in practice.</p>
+
+      <p>Tomas Adeyemi, who spoke to five of the eleven, has been close to it from the start.</p>
+
+      <h2>Background</h2>
+
+      <p>The work would have taken roughly 70 per cent of the studio''s capacity, on a brief that would not have left the client''s brand team.</p>
+
+      <p>The timeline tells its own story: eighteen months from first conversation to the point anyone outside the room saw anything, and then six weeks in which everything visible was decided.</p>
+
+      <p>They are candid that the decision was affordable because they had eight months of runway.</p>
+
+      <blockquote><p>We could not find the version of ourselves that would have been at the end of it.</p><footer>one of the partners</footer></blockquote>
+
+      <h2>The method</h2>
+
+      <p>They took two smaller commissions instead and ended the year six per cent down on revenue and, by their own count, four projects up on work they would show.</p>
+
+      <p>Studios copy each other faster than they admit. Expect three versions of this arrangement by next summer, at least one of them badly costed.</p>
+
+      <p>Reaction has split along predictable lines. The people who have to maintain it have the sharpest questions, and the fairest ones.</p>
+
+      <p>There is no shortage of people willing to call it inevitable in hindsight. Nobody involved describes it that way.</p>
+
+      <h2>Where it goes</h2>
+
+      <p>Asked whether they would do it again, four said yes without qualification. The fifth said it depends on the runway.</p>'
+    format: full_html
+  field_description:
+  - value: Fen & Marble on why they walked away from a seven-figure retainer, what they took on instead, and whether they'd make the same call again.
+  field_featured_image:
+  - entity: 8235799f-3a5b-4c70-958d-df36f4bdcd44
+  field_news_categories:
+  - entity: 4190771e-e477-4d78-a6bf-1fcef05f99e1
+  created:
+  - value: 1767430800
+  changed:
+  - value: 1767430800

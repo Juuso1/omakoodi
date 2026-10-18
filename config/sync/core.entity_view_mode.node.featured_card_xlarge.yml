@@ -1,0 +1,13 @@
+uuid: 6dc63f15-79f0-46a4-9b99-4718b0b50b0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: IHo_VVSDDdMbnqKQe5TWTokpw5zlWdQ8svRqeafLAlA
+id: node.featured_card_xlarge
+label: 'Featured card - xlarge'
+description: null
+targetEntityType: node
+cache: true

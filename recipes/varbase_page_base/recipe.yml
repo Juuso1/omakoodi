@@ -1,0 +1,74 @@
+name: Varbase Page Base
+description: A recipe to provide a Page content type for Varbase, with specific features including SEO fields, editorial workflow, and menu configuration.
+type: Varbase Page
+recipes:
+  - varbase_media_base
+  - varbase_editor_base
+  - varbase_content_base
+  - varbase_seo_base
+  - varbase_workflow_base
+config:
+  strict: false
+  import:
+    system:
+      - system.menu.footer
+  actions:
+    user.role.anonymous:
+      grantPermissions:
+        - 'access_unpublished node page'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access_unpublished node page'
+    # Allow basic pages to go into the main menu, or the footer.
+    node.type.page:
+      setThirdPartySettings:
+        -
+          module: menu_ui
+          key: available_menus
+          value:
+            - main
+            - footer
+        -
+          module: menu_ui
+          key: parent
+          value: 'main:'
+    user.role.content_editor:
+      grantPermissions:
+        - 'create page content'
+        - 'delete own page content'
+        - 'delete page revisions'
+        - 'delete any page content'
+        - 'edit own page content'
+        - 'edit any page content'
+        - 'revert page revisions'
+        - 'view page revisions'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create page content'
+        - 'delete own page content'
+        - 'delete any page content'
+        - 'delete page revisions'
+        - 'edit own page content'
+        - 'edit any page content'
+        - 'revert page revisions'
+        - 'view page revisions'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create page content'
+        - 'delete own page content'
+        - 'delete any page content'
+        - 'edit own page content'
+        - 'edit any page content'
+        - 'view page revisions'
+    user.role.site_admin:
+      grantPermissions:
+        - 'create page content'
+        - 'delete own page content'
+        - 'delete any page content'
+        - 'delete page revisions'
+        - 'edit own page content'
+        - 'edit any page content'
+        - 'revert page revisions'
+        - 'view page revisions'
+    workflows.workflow.varbase_editorial_workflow:
+      addNodeTypes: ['page']

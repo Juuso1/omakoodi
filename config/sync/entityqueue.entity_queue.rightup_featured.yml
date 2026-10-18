@@ -1,0 +1,24 @@
+uuid: 715d575b-9ecc-4fe8-aa03-c99cc22bd815
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 91DLZfhCpntP5fcmdMdCVqgP0Lq_DlaqZaeXj0e9T94
+id: rightup_featured
+label: Featured
+description: null
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news: news
+queue_settings:
+  min_size: 0
+  max_size: 8
+  act_as_queue: true
+  reverse: false

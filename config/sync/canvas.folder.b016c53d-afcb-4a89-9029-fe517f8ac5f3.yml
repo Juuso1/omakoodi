@@ -1,0 +1,15 @@
+uuid: b016c53d-afcb-4a89-9029-fe517f8ac5f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.search_form_block
+    - canvas.component.block.user_login_block
+    - canvas.component.sdc.vartheme_bs5_rightup.subscribe-box
+name: Forms
+configEntityTypeId: component
+weight: 0
+items:
+  - block.search_form_block
+  - block.user_login_block
+  - sdc.vartheme_bs5_rightup.subscribe-box

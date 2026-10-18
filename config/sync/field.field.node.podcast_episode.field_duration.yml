@@ -1,0 +1,21 @@
+uuid: 61733bd3-f91b-4c89-847a-b3319c899216
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.podcast_episode
+_core:
+  default_config_hash: lQYqNWwvErOhBpK-WQa6nm3FEe9WMlDwlXY4C5tNYOg
+id: node.podcast_episode.field_duration
+field_name: field_duration
+entity_type: node
+bundle: podcast_episode
+label: Duration
+description: 'Running time as it should read to a listener, for example 42:15.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+uuid: 4e7a200f-a351-496d-8df6-626d4523266f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+active_version: 6815ab2dcfe29656
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:news-latest'
+        label: 'News: Latest news posts'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'News: Latest news posts'
+id: block.views_block.news-latest
+provider: views
+source: block
+source_local_id: 'views_block:news-latest'

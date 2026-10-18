@@ -1,0 +1,13 @@
+uuid: a66db83e-1ac4-4f9b-b5ac-b5b930832051
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ChVYOtkBnFyDGnF_SjlXHhiR2RMVAN94mmPidBQ_KuI
+id: node.rightup_lead
+label: 'Lead story'
+description: null
+targetEntityType: node
+cache: true

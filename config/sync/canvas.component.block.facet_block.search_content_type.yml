@@ -1,0 +1,24 @@
+uuid: ce2f251a-0d3c-42a3-a162-88813c0bfdfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.search_content_type
+  module:
+    - facets
+active_version: f94cf4db55f86cd3
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'facet_block:search_content_type'
+        label: 'Content Type'
+        label_display: '0'
+        provider: facets
+    fallback_metadata:
+      slot_definitions: null
+label: 'Content Type'
+id: block.facet_block.search_content_type
+provider: facets
+source: block
+source_local_id: 'facet_block:search_content_type'

@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - core.entity_view_mode.node.text_card_small
+  - node.type.news
+  module:
+  - node
+id: node.news.text_card_small
+content_entity_type_id: node
+content_entity_type_bundle: news
+content_entity_type_view_mode: text_card_small
+component_tree:
+  32ac5ecd-0a2a-5872-8f5a-41355729459c:
+    uuid: 32ac5ecd-0a2a-5872-8f5a-41355729459c
+    component_id: sdc.vartheme_bs5.card-text
+    component_version: e029fefa26d20f4f
+    inputs:
+      card_border: false
+      padded: false
+      corner_style: rounded-3
+      equal_height: true
+      stretched_link: true
+      link_url:
+        sourceType: host-entity-url
+        absolute: false
+  cc0f53da-9677-45e4-ae70-d3c0a818a24a:
+    parent_uuid: 32ac5ecd-0a2a-5872-8f5a-41355729459c
+    slot: content
+    uuid: cc0f53da-9677-45e4-ae70-d3c0a818a24a
+    component_id: sdc.vartheme_bs5.heading
+    component_version: 0889e2ce906c3164
+    inputs:
+      heading_text:
+        sourceType: entity-field
+        expression: ℹ︎␜entity:node:news␝title␞␟value
+      level: 3
+exposed_slots: {}

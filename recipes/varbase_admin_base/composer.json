@@ -1,0 +1,62 @@
+{
+  "name": "drupal/varbase_admin_base",
+  "description": "A recipe to manage default installed modules, configs and permissions for Varbase admin experience.",
+  "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "Admin", "Administration", "Gin", "Navigation"],
+  "type": "drupal-recipe",
+  "notification-url": "https://packages.drupal.org/8/downloads",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_admin_base",
+    "source": "http://cgit.drupalcode.org/varbase_admin_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/admin_audit_trail": "~1",
+    "drupal/masquerade": "~2",
+    "drupal/menu_admin_per_menu": "~1",
+    "drupal/revision_log_default": "~1",
+    "drupal/autosave_form": "~1",
+    "drupal/taxonomy_manager": "~2",
+    "drupal/taxonomy_access_fix": "~4",
+    "drupal/coffee": "~2",
+    "drupal/length_indicator": "~1",
+    "drupal/maxlength": "~3",
+    "drupal/navigation_extra_tools": "~1",
+    "drupal/gin": "~5",
+    "drupal/gin_toolbar": "~3",
+    "drupal/gin_login": "~2",
+    "drupal/gin_everywhere": "~1",
+    "drupal/gin_type_tray": "~1",
+    "drupal/trash": "~3",
+    "drupal/eca": "~3",
+    "drupal/eca_vbo": "~2",
+    "drupal/config_perms": "~2",
+    "drupal/userprotect": "~1",
+    "drupal/roleassign": "~2",
+    "drupal/prevent_homepage_deletion": "~3",
+    "drupal/views_bulk_operations": "~4",
+    "drupal/views_bulk_edit": "~3",
+    "drupal/ui_icons": "~1",
+    "drupal/canvas_icon_picker": "~1",
+    "drupal/automatic_updates": "~4.1",
+    "drupal/dashboard": "~2.2",
+    "drupal/menu_block": "~1",
+    "drupal/drupal_cms_helper": "~2",
+    "drupal/drupical": "~1",
+    "drupal/project_browser": "~2.1",
+    "drupal/sam": "~1.2",
+    "drupal/tagify": "~2.0",
+    "drupal/view_password": "~6",
+    "drupal/smart_date": "~4.3.0",
+    "drupal/varbase_recipes": "~1.0.0",
+    "vardot/jquery.fancytree": "^2.38.5"
+  },
+  "version": "1.0.7"
+}

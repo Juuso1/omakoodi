@@ -1,0 +1,13 @@
+uuid: 290c66c4-2a0c-4904-afa9-bd97a6bb85ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.facet_block.search_category
+    - canvas.component.block.facet_block.search_content_type
+name: Facets
+configEntityTypeId: component
+weight: 0
+items:
+  - block.facet_block.search_category
+  - block.facet_block.search_content_type

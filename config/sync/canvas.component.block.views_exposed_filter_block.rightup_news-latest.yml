@@ -1,0 +1,25 @@
+uuid: 20d1d146-3dc5-4cca-a096-53440edd7751
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rightup_news
+  module:
+    - views
+active_version: 0b266acbd3379a51
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_exposed_filter_block:rightup_news-latest'
+        label: 'Exposed form: rightup_news-latest'
+        label_display: '0'
+        provider: views
+        views_label: ''
+    fallback_metadata:
+      slot_definitions: null
+label: 'Exposed form: rightup_news-latest'
+id: block.views_exposed_filter_block.rightup_news-latest
+provider: views
+source: block
+source_local_id: 'views_exposed_filter_block:rightup_news-latest'

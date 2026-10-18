@@ -1,0 +1,13 @@
+uuid: 4f3e5574-4536-4ee9-880c-c6f42ca4ab47
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: zYKZTih1P5jc85salemrhnbqJGypaG25thlPxS3XfnY
+id: node.text_card_small
+label: 'Text card - small'
+description: null
+targetEntityType: node
+cache: true

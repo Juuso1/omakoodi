@@ -1,0 +1,47 @@
+uuid: 624d57d8-33ac-4d1e-bd4d-6776562aa82b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.podcast.field_content
+    - field.field.node.podcast.field_description
+    - field.field.node.podcast.field_featured_image
+    - field.field.node.podcast.field_host
+    - field.field.node.podcast.field_listen_links
+    - field.field.node.podcast.field_tags
+    - node.type.podcast
+  module:
+    - user
+_core:
+  default_config_hash: XnxJxBrhP3KrBAahzZEOQKbLEQ4i_BVZ26zTfKxiJNU
+id: node.podcast.card
+targetEntityType: node
+bundle: podcast
+mode: card
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: media_16_09
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  field_content: true
+  field_host: true
+  field_listen_links: true
+  field_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

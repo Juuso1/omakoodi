@@ -1,0 +1,29 @@
+uuid: db0215f8-9cd6-4894-b12a-cbf99ba9bbaa
+langcode: en
+status: false
+dependencies:
+  module:
+    - webshare
+active_version: ec57cdd2ed827da8
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: share
+        label: Share
+        label_display: '0'
+        provider: webshare
+        heading: Share
+        display_title: true
+        alignment: end
+        orientation: vertical
+        mobile_visibility: all
+        native_share: false
+        placement: rail-end
+    fallback_metadata:
+      slot_definitions: null
+label: Share
+id: block.share
+provider: webshare
+source: block
+source_local_id: share

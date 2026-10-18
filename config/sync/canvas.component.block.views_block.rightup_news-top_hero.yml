@@ -1,0 +1,29 @@
+uuid: dbda3fcd-bc9b-44a4-9b0a-25b9336ba7f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rightup_news
+  module:
+    - views
+_core:
+  default_config_hash: rnMVjtR_LYtLkWHCJ3QjIKV5FDsLGHCADO8q8PANMOA
+active_version: 98f14bf6dec3138f
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:rightup_news-top_hero'
+        label: 'News: Top stories: hero'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+        exposed: {  }
+    fallback_metadata:
+      slot_definitions: null
+label: 'News: Top stories: hero'
+id: block.views_block.rightup_news-top_hero
+provider: views
+source: block
+source_local_id: 'views_block:rightup_news-top_hero'

@@ -1,0 +1,13 @@
+uuid: aa5082f0-b672-4150-bdc9-5d71970e6e13
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 9_rBmNqI_baSEWSKzJfPjMsxdFU9De8oMcN8Kk9xQM4
+id: media.media_video_16_09
+label: 'Media Video 16:9'
+description: null
+targetEntityType: media
+cache: true

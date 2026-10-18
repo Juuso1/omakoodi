@@ -1,0 +1,30 @@
+{
+  "name": "drupal/varbase_seo_base",
+  "description": "A recipe to manage default installed modules, configs and permissions for Varbase Search Engine Optimization (SEO) Core features and settings.",
+  "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "SEO", "Search Engine Optimization", "Metatag", "Yoast"],
+  "type": "drupal-recipe",
+  "notification-url": "https://packages.drupal.org/8/downloads",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_seo_base",
+    "source": "http://cgit.drupalcode.org/varbase_seo_base"
+  },
+  "require": {
+    "drupal/core": "~11.4.0",
+    "drupal/metatag": "~2",
+    "drupal/eca_metatag": "~2",
+    "drupal/schema_metatag": "~3",
+    "drupal/pathauto": "~1",
+    "drupal/yoast_seo": "~2",
+    "drupal/redirect": "~1",
+    "drupal/simple_sitemap": "~4"
+  },
+  "version": "1.0.2"
+}

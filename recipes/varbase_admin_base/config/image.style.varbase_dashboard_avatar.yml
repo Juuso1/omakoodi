@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+name: varbase_dashboard_avatar
+label: 'Dashboard avatar (128×128)'
+effects:
+  59aecc76-ff2d-4348-80ae-1b0569ec1c40:
+    uuid: 59aecc76-ff2d-4348-80ae-1b0569ec1c40
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 128
+      height: 128
+      anchor: center-center
+  d89bb5b4-7424-4a43-8fde-ae5b1e980d25:
+    uuid: d89bb5b4-7424-4a43-8fde-ae5b1e980d25
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

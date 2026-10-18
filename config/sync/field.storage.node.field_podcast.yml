@@ -1,0 +1,21 @@
+uuid: 5a6af9ee-5fe4-45e9-a4f4-2615f2c86737
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: dcCGrEtxrdtr9oE697qCBgzmqa_vVyH0rizr8vAf6HM
+id: node.field_podcast
+field_name: field_podcast
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,53 @@
+name: Varbase Webform Base
+description: A recipe to manage default installed webform modules, configurations, and permissions for Varbase webform experience.
+type: Varbase Webform
+install:
+  - webform
+  - webform_templates
+  - webform_ui
+  - webform_views
+  - eca_webform
+config:
+  import:
+    webform: '*'
+    webform_templates: '*'
+    webform_ui: '*'
+    webform_views: '*'
+  actions:
+    webform.settings:
+      simpleConfigUpdate:
+        requirements:
+          cdn: false
+          clientside_validation: true
+          bootstrap: true
+          spam: true
+    webform.webform.contact:
+      simpleConfigUpdate:
+        archive: true
+    user.role.content_editor:
+      grantPermissions:
+        - 'access webform overview'
+        - 'create webform'
+        - 'edit own webform'
+    user.role.content_admin:
+      grantPermissions:
+        - 'access webform overview'
+        - 'access webform submission user'
+        - 'administer webform overview'
+        - 'create webform'
+        - 'edit any webform'
+        - 'edit own webform'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'access webform overview'
+    user.role.site_admin:
+      grantPermissions:
+        - 'use text format webform_default'
+        - 'access webform overview'
+        - 'access webform submission user'
+        - 'administer webform'
+        - 'administer webform overview'
+        - 'administer webform submission'
+        - 'create webform'
+        - 'edit any webform'
+        - 'edit own webform'
